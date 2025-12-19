@@ -1,0 +1,32 @@
+{
+  "name": "hfdx-dex",
+  "version": "1.0.0",
+  "description": "HFDX - Perpetual Futures DEX built on ApolloX Broker SDK",
+  "private": true,
+  "scripts": {
+    "dev": "ws --config-file lws.config.cjs",
+    "start": "ws --config-file lws.config.cjs",
+    "serve": "ws --config-file lws.config.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overthetopseo/HFDX.git"
+  },
+  "keywords": [
+    "dex",
+    "perpetual-futures",
+    "crypto",
+    "trading",
+    "apollox",
+    "bnb-chain"
+  ],
+  "author": "HFDX",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/overthetopseo/HFDX/issues"
+  },
+  "homepage": "https://app.hfdx.xyz",
+  "dependencies": {
+    "local-web-server": "^5.4.0"
+  }
+}

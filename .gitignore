@@ -3,9 +3,7 @@ node_modules/
 package-lock.json
 yarn.lock
 
-# Development files
-lws.config.cjs
-lws.config.js
+# Environment files
 .env
 .env.local
 .env.*.local
@@ -38,11 +36,3 @@ temp/
 
 # AWS
 .aws/
-
-# Don't ignore these important files
-!favicon.ico
-!custom.css
-!index.html
-!deploy.sh
-!README.md
-

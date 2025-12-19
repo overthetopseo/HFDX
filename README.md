@@ -37,8 +37,9 @@ HFDX is a perpetual futures trading platform powered by the ApolloX Broker SDK v
 HFDX/
 ├── index.html          # Main entry point
 ├── custom.css          # HFDX brand styling
-├── favicon.ico         # Site favicon
-├── deploy.sh           # AWS deployment script
+├── vercel.json         # Vercel deployment config
+├── package.json        # NPM package file
+├── lws.config.cjs      # Local dev server config
 ├── assets/             # HFDX branding assets
 │   ├── logo-dark.svg
 │   ├── logo-dark-rwd.svg
@@ -71,92 +72,119 @@ HFDX/
    cd HFDX
    ```
 
-2. Install local-web-server for development:
+2. Install dependencies:
    ```bash
-   npm init -y
-   npm install local-web-server
+   npm install
    ```
 
-3. Create `lws.config.cjs` for API proxying:
-   ```javascript
-   module.exports = {
-     rewrite: [
-       {
-         from: '/bapi/(.*)',
-         to: 'https://www.apollox.finance/bapi/$1',
-       },
-       {
-         from: '/fapi/(.*)',
-         to: 'https://www.apollox.finance/fapi/$1',
-       },
-       {
-         from: '/cloud-futures/(.*)',
-         to: 'https://static.apollox.com/cloud-futures/$1',
-       },
-       {
-         from: '/api/(.*)',
-         to: 'https://static.apollox.com/api/$1',
-       },
-     ],
-     directory: './',
-     logFormat: 'stats',
-   };
-   ```
-
-4. Start the development server:
+3. Start the development server:
    ```bash
-   ./node_modules/.bin/ws --port 3333
+   npm run dev
    ```
 
-5. Open [http://localhost:3333](http://localhost:3333) in your browser.
+4. Open [http://localhost:3333](http://localhost:3333) in your browser.
 
 ---
 
-## AWS Deployment
+## Vercel Deployment (Recommended)
 
 ### Prerequisites
+- Vercel account (free at [vercel.com](https://vercel.com))
+- GitHub repository connected to Vercel
 
-- AWS CLI installed and configured
-- Access to create S3 buckets and CloudFront distributions
-- SSL certificate in AWS Certificate Manager
+### Deploy Steps
 
-### Deploy
+1. **Connect GitHub to Vercel:**
+   - Go to [vercel.com/new](https://vercel.com/new)
+   - Import your `overthetopseo/HFDX` repository
+   - Click "Deploy"
 
-Run the deployment script:
+2. **Configure Custom Domain:**
+   - Go to your Vercel project → Settings → Domains
+   - Add `app.hfdx.xyz`
+   - Vercel will provide DNS records to configure
 
-```bash
-chmod +x deploy.sh
-./deploy.sh
-```
+3. **That's it!** Vercel automatically:
+   - Deploys on every push to `main`
+   - Provides free SSL certificate
+   - Global CDN distribution
+   - Automatic HTTPS
 
-Or manually:
+---
 
-```bash
-# Create S3 bucket
-aws s3 mb s3://hfdx-dex
+## Cloudflare DNS Setup
 
-# Sync files with public read access
-aws s3 sync . s3://hfdx-dex \
-  --exclude ".git/*" \
-  --exclude "*.sh" \
-  --exclude "README.md" \
-  --exclude "node_modules/*" \
-  --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
-```
+If you're using Cloudflare for DNS (recommended for hfdx.xyz):
 
-### CloudFront Setup
+### Option 1: Vercel + Cloudflare DNS (Recommended)
 
-1. Create a CloudFront distribution pointing to your S3 bucket
-2. Configure the custom domain: `app.hfdx.xyz`
-3. Add SSL certificate from ACM
-4. Configure error pages to redirect to `index.html` for SPA routing
+1. **In Cloudflare Dashboard:**
+   - Go to DNS settings for hfdx.xyz
+   - Add a CNAME record:
+     ```
+     Type: CNAME
+     Name: app
+     Target: cname.vercel-dns.com
+     Proxy status: DNS only (grey cloud)
+     ```
+   - **Important:** Set proxy to "DNS only" (grey cloud icon) for Vercel
 
-### DNS Configuration
+2. **In Vercel:**
+   - Add `app.hfdx.xyz` as a custom domain
+   - Vercel handles SSL automatically
 
-Add a CNAME record:
-```
-app.hfdx.xyz -> [your-cloudfront-distribution].cloudfront.net
-```
+### Option 2: Full Cloudflare (Pages + CDN)
+
+If you want to use Cloudflare Pages instead of Vercel:
+
+1. **Create Cloudflare Pages Project:**
+   - Go to Cloudflare Dashboard → Pages
+   - Connect your GitHub account
+   - Select `overthetopseo/HFDX` repository
+   - Build settings:
+     - Framework preset: None
+     - Build command: (leave empty)
+     - Build output directory: `/`
+
+2. **Configure Custom Domain:**
+   - In Pages project → Custom domains
+   - Add `app.hfdx.xyz`
+   - Cloudflare automatically handles DNS and SSL
+
+### Cloudflare Settings (if using proxy)
+
+If using Cloudflare proxy (orange cloud), configure these:
+
+1. **SSL/TLS:**
+   - Mode: Full (strict)
+
+2. **Caching:**
+   - Go to Rules → Cache Rules
+   - Create rule to cache `/static/*` and `/sdk/*`
+
+3. **Page Rules (optional):**
+   ```
+   app.hfdx.xyz/static/* → Cache Level: Cache Everything
+   app.hfdx.xyz/sdk/* → Cache Level: Cache Everything
+   ```
+
+---
+
+## Server Requirements
+
+**No traditional server needed!** This is a static site that can be hosted on:
+
+| Platform | Cost | Recommended |
+|----------|------|-------------|
+| **Vercel** | Free | Yes - Easiest setup |
+| **Cloudflare Pages** | Free | Yes - If already using Cloudflare |
+| **Netlify** | Free | Alternative option |
+| **AWS S3 + CloudFront** | ~$1-5/month | Enterprise option |
+
+All platforms provide:
+- Free SSL/HTTPS
+- Global CDN
+- Automatic deployments from GitHub
 
 ---
 
@@ -173,7 +201,7 @@ app.hfdx.xyz -> [your-cloudfront-distribution].cloudfront.net
 2. **Colors**: Edit `/custom.css` to change the color scheme
    - Modify CSS variables in `:root` and `html.light` sections
 
-3. **Favicon**: Replace `favicon.ico` with your icon
+3. **Favicon**: Add `favicon.ico` to the root directory
 
 ### Configuration
 
@@ -217,4 +245,3 @@ For technical support or questions:
 This project uses the ApolloX Broker SDK under their license terms.
 
 © 2024 HFDX. All rights reserved.
-
