@@ -1,0 +1,42 @@
+name: Publish SDK
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish-sdk:
+    runs-on: ubuntu-latest
+    environment: sdk_deploy
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org/"
+          always-auth: true
+          scope: "@gmx-io"
+          auth-token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install dependencies
+        working-directory: ./sdk
+        run: yarn install --immutable
+
+      - name: Build package
+        working-directory: ./sdk
+        run: |
+          yarn prepare
+          yarn prebuild
+          yarn build
+
+      - run: npm publish --access public
+        working-directory: ./sdk
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
