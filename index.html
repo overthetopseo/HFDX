@@ -112,7 +112,8 @@
       const symbol = getSymbolFromUrl();
       
       // Environment detection
-      const { origin } = window.location;
+      const { origin, protocol } = window.location;
+      const isDev = protocol === 'http:';
       
       // HFDX SDK Configuration
       const hfdxConfig = {
@@ -120,13 +121,11 @@
         brokerId: 2063,
         staticBaseUrl: '/static/',
         futuresWsHost: 'wss://fstream.apollox.finance/plain',
-        graphqlTemplateUrl: 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/F3tL1YmzfEA1g8H8nPUBqnMgWzj7RMXjgn6fqDZdBjsF',
         
-        // IMPORTANT: Production mode (not testnet)
-        isTestnet: false,
-        
-        // API Base URL - Use origin for Vercel proxy rewrites
-        apiBaseUrl: origin,
+        // API Base URL - ONLY use origin in development for local proxy
+        // In production, leave undefined so SDK talks directly to ApolloX servers
+        // (This is important for correct IP detection in common-check-ip API)
+        apiBaseUrl: isDev ? origin : undefined,
         
         // Network Configuration - BNB Chain only
         supportNetworks: ['bnb'],
