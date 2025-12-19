@@ -4,11 +4,27 @@
   "public": true,
   "rewrites": [
     {
+      "source": "/bapi/:path*",
+      "destination": "https://www.apollox.finance/bapi/:path*"
+    },
+    {
+      "source": "/fapi/:path*",
+      "destination": "https://www.apollox.finance/fapi/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://www.apollox.finance/api/:path*"
+    },
+    {
       "source": "/:lng/futures/:symbol",
       "destination": "/index.html"
     },
     {
       "source": "/:lng/futures",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:lng",
       "destination": "/index.html"
     }
   ],
@@ -48,7 +64,23 @@
           "value": "public, max-age=86400"
         }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Requested-With, Content-Type, Accept"
+        }
+      ]
     }
   ]
 }
-

@@ -112,8 +112,7 @@
       const symbol = getSymbolFromUrl();
       
       // Environment detection
-      const { origin, protocol } = window.location;
-      const isDev = protocol === 'http:';
+      const { origin } = window.location;
       
       // HFDX SDK Configuration
       const hfdxConfig = {
@@ -123,9 +122,8 @@
         futuresWsHost: 'wss://fstream.apollox.finance/plain',
         graphqlTemplateUrl: 'https://api.thegraph.com/subgraphs/name/apollx-apx/apollox-perp-{{network}}',
         
-        // API Base URL - only use origin in development for proxy
-        // In production, leave undefined to use ApolloX's default URLs
-        apiBaseUrl: isDev ? origin : undefined,
+        // API Base URL - Use origin for Vercel proxy rewrites
+        apiBaseUrl: origin,
         
         // Network Configuration - BNB Chain only
         supportNetworks: ['bnb'],
