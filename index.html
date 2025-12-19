@@ -120,7 +120,10 @@
         brokerId: 2063,
         staticBaseUrl: '/static/',
         futuresWsHost: 'wss://fstream.apollox.finance/plain',
-        graphqlTemplateUrl: 'https://api.thegraph.com/subgraphs/name/apollx-apx/apollox-perp-{{network}}',
+        graphqlTemplateUrl: 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/F3tL1YmzfEA1g8H8nPUBqnMgWzj7RMXjgn6fqDZdBjsF',
+        
+        // IMPORTANT: Production mode (not testnet)
+        isTestnet: false,
         
         // API Base URL - Use origin for Vercel proxy rewrites
         apiBaseUrl: origin,
