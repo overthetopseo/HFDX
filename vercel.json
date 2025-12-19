@@ -3,7 +3,7 @@
   "framework": "vite",
   "buildCommand": "yarn build",
   "outputDirectory": "build",
-  "installCommand": "yarn install",
+  "installCommand": "pip install setuptools && yarn install",
   "rewrites": [
     {
       "source": "/(.*)",
