@@ -1,0 +1,286 @@
+/**
+ * HFDX DEX - Custom Branding Stylesheet
+ * ======================================
+ * Customize the appearance of your HFDX trading platform.
+ * 
+ * This file overrides the default ApolloX SDK styles with HFDX branding.
+ * 
+ * Color Format: RGB values without commas (e.g., "255 255 255" for white)
+ */
+
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+html.light {
+  /* Typography Colors */
+  --colors-t-primary: 23 24 34;
+  --colors-t-secondary: 68 71 95;
+  --colors-t-third: 114 118 143;
+  --colors-t-disabled: 105 107 130;
+  --colors-t-placeholder: 181 183 193;
+  --colors-t-onColor: 255 255 255;
+  --colors-t-consistent: 255 255 255;
+  --colors-t-inverse: 11 12 18;
+  --colors-t-error: 255 22 149;
+  --colors-t-buy: 16 185 129;
+  --colors-t-yellow: 126 154 255;
+  --colors-t-sell: 239 68 68;
+  --colors-t-link: 59 130 246;
+  --colors-t-linkHover: 96 165 250;
+  --colors-t-white: 255 255 255;
+  --colors-t-emphasize: 251 191 36;
+
+  /* Border Colors */
+  --colors-border-line: 216 218 227;
+  --colors-border-lineSubtle: 235 235 239;
+  --colors-border-lineStrong: 199 201 208;
+
+  /* Background Colors */
+  --colors-background-bg1: 253 253 253;
+  --colors-background-bg2: 255 255 255;
+  --colors-background-bg1Accent01: 243 243 247;
+  --colors-background-bg1Accent02: 243 243 247;
+
+  /* Interactive Colors */
+  --colors-interactive-disabled: 223 223 224;
+  --colors-interactive-primary: 59 130 246;
+  --colors-interactive-primaryHover: 96 165 250;
+  --colors-interactive-primaryActive: 147 197 253;
+  --colors-interactive-primaryGradient: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  --colors-interactive-primaryAccent01: 76 80 122;
+  --colors-interactive-primaryAccent02: 49 53 83;
+  
+  /* Buy (Long) Colors - Green */
+  --colors-interactive-buy: 16 185 129;
+  --colors-interactive-buyHover: 52 211 153;
+  --colors-interactive-buyActive: 110 231 183;
+  --colors-interactive-buyGradient: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  --colors-interactive-buyAccent01: 46 65 69;
+  
+  /* Sell (Short) Colors - Red */
+  --colors-interactive-sell: 239 68 68;
+  --colors-interactive-sellHover: 248 113 113;
+  --colors-interactive-sellActive: 252 165 165;
+  --colors-interactive-sellGradient: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+  --colors-interactive-sellAccent01: 74 42 60;
+
+  /* Interactive Backgrounds */
+  --colors-interactive-interactiveBg: 253 253 253;
+  --colors-interactive-interactiveBgHover: 242 242 246;
+  --colors-interactive-interactiveBgActive: 242 242 246;
+  --colors-interactive-interactiveBgSelected: 242 242 246;
+  --colors-interactive-interactive01: 235 235 239;
+  --colors-interactive-interactive01Hover: 229 229 233;
+  --colors-interactive-interactive01Active: 229 229 233;
+  --colors-interactive-interactive01Selected: 229 229 233;
+  --colors-interactive-interactive02: 215 215 223;
+  --colors-interactive-interactive02Hover: 205 205 213;
+  --colors-interactive-interactive02Active: 205 205 213;
+  --colors-interactive-interactive02Selected: 205 205 213;
+  --colors-interactive-interactivePopup: 255 255 255;
+
+  /* Support Colors */
+  --colors-support-success: 16 185 129;
+  --colors-support-error: 239 68 68;
+  --colors-support-warning: 245 158 11;
+  --colors-support-info: 59 130 246;
+
+  /* Others */
+  --colors-highLight: 251 191 36;
+  --colors-overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   DARK THEME (Default)
+   ============================================ */
+:root,
+html.dark {
+  /* Typography Colors */
+  --colors-t-primary: 240 240 245;
+  --colors-t-secondary: 178 180 198;
+  --colors-t-third: 114 118 143;
+  --colors-t-disabled: 105 107 130;
+  --colors-t-placeholder: 68 71 95;
+  --colors-t-onColor: 255 255 255;
+  --colors-t-consistent: 255 255 255;
+  --colors-t-inverse: 11 12 18;
+  --colors-t-error: 239 68 68;
+  --colors-t-buy: 16 185 129;
+  --colors-t-yellow: 251 191 36;
+  --colors-t-sell: 239 68 68;
+  --colors-t-link: 96 165 250;
+  --colors-t-linkHover: 147 197 253;
+  --colors-t-white: 255 255 255;
+  --colors-t-emphasize: 251 191 36;
+
+  /* Border Colors */
+  --colors-border-line: 55 65 81;
+  --colors-border-lineSubtle: 45 55 72;
+  --colors-border-lineStrong: 75 85 99;
+
+  /* Background Colors - Dark Professional */
+  --colors-background-bg1: 17 24 39;
+  --colors-background-bg2: 11 15 25;
+  --colors-background-bg1Accent01: 31 41 55;
+  --colors-background-bg1Accent02: 37 47 63;
+
+  /* Interactive Colors - HFDX Primary Blue */
+  --colors-interactive-disabled: 55 65 81;
+  --colors-interactive-primary: 59 130 246;
+  --colors-interactive-primaryHover: 96 165 250;
+  --colors-interactive-primaryActive: 147 197 253;
+  --colors-interactive-primaryGradient: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  --colors-interactive-primaryAccent01: 55 65 81;
+  --colors-interactive-primaryAccent02: 45 55 72;
+
+  /* Buy (Long) Colors - Green */
+  --colors-interactive-buy: 16 185 129;
+  --colors-interactive-buyHover: 52 211 153;
+  --colors-interactive-buyActive: 110 231 183;
+  --colors-interactive-buyGradient: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  --colors-interactive-buyAccent01: 6 78 59;
+
+  /* Sell (Short) Colors - Red */
+  --colors-interactive-sell: 239 68 68;
+  --colors-interactive-sellHover: 248 113 113;
+  --colors-interactive-sellActive: 252 165 165;
+  --colors-interactive-sellGradient: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+  --colors-interactive-sellAccent01: 127 29 29;
+
+  /* Interactive Backgrounds */
+  --colors-interactive-interactiveBg: 23 32 48;
+  --colors-interactive-interactiveBgHover: 31 41 55;
+  --colors-interactive-interactiveBgActive: 45 55 72;
+  --colors-interactive-interactiveBgSelected: 37 47 63;
+  --colors-interactive-interactive01: 37 47 63;
+  --colors-interactive-interactive01Hover: 45 55 72;
+  --colors-interactive-interactive01Active: 55 65 81;
+  --colors-interactive-interactive01Selected: 49 59 75;
+  --colors-interactive-interactive02: 55 65 81;
+  --colors-interactive-interactive02Hover: 65 75 91;
+  --colors-interactive-interactive02Active: 75 85 99;
+  --colors-interactive-interactive02Selected: 69 79 95;
+  --colors-interactive-interactivePopup: 55 65 81;
+
+  /* Support Colors */
+  --colors-support-success: 16 185 129;
+  --colors-support-error: 239 68 68;
+  --colors-support-warning: 245 158 11;
+  --colors-support-info: 59 130 246;
+
+  /* Others */
+  --colors-highLight: 251 191 36;
+  --colors-overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+:root {
+  /* Font Family - Modern Sans-Serif */
+  --font-site-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ============================================
+   SCROLLBAR CUSTOMIZATION
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--colors-border-line));
+  border-radius: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--colors-border-lineStrong));
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Hide number input spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* ============================================
+   WIDGET CUSTOMIZATIONS
+   ============================================ */
+
+/* Buttons */
+.button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Sheet/Modal Content */
+.sheet-content {
+  border-radius: 16px;
+}
+
+/* Input Fields */
+.input-text-field,
+.input-base-input {
+  border-radius: 8px;
+}
+
+/* Dialog/Modal Content */
+.dialog-content {
+  border-radius: 16px;
+}
+
+/* Order Form Card */
+.order-form-card {
+  border-radius: 12px;
+}
+
+/* Radio Options */
+.radio-option {
+  border-radius: 8px;
+}
+
+/* Currency Input */
+.currency-input {
+  border-radius: 8px;
+}
+
+/* Direction Switch - Long (Buy) */
+.direction-switch-long {
+  border-radius: 8px;
+}
+
+/* Direction Switch - Short (Sell) */
+.direction-switch-short {
+  border-radius: 8px;
+}
+
+/* ============================================
+   HFDX SPECIFIC OVERRIDES
+   ============================================ */
+
+/* Add subtle glow effect to buy/sell buttons on hover */
+.direction-switch-long:hover {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.direction-switch-short:hover {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Primary button glow */
+.button:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+

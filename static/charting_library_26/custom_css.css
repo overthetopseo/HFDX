@@ -1,0 +1,43 @@
+div[class^="tooltip"] {
+  background-color: rgb(var(--colors-interactive-primary)) !important;
+  color: #fff !important;
+  white-space: pre-line !important;
+}
+
+div[class^="tooltip"] div {
+  color: #fff !important;
+  position: relative;
+  z-index: 9;
+}
+
+div[class^="tooltip"]:not(div[class^="right"]):after {
+  border-left-color: rgb(var(--colors-interactive-primary)) !important;
+}
+
+div[class^="tooltip"]:before {
+  border-color: #0000 rgb(var(--colors-interactive-primary)) #0000 #0000 !important;
+}
+
+div[data-name="legend-series-item"] div[class^="statusesWrapper-"] {
+  display: none;
+}
+
+:root:not(.theme-dark) body,
+.theme-dark:root body {
+  --tv-color-platform-background: rgb(var(--colors-background-bg1));
+  --tv-color-pane-background: rgb(var(--colors-background-bg1));
+  --tv-color-toolbar-button-text: rgb(var(--colors-t-primary));
+  --tv-color-toolbar-button-text-hover: rgb(var(--colors-interactive-primaryHover));
+  --tv-color-popup-element-text-hover: rgb(var(--colors-interactive-primaryHover));
+  --tv-color-toolbar-button-text-active-hover: rgb(var(--colors-interactive-primaryActive));
+  --tv-color-toolbar-button-text-active: rgb(var(--colors-interactive-primaryActive));
+
+  --tv-color-popup-background: rgb(var(--colors-interactive-interactiveBg));
+  --tv-color-popup-element-background-hover: rgb(var(--colors-interactive-interactiveBgHover));
+  --tv-color-popup-element-background-active: rgb(var(--colors-interactive-interactiveBgSelected));
+
+  --tv-color-popup-element-text-active: rgb(var(--colors-interactive-primaryActive));
+
+  --tv-color-toolbar-toggle-button-background-active: rgb(var(--colors-interactive-primary));
+  --tv-color-toolbar-toggle-button-background-active-hover: rgb(var(--colors-interactive-primaryActive));
+}

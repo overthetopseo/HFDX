@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HFDX - Perpetual Futures DEX - Trade crypto perpetual futures with up to 500x leverage" />
+    <meta name="keywords" content="HFDX, DEX, perpetual futures, crypto trading, BNB Chain, leverage trading" />
+    <meta name="theme-color" content="#0b0c12" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://app.hfdx.xyz/" />
+    <meta property="og:title" content="HFDX - Perpetual Futures DEX" />
+    <meta property="og:description" content="Trade crypto perpetual futures with up to 500x leverage on BNB Chain" />
+    <meta property="og:image" content="/assets/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://app.hfdx.xyz/" />
+    <meta property="twitter:title" content="HFDX - Perpetual Futures DEX" />
+    <meta property="twitter:description" content="Trade crypto perpetual futures with up to 500x leverage on BNB Chain" />
+    
+    <title>HFDX - Perpetual Futures DEX</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0b0c12;
+        overflow: hidden;
+      }
+      
+      #app {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      
+      /* Loading state */
+      .loading-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #0b0c12;
+        color: #f0f0f5;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      .loading-container img {
+        max-width: 120px;
+        margin-bottom: 24px;
+      }
+      
+      .loading-text {
+        font-size: 14px;
+        color: #72768f;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    </style>
+    
+    <!-- ApolloX SDK v4.0.3 -->
+    <script src="/sdk/sdk.4.0.3.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="loading-container">
+        <img src="/static/images/example-loading-image.gif" alt="Loading..." />
+        <div class="loading-text">Loading HFDX...</div>
+      </div>
+    </div>
+    
+    <script>
+      // ============================================
+      // HFDX DEX Configuration
+      // Broker ID: 2063
+      // Domain: app.hfdx.xyz
+      // ============================================
+      
+      // URL parsing utilities
+      function getLngFromUrl() {
+        const path = location.pathname.split('/');
+        return path[1] || 'en';
+      }
+      
+      function getSymbolFromUrl() {
+        const path = location.pathname.split('/');
+        // URL pattern: /:lng/futures/:symbol
+        const symbol = path[3];
+        return symbol && symbol !== '' ? symbol : 'BTCUSD';
+      }
+      
+      // Get initial values from URL
+      const lng = getLngFromUrl();
+      const symbol = getSymbolFromUrl();
+      
+      // Environment detection
+      const { origin, protocol } = window.location;
+      const isDev = protocol === 'http:';
+      
+      // HFDX SDK Configuration
+      const hfdxConfig = {
+        // Core Configuration
+        brokerId: 2063,
+        staticBaseUrl: '/static/',
+        futuresWsHost: 'wss://fstream.apollox.finance/plain',
+        graphqlTemplateUrl: 'https://api.thegraph.com/subgraphs/name/apollx-apx/apollox-perp-{{network}}',
+        
+        // API Base URL - only use origin in development for proxy
+        // In production, leave undefined to use ApolloX's default URLs
+        apiBaseUrl: isDev ? origin : undefined,
+        
+        // Network Configuration - BNB Chain only
+        supportNetworks: ['bnb'],
+        
+        // Language Support
+        supportLanguages: ['en', 'es', 'zh-CN', 'zh-TW', 'ja', 'ko', 'ru', 'pt-BR', 'tr', 'de', 'fr'],
+        
+        // Theme Configuration
+        defaultTheme: 'dark',
+        enableThemeToggle: true,
+        
+        // Custom CSS for HFDX branding
+        customCssUrl: '/custom.css',
+        
+        // Loading Image
+        loadingImage: {
+          url: '/static/images/example-loading-image.gif',
+          backgroundColor: '#0b0c12',
+        },
+        
+        // Notification Position
+        notificationPosition: {
+          horizontal: 'right',
+          vertical: 'top',
+        },
+        
+        // Header Configuration
+        headerConfig: {
+          // Logo Configuration
+          logo: {
+            // Replace these URLs with your actual HFDX logo URLs
+            darkImgUrl: '/assets/logo-dark.svg',
+            darkRWDImgUrl: '/assets/logo-dark-rwd.svg',
+            lightImgUrl: '/assets/logo-light.svg',
+            lightRWDImgUrl: '/assets/logo-light-rwd.svg',
+            navTo: 'https://hfdx.xyz',
+            navTarget: '_blank',
+          },
+          
+          // Navigation Menu
+          menu: {
+            data: [
+              { 
+                text: 'Trade', 
+                navTo: '/en/futures/BTCUSD',
+                navTarget: '_parent'
+              },
+              { 
+                text: 'Website', 
+                navTo: 'https://hfdx.xyz',
+                navTarget: '_blank'
+              },
+            ],
+            placement: 'left',
+          },
+          
+          // Customer Service / Support Link
+          customerService: {
+            navTo: 'https://hfdx.xyz/support',
+            navTarget: '_blank',
+          },
+        },
+        
+        // Features Configuration
+        features: {
+          referral: {
+            enabled: true,
+          },
+        },
+      };
+      
+      // Initialize HFDX Trading UI
+      function initHFDX() {
+        try {
+          FuturesSDK.createTradeUI({
+            container: document.getElementById('app'),
+            config: hfdxConfig,
+            state: {
+              symbol: symbol,
+              lng: lng,
+            },
+          });
+          
+          // Event Listeners for URL synchronization
+          FuturesSDK.eventListener.on('symbolChange', (data) => {
+            console.log('[HFDX] Symbol changed:', data.symbol);
+            const newPath = `/${getLngFromUrl()}/futures/${data.symbol}`;
+            window.history.replaceState({}, null, newPath);
+            document.title = `${data.symbol} | HFDX - Perpetual Futures DEX`;
+          });
+          
+          FuturesSDK.eventListener.on('lngChange', (data) => {
+            console.log('[HFDX] Language changed:', data.lng);
+            const newPath = `/${data.lng}/futures/${getSymbolFromUrl()}`;
+            window.history.pushState({}, null, newPath);
+          });
+          
+          FuturesSDK.eventListener.on('invalidSymbol', () => {
+            console.warn('[HFDX] Invalid symbol, redirecting to BTCUSD');
+            window.location.href = `/${lng}/futures/BTCUSD`;
+          });
+          
+          FuturesSDK.eventListener.on('startLoad', () => {
+            console.log('[HFDX] SDK started loading');
+          });
+          
+          console.log('[HFDX] DEX initialized successfully');
+          console.log('[HFDX] Broker ID:', hfdxConfig.brokerId);
+          console.log('[HFDX] Network:', hfdxConfig.supportNetworks.join(', '));
+          
+        } catch (error) {
+          console.error('[HFDX] Failed to initialize:', error);
+          document.getElementById('app').innerHTML = `
+            <div class="loading-container">
+              <h2 style="color: #ff1695; margin-bottom: 16px;">Failed to Load</h2>
+              <p style="color: #72768f;">Please refresh the page or try again later.</p>
+            </div>
+          `;
+        }
+      }
+      
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHFDX);
+      } else {
+        initHFDX();
+      }
+    </script>
+  </body>
+</html>
+

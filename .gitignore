@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Development files
+lws.config.cjs
+lws.config.js
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build output
+dist/
+build/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# AWS
+.aws/
+
+# Don't ignore these important files
+!favicon.ico
+!custom.css
+!index.html
+!deploy.sh
+!README.md
+
