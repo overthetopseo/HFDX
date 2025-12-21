@@ -3,7 +3,7 @@ import { Hex, encodePacked, type Address } from "viem";
 
 import { ContractsChainId } from "config/chains";
 import { getContract } from "config/contracts";
-import { HFDX_SIMULATION_ORIGIN } from "config/dataStore";
+import { GMX_SIMULATION_ORIGIN } from "config/dataStore";
 
 export async function callRelayTransaction({
   chainId,
@@ -23,7 +23,7 @@ export async function callRelayTransaction({
   try {
     return await provider.call({
       to: relayRouterAddress,
-      from: HFDX_SIMULATION_ORIGIN,
+      from: GMX_SIMULATION_ORIGIN,
       data: encodePacked(
         ["bytes", "address", "address", "uint256"],
         [
