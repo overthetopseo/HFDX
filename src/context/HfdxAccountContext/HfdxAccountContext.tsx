@@ -17,7 +17,7 @@ export type GmxAccountModalView =
   | "selectAssetToDeposit"
   | "withdraw";
 
-export type GmxAccountContext = {
+export type HfdxAccountContext = {
   modalOpen: boolean | GmxAccountModalView;
   setModalOpen: (v: boolean | GmxAccountModalView) => void;
 
@@ -52,7 +52,7 @@ export type GmxAccountContext = {
   setSelectedTransferGuid: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 
-export const context = createContext<GmxAccountContext | null>(null);
+export const context = createContext<HfdxAccountContext | null>(null);
 
 const DEFAULT_SETTLEMENT_CHAIN_ID: SettlementChainId = isDevelopment() ? ARBITRUM_SEPOLIA : ARBITRUM;
 
@@ -81,12 +81,12 @@ const getSettlementChainIdFromLocalStorage = () => {
   return chainIdFromLocalStorage;
 };
 
-export function GmxAccountContextProvider({ children }: PropsWithChildren) {
+export function HfdxAccountContextProvider({ children }: PropsWithChildren) {
   const { chainId: walletChainId } = useAccount();
 
-  const [modalOpen, setModalOpen] = useState<GmxAccountContext["modalOpen"]>(false);
+  const [modalOpen, setModalOpen] = useState<HfdxAccountContext["modalOpen"]>(false);
 
-  let [settlementChainId, setSettlementChainId] = useState<GmxAccountContext["settlementChainId"]>(
+  let [settlementChainId, setSettlementChainId] = useState<HfdxAccountContext["settlementChainId"]>(
     getSettlementChainIdFromLocalStorage()
   );
 
@@ -104,20 +104,20 @@ export function GmxAccountContextProvider({ children }: PropsWithChildren) {
     localStorage.setItem(SELECTED_SETTLEMENT_CHAIN_ID_KEY, chainId.toString());
   }, []);
 
-  const [depositViewChain, setDepositViewChain] = useState<GmxAccountContext["depositViewChain"]>(undefined);
+  const [depositViewChain, setDepositViewChain] = useState<HfdxAccountContext["depositViewChain"]>(undefined);
   const [depositViewTokenAddress, setDepositViewTokenAddress] =
-    useState<GmxAccountContext["depositViewTokenAddress"]>(undefined);
+    useState<HfdxAccountContext["depositViewTokenAddress"]>(undefined);
   const [depositViewTokenInputValue, setDepositViewTokenInputValue] =
-    useState<GmxAccountContext["depositViewTokenInputValue"]>(undefined);
+    useState<HfdxAccountContext["depositViewTokenInputValue"]>(undefined);
 
-  const [withdrawalViewChain, setWithdrawalViewChain] = useState<GmxAccountContext["withdrawalViewChain"]>(undefined);
+  const [withdrawalViewChain, setWithdrawalViewChain] = useState<HfdxAccountContext["withdrawalViewChain"]>(undefined);
   const [withdrawalViewTokenAddress, setWithdrawalViewTokenAddress] =
-    useState<GmxAccountContext["withdrawalViewTokenAddress"]>(undefined);
+    useState<HfdxAccountContext["withdrawalViewTokenAddress"]>(undefined);
   const [withdrawalViewTokenInputValue, setWithdrawalViewTokenInputValue] =
-    useState<GmxAccountContext["withdrawalViewTokenInputValue"]>(undefined);
+    useState<HfdxAccountContext["withdrawalViewTokenInputValue"]>(undefined);
 
   const [selectedTransferGuid, setSelectedTransferGuid] =
-    useState<GmxAccountContext["selectedTransferGuid"]>(undefined);
+    useState<HfdxAccountContext["selectedTransferGuid"]>(undefined);
 
   const handleSetModalOpen = useCallback((newModalOpen: boolean | GmxAccountModalView) => {
     setModalOpen(newModalOpen);

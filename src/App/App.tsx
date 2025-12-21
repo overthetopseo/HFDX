@@ -18,7 +18,7 @@ import "./App.scss";
 import { LANGUAGE_LOCALSTORAGE_KEY } from "config/localStorage";
 import { ChainContextProvider } from "context/ChainContext/ChainContext";
 import { GlobalStateProvider } from "context/GlobalContext/GlobalContextProvider";
-import { GmxAccountContextProvider } from "context/HfdxAccountContext/HfdxAccountContext";
+import { HfdxAccountContextProvider } from "context/HfdxAccountContext/HfdxAccountContext";
 import { PendingTxnsContextProvider } from "context/PendingTxnsContext/PendingTxnsContext";
 import { SettingsContextProvider } from "context/SettingsContext/SettingsContextProvider";
 import { SorterContextProvider } from "context/SorterContext/SorterContextProvider";
@@ -75,7 +75,7 @@ function App() {
   app = <SettingsContextProvider>{app}</SettingsContextProvider>;
   app = <GlobalStateProvider>{app}</GlobalStateProvider>;
   app = <ChainContextProvider>{app}</ChainContextProvider>;
-  app = <GmxAccountContextProvider>{app}</GmxAccountContextProvider>;
+  app = <HfdxAccountContextProvider>{app}</HfdxAccountContextProvider>;
   app = <ThemeProvider>{app}</ThemeProvider>;
   app = <Router>{app}</Router>;
 

@@ -1,6 +1,6 @@
 import { Context, useContextSelector } from "use-context-selector";
 
-import { GmxAccountContext, context } from "./GmxAccountContext";
+import { HfdxAccountContext, context } from "./HfdxAccountContext";
 import {
   selectGmxAccountDepositViewChain,
   selectGmxAccountDepositViewTokenAddress,
@@ -22,8 +22,8 @@ import {
   selectGmxAccountWithdrawalViewTokenInputValue,
 } from "./selectors";
 
-export function useGmxAccountSelector<Selected>(selector: (s: GmxAccountContext) => Selected) {
-  return useContextSelector(context as Context<GmxAccountContext>, selector) as Selected;
+export function useGmxAccountSelector<Selected>(selector: (s: HfdxAccountContext) => Selected) {
+  return useContextSelector(context as Context<HfdxAccountContext>, selector) as Selected;
 }
 
 export function useGmxAccountModalOpen() {
