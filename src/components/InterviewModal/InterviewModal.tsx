@@ -16,16 +16,16 @@ type Props = {
 export function InterviewModal({ type, isVisible, setIsVisible }: Props) {
   if (type === "trader") {
     return (
-      <Modal isVisible={isVisible} setIsVisible={setIsVisible} label={t`Anonymous chat with GMX`}>
+      <Modal isVisible={isVisible} setIsVisible={setIsVisible} label={t`Anonymous chat with HFDX`}>
         <div className="max-w-xl">
           <Trans>
-            We want your insights to help improve GMX. For security reasons, we won't contact you first. Please send the
+            We want your insights to help improve HFDX. For security reasons, we won't contact you first. Please send the
             message "I have feedback" to any of our official accounts:
           </Trans>
           <div className="mb-20 mt-20 flex flex-col gap-8">
             <div className="flex items-center gap-12 text-14">
               <ArrowBulletIcon />
-              <ExternalLink href="https://t.me/GMXPartners">
+              <ExternalLink href="https://t.me/HFDXPartners">
                 <Trans>Telegram account</Trans>
               </ExternalLink>
             </div>
@@ -37,16 +37,16 @@ export function InterviewModal({ type, isVisible, setIsVisible }: Props) {
 
   if (type === "lp") {
     return (
-      <Modal isVisible={isVisible} setIsVisible={setIsVisible} label={t`Anonymous chat with GMX team`}>
+      <Modal isVisible={isVisible} setIsVisible={setIsVisible} label={t`Anonymous chat with HFDX team`}>
         <div className="max-w-xl">
           <Trans>
-            We want your insights to help improve GMX for Liquidity Providers. For security reasons, we won't contact
+            We want your insights to help improve HFDX for Liquidity Providers. For security reasons, we won't contact
             you first. Please send the message "I’m a Liquidity Provider" to our official telegram account:
           </Trans>
           <div className="mb-20 mt-20 flex flex-col gap-8">
             <div className="flex items-center gap-12 text-14">
               <ArrowBulletIcon />
-              <ExternalLink href="https://t.me/GMXPartners">
+              <ExternalLink href="https://t.me/HFDXPartners">
                 <Trans>Telegram account</Trans>
               </ExternalLink>
             </div>

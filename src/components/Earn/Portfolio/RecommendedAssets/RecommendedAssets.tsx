@@ -18,7 +18,7 @@ import { useChainId } from "lib/chains";
 import { expandDecimals, formatPercentage, USD_DECIMALS } from "lib/numbers";
 import { useBreakpoints } from "lib/useBreakpoints";
 import { sendEarnRecommendationClickedEvent } from "lib/userAnalytics/earnEvents";
-import { BuyGmxModal } from "pages/BuyGMX/BuyGmxModal";
+import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
 import { AnyChainId, BOTANIX } from "sdk/configs/chains";
 import { getNormalizedTokenSymbol } from "sdk/configs/tokens";
 import { MarketInfo, MarketTokensAPRData } from "sdk/types/markets";
@@ -159,7 +159,7 @@ export function RecommendedAssets({
         })}
       >
         {!hasGmxAssets && chainId !== BOTANIX && (
-          <RecommendedAssetSection title={<Trans>GMX</Trans>}>
+          <RecommendedAssetSection title={<Trans>HFDX</Trans>}>
             {[
               <GmxRecommendedAssetItem
                 key="gmx"
@@ -241,7 +241,7 @@ function GmxRecommendedAssetItem({ chainId, openBuyGmxModal }: { chainId: AnyCha
     sendEarnRecommendationClickedEvent({
       activeTab: "portfolio",
       context: "PortfolioRecommendations",
-      token: "GMX",
+      token: "HFDX",
     });
 
     openBuyGmxModal();
@@ -250,12 +250,12 @@ function GmxRecommendedAssetItem({ chainId, openBuyGmxModal }: { chainId: AnyCha
   return (
     <BaseRecommendedAssetItem
       icon={<GmxIcon className="size-32" />}
-      title={<Trans>GMX</Trans>}
+      title={<Trans>HFDX</Trans>}
       metricValue={<APRLabel chainId={chainId} label="gmxAprTotal" />}
       metricLabel={<Trans>APR</Trans>}
       button={
         <Button variant="primary" onClick={handleClick}>
-          <Trans>Buy GMX</Trans>
+          <Trans>Buy HFDX</Trans>
         </Button>
       }
     />

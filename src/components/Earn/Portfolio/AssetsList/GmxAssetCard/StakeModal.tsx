@@ -32,7 +32,7 @@ import { SwitchToSettlementChainButtons } from "components/SwitchToSettlementCha
 import { SwitchToSettlementChainWarning } from "components/SwitchToSettlementChain/SwitchToSettlementChainWarning";
 import Tabs from "components/Tabs/Tabs";
 
-import { GMX_DAO_LINKS } from "./constants";
+import { HFDX_DAO_LINKS } from "./constants";
 
 export type StakeModalTab = "stake" | "unstake";
 
@@ -43,8 +43,8 @@ export type StakeModalTabConfig = {
 };
 
 const METHOD_NAME_MAP: Record<string, { stake: string; unstake: string }> = {
-  GMX: { stake: "stakeGmx", unstake: "unstakeGmx" },
-  esGMX: { stake: "stakeEsGmx", unstake: "unstakeEsGmx" },
+  HFDX: { stake: "stakeGmx", unstake: "unstakeGmx" },
+  esHFDX: { stake: "stakeEsGmx", unstake: "unstakeEsGmx" },
 };
 
 export function StakeModal(props: {
@@ -378,10 +378,10 @@ export function StakeModal(props: {
         )}
 
         {activeTab === "stake" && isUndelegatedGovToken ? (
-          <AlertInfo type="warning" className={cx("DelegateGMXAlertInfo")} textColor="text-yellow-300">
+          <AlertInfo type="warning" className={cx("DelegateHFDXAlertInfo")} textColor="text-yellow-300">
             <Trans>
-              <ExternalLink href={GMX_DAO_LINKS.VOTING_POWER} className="display-inline">
-                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} GMX DAO
+              <ExternalLink href={HFDX_DAO_LINKS.VOTING_POWER} className="display-inline">
+                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} HFDX DAO
               </ExternalLink>{" "}
               voting power before staking.
             </Trans>

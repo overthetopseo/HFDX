@@ -84,13 +84,13 @@ export function GmCard() {
                 </div>
                 <div className="h-32">
                   <Button size="small" variant="secondary" to="/pools">
-                    <img src={currentIcons.gm} width="16" alt="GMX Icon" />
+                    <img src={currentIcons.gm} width="16" alt="HFDX Icon" />
                     <Trans>Buy GM</Trans>
                   </Button>
                 </div>
               </div>
               <div className="text-13 text-typography-secondary">
-                GM is the liquidity provider token for GMX V2 markets. Accrues 63% of the V2 markets generated fees.
+                GM is the liquidity provider token for HFDX V2 markets. Accrues 63% of the V2 markets generated fees.
               </div>
             </AppCardSection>
             <AppCardSection>

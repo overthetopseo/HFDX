@@ -92,7 +92,7 @@ function DepthChartContainer() {
       <ColorfulBanner color="blue">
         <span>
           <Trans>
-            This simulated depth chart offers a hypothetical orderbook-style view of GMX liquidity—it's not how trades
+            This simulated depth chart offers a hypothetical orderbook-style view of HFDX liquidity—it's not how trades
             actually execute. Opens always execute at the mark price with zero impact applied, so any shown execution
             price for opening is purely virtual. The actual net price impact, applied only on closes, sums the displayed
             open and close impacts but is capped at 0.5%.{" "}

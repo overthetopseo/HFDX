@@ -1087,7 +1087,7 @@ export const WithdrawalView = () => {
                     >
                       deposit
                     </span>{" "}
-                    more {isOutOfTokenErrorToken?.symbol} to your GMX account.
+                    more {isOutOfTokenErrorToken?.symbol} to your HFDX account.
                   </Trans>
                 </div>
               </AlertInfoCard>
@@ -1152,7 +1152,7 @@ export const WithdrawalView = () => {
             }
           />
           <SyntheticsInfoRow
-            label={<Trans>GMX Balance</Trans>}
+            label={<Trans>HFDX Balance</Trans>}
             value={<ValueTransition from={formatUsd(gmxAccountUsd)} to={formatUsd(nextGmxAccountBalanceUsd)} />}
           />
         </div>

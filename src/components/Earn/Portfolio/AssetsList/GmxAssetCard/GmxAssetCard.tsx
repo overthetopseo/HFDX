@@ -17,13 +17,13 @@ import { PLACEHOLDER_ACCOUNT, StakingProcessedData } from "lib/legacy";
 import { formatAmount, formatUsd } from "lib/numbers";
 import { sendEarnPortfolioItemClickEvent } from "lib/userAnalytics/earnEvents";
 import useWallet from "lib/wallets/useWallet";
-import { BuyGmxModal } from "pages/BuyGMX/BuyGmxModal";
+import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
 import { bigMath } from "sdk/utils/bigmath";
 
 import { AmountWithUsdBalance } from "components/AmountWithUsd/AmountWithUsd";
 import Button from "components/Button/Button";
 import { VestModal } from "components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal";
-import GMXAprTooltip from "components/Stake/GMXAprTooltip";
+import HFDXAprTooltip from "components/Stake/HFDXAprTooltip";
 import { SyntheticsInfoRow } from "components/SyntheticsInfoRow";
 import Tooltip from "components/Tooltip/Tooltip";
 
@@ -37,7 +37,7 @@ import esGmxIcon from "img/tokens/ic_esgmx.svg";
 import gmxIcon from "img/tokens/ic_gmx.svg";
 
 import { BaseAssetCard } from "../BaseAssetCard";
-import { GMX_DAO_LINKS } from "./constants";
+import { HFDX_DAO_LINKS } from "./constants";
 import { StakeModal, StakeModalTabConfig } from "./StakeModal";
 
 export function GmxAssetCard({
@@ -63,8 +63,8 @@ export function GmxAssetCard({
   const rewardRouterAddress = getContract(chainId, "RewardRouter");
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");
   const feeGmxTrackerAddress = getContract(chainId, "FeeGmxTracker");
-  const gmxAddress = getContract(chainId, "GMX");
-  const esGmxAddress = getContract(chainId, "ES_GMX");
+  const gmxAddress = getContract(chainId, "HFDX");
+  const esGmxAddress = getContract(chainId, "ES_HFDX");
 
   const shouldFetchSbfGmx = chainId !== undefined && feeGmxTrackerAddress !== zeroAddress;
   const { data: sbfGmxBalance } = useSWR<bigint>(
@@ -93,8 +93,8 @@ export function GmxAssetCard({
     return reserved > 0n ? reserved : 0n;
   }, [processedData?.esGmxInStakedGmx, processedData?.gmxInStakedGmx, sbfGmxBalance]);
 
-  const stakeTokenSymbol = esGmx ? "esGMX" : "GMX";
-  const title = esGmx ? "esGMX" : "GMX";
+  const stakeTokenSymbol = esGmx ? "esHFDX" : "HFDX";
+  const title = esGmx ? "esHFDX" : "HFDX";
   const icon = esGmx ? esGmxIcon : gmxIcon;
   const balanceAmount = esGmx ? processedData?.esGmxBalance : processedData?.gmxBalance;
   const balanceUsd = esGmx ? processedData?.esGmxBalanceUsd : processedData?.gmxBalanceUsd;
@@ -115,7 +115,7 @@ export function GmxAssetCard({
     return bigMath.min(stakedAmount, sbfGmxBalance);
   }, [sbfGmxBalance, stakedAmount]);
 
-  const itemToken = esGmx ? "esGMX" : "GMX";
+  const itemToken = esGmx ? "esHFDX" : "HFDX";
 
   const handleOpenStakeModal = () => {
     sendEarnPortfolioItemClickEvent({ item: itemToken, type: "stake" });
@@ -153,7 +153,7 @@ export function GmxAssetCard({
         position="bottom-end"
         handle={aprHandle}
         renderContent={() => (
-          <GMXAprTooltip processedData={processedData} nativeTokenSymbol={nativeTokenSymbol} isUserConnected={active} />
+          <HFDXAprTooltip processedData={processedData} nativeTokenSymbol={nativeTokenSymbol} isUserConnected={active} />
         )}
       />
     );
@@ -187,7 +187,7 @@ export function GmxAssetCard({
           <div className={cx("grid w-full grid-cols-2 gap-8", { "grid-cols-3": esGmx })}>
             <Button variant="secondary" onClick={handleOpenBuyModal} className="whitespace-nowrap">
               <PlusCircleIcon className="size-16 shrink-0" />
-              <Trans>Buy GMX</Trans>
+              <Trans>Buy HFDX</Trans>
             </Button>
             <Button variant="secondary" onClick={handleOpenStakeModal}>
               <DownloadIcon className="size-16 shrink-0" />
@@ -271,7 +271,7 @@ function GmxAssetCardOptionsDropdown() {
         >
           <Menu.Item>
             {() => (
-              <a href={GMX_DAO_LINKS.VOTING_POWER} target="_blank" rel="noopener noreferrer" className="menu-item">
+              <a href={HFDX_DAO_LINKS.VOTING_POWER} target="_blank" rel="noopener noreferrer" className="menu-item">
                 <ShareIcon className="size-16" />
                 <p>
                   <Trans>Delegate</Trans>

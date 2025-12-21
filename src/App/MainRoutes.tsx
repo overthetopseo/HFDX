@@ -11,7 +11,7 @@ import { buildAccountDashboardUrl } from "pages/AccountDashboard/buildAccountDas
 import BeginAccountTransfer from "pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer";
 import CompleteAccountTransfer from "pages/AccountTransfer/CompleteAccountTransfer/CompleteAccountTransfer";
 import { AccountsRouter } from "pages/Actions/ActionsRouter";
-import BuyGMX from "pages/BuyGMX/BuyGMX";
+import BuyHFDX from "pages/BuyHFDX/BuyHFDX";
 import DashboardV2 from "pages/Dashboard/DashboardV2";
 import EarnAdditionalOpportunitiesPage from "pages/Earn/EarnAdditionalOpportunitiesPage";
 import EarnDiscoveryPage from "pages/Earn/EarnDiscoveryPage";
@@ -164,7 +164,7 @@ export function MainRoutes({ openSettings }: { openSettings: () => void }) {
         <Jobs />
       </Route>
       <Route exact path="/buy_gmx">
-        <BuyGMX />
+        <BuyHFDX />
       </Route>
       <Route exact path="/ecosystem">
         <Ecosystem />

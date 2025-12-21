@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 import { useMemo } from "react";
 import useSWR from "swr";
 
-import { GMX_STATS_API_URL } from "config/backend";
+import { HFDX_STATS_API_URL } from "config/backend";
 import { USD_DECIMALS } from "config/factors";
 import { chainlinkClient } from "lib/indexers/clients";
 import { CHART_PERIODS } from "lib/legacy";
@@ -71,7 +71,7 @@ export async function getChartPricesFromStats(
 
   const timeDiff = CHART_PERIODS[period] * 3000;
   const from = Math.floor(Date.now() / 1000 - timeDiff);
-  const url = `${GMX_STATS_API_URL}/candles/${symbol}?preferableChainId=${chainId}&period=${period}&from=${from}&preferableSource=fast`;
+  const url = `${HFDX_STATS_API_URL}/candles/${symbol}?preferableChainId=${chainId}&period=${period}&from=${from}&preferableSource=fast`;
 
   const TIMEOUT = 5000;
   const res: Response = await new Promise(async (resolve, reject) => {

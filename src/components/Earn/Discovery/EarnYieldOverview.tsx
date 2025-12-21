@@ -17,7 +17,7 @@ import { useBreakpoints } from "lib/useBreakpoints";
 import { sendEarnRecommendationClickedEvent } from "lib/userAnalytics/earnEvents";
 import { switchNetwork } from "lib/wallets";
 import useWallet from "lib/wallets/useWallet";
-import { BuyGmxModal } from "pages/BuyGMX/BuyGmxModal";
+import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
 
 import APRLabel from "components/APRLabel/APRLabel";
 import Tabs from "components/Tabs/Tabs";
@@ -106,7 +106,7 @@ function YieldMetric({
 }
 
 type YieldRowProps = {
-  token: "GMX" | "GLV" | "GM";
+  token: "HFDX" | "GLV" | "GM";
   metric: ReactNode;
   to?: string;
   disabled?: boolean;
@@ -115,7 +115,7 @@ type YieldRowProps = {
 };
 
 const ASSET_ICONS: Record<YieldRowProps["token"], string> = {
-  GMX: gmxIcon,
+  HFDX: gmxIcon,
   GLV: glvIcon,
   GM: gmIcon,
 };
@@ -229,9 +229,9 @@ export default function EarnYieldOverview() {
 
   const hasGmxHoldings = useMemo(
     () =>
-      hasTokenBalance(arbitrumTokens.tokensData, "GMX") ||
-      hasTokenBalance(avalancheTokens.tokensData, "GMX") ||
-      hasTokenBalance(botanixTokens.tokensData, "GMX"),
+      hasTokenBalance(arbitrumTokens.tokensData, "HFDX") ||
+      hasTokenBalance(avalancheTokens.tokensData, "HFDX") ||
+      hasTokenBalance(botanixTokens.tokensData, "HFDX"),
     [arbitrumTokens.tokensData, avalancheTokens.tokensData, botanixTokens.tokensData]
   );
 
@@ -266,11 +266,11 @@ export default function EarnYieldOverview() {
         rows: [
           <YieldRow
             key="arb-gmx"
-            token="GMX"
+            token="HFDX"
             onClick={!showGmxLink ? () => setIsBuyGmxModalVisible(true) : undefined}
             to={showGmxLink ? "/earn/portfolio" : undefined}
             chainId={ARBITRUM}
-            metric={<YieldMetric value={<APRLabel chainId={ARBITRUM} label="avgGMXAprTotal" />} suffix="APR" />}
+            metric={<YieldMetric value={<APRLabel chainId={ARBITRUM} label="avgHFDXAprTotal" />} suffix="APR" />}
           />,
           <YieldRow
             key="arb-glv"
@@ -294,11 +294,11 @@ export default function EarnYieldOverview() {
         rows: [
           <YieldRow
             key="avax-gmx"
-            token="GMX"
+            token="HFDX"
             to={showGmxLink ? "/earn/portfolio" : undefined}
             onClick={!showGmxLink ? () => setIsBuyGmxModalVisible(true) : undefined}
             chainId={AVALANCHE}
-            metric={<YieldMetric value={<APRLabel chainId={AVALANCHE} label="avgGMXAprTotal" />} suffix="APR" />}
+            metric={<YieldMetric value={<APRLabel chainId={AVALANCHE} label="avgHFDXAprTotal" />} suffix="APR" />}
           />,
           <YieldRow
             key="avax-glv"
@@ -322,7 +322,7 @@ export default function EarnYieldOverview() {
         rows: [
           <YieldRow
             key="botanix-gmx"
-            token="GMX"
+            token="HFDX"
             disabled
             chainId={BOTANIX}
             metric={
@@ -331,7 +331,7 @@ export default function EarnYieldOverview() {
                 suffix=""
                 tooltip={
                   <Trans>
-                    Staking GMX is currently not supported on Botanix. For access to these features, please visit the
+                    Staking HFDX is currently not supported on Botanix. For access to these features, please visit the
                     Arbitrum and Avalanche deployments.
                   </Trans>
                 }

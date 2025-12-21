@@ -22,11 +22,11 @@ export default function SyntheticsActions() {
         <div className="Actions-title">
           <PageTitle
             isTop
-            title={t`GMX V2 Actions`}
+            title={t`HFDX V2 Actions`}
             subtitle={
               <>
                 <Trans>
-                  GMX {VERSION_NAME} {networkName} actions for all accounts.
+                  HFDX {VERSION_NAME} {networkName} actions for all accounts.
                 </Trans>
                 <VersionNetworkSwitcherRow chainId={chainId} version={2} />
               </>

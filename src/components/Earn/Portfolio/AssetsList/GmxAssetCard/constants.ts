@@ -1,4 +1,4 @@
-export const GMX_DAO_LINKS = {
+export const HFDX_DAO_LINKS = {
   VOTING_POWER: "https://www.tally.xyz/gov/gmx/my-voting-power",
   DELEGATES: "https://www.tally.xyz/gov/gmx/delegates",
 };

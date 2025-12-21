@@ -27,7 +27,7 @@ import { SwitchToSettlementChainButtons } from "components/SwitchToSettlementCha
 import { SwitchToSettlementChainWarning } from "components/SwitchToSettlementChain/SwitchToSettlementChainWarning";
 import TokenIcon from "components/TokenIcon/TokenIcon";
 
-import { GMX_DAO_LINKS } from "./constants";
+import { HFDX_DAO_LINKS } from "./constants";
 
 export function ClaimModal(props: {
   isVisible: boolean;
@@ -92,7 +92,7 @@ export function ClaimModal(props: {
   const isUndelegatedGovToken =
     chainId === ARBITRUM && govTokenDelegatesAddress === NATIVE_TOKEN_ADDRESS && govTokenAmount && govTokenAmount > 0;
 
-  const gmxAddress = getContract(chainId, "GMX");
+  const gmxAddress = getContract(chainId, "HFDX");
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");
 
   const [isApproving, setIsApproving] = useState(false);
@@ -133,7 +133,7 @@ export function ClaimModal(props: {
       return <Trans>Select rewards to claim</Trans>;
     }
     if (needApproval || isApproving) {
-      return <Trans>Pending GMX approval</Trans>;
+      return <Trans>Pending HFDX approval</Trans>;
     }
     if (isClaiming) {
       return <Trans>Claiming...</Trans>;
@@ -245,20 +245,20 @@ export function ClaimModal(props: {
     >
       <div className="flex flex-col gap-12 pb-20 ">
         <ClaimRewardOption
-          tokenSymbol="GMX"
+          tokenSymbol="HFDX"
           amount={totalGmxRewards}
           amountDecimals={18}
-          amountSymbol="GMX"
+          amountSymbol="HFDX"
           primaryChecked={shouldClaimGmx}
           setPrimaryChecked={setShouldClaimGmx}
           secondaryChecked={shouldStakeGmx}
           setSecondaryChecked={toggleShouldStakeGmx}
         />
         <ClaimRewardOption
-          tokenSymbol="esGMX"
+          tokenSymbol="esHFDX"
           amount={totalEsGmxRewards}
           amountDecimals={18}
-          amountSymbol="esGMX"
+          amountSymbol="esHFDX"
           primaryChecked={shouldClaimEsGmx}
           setPrimaryChecked={setShouldClaimEsGmx}
           secondaryChecked={shouldStakeEsGmx}
@@ -284,16 +284,16 @@ export function ClaimModal(props: {
           <ApproveTokenButton
             tokenAddress={gmxAddress}
             spenderAddress={stakedGmxTrackerAddress}
-            tokenSymbol={"GMX"}
+            tokenSymbol={"HFDX"}
             isApproved={!needApproval}
           />
         </div>
       )}
       {isUndelegatedGovToken ? (
-        <AlertInfo type="warning" className={cx("DelegateGMXAlertInfo")} textColor="text-yellow-300">
+        <AlertInfo type="warning" className={cx("DelegateHFDXAlertInfo")} textColor="text-yellow-300">
           <Trans>
-            <ExternalLink href={GMX_DAO_LINKS.VOTING_POWER} className="display-inline">
-              Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} GMX DAO
+            <ExternalLink href={HFDX_DAO_LINKS.VOTING_POWER} className="display-inline">
+              Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} HFDX DAO
             </ExternalLink>
             voting power before claiming.
           </Trans>

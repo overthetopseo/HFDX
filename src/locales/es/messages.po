@@ -49,7 +49,7 @@ msgstr "Protocolo de Trading Descentralizado"
 msgid "STIP.b Trading Incentives"
 msgstr "Incentivos de Trading STIP.b"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "You can transfer {nativeTokenSymbol} from other networks to {chainName} using any of the below options:"
 msgstr "Puedes transferir {nativeTokenSymbol} desde otras redes a {chainName} utilizando cualquiera de las opciones a continuación:"
 
@@ -74,8 +74,8 @@ msgid "receive"
 msgstr "recibir"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Referrals Dashboard"
-msgstr "Panel de Referidos GMX"
+msgid "HFDX Referrals Dashboard"
+msgstr "Panel de Referidos HFDX"
 
 #: src/components/PositionEditor/usePositionEditorButtonState.tsx
 msgid "Decrease the withdraw size to match the max. <0>Read more</0>.<1/><2/><3>Set max withdrawal</3>"
@@ -114,8 +114,8 @@ msgid "Claim {tokenSymbol} Rewards"
 msgstr ""
 
 #: src/components/UserIncentiveDistribution/AboutGlpIncident.tsx
-msgid "earns fees from providing liquidity to multiple GMX V2 markets"
-msgstr "gana tarifas por proporcionar liquidez a múltiples mercados de GMX V2"
+msgid "earns fees from providing liquidity to multiple HFDX V2 markets"
+msgstr "gana tarifas por proporcionar liquidez a múltiples mercados de HFDX V2"
 
 #: src/components/TradeHistory/keys.ts
 msgid "Create TWAP Swap"
@@ -154,7 +154,7 @@ msgid "Type"
 msgstr "Tipo"
 
 #: src/components/Earn/Portfolio/RewardsBar.tsx
-msgid "esGMX Rewards:"
+msgid "esHFDX Rewards:"
 msgstr ""
 
 #: src/components/Errors/errorToasts.tsx
@@ -196,8 +196,8 @@ msgid "Performance"
 msgstr "Rendimiento"
 
 #: src/components/GmList/PerformanceLabel.tsx
-msgid "Annualized return of the pool or vault over the selected period, compared to a benchmark that follows Uniswap V2–style rebalancing of the backing tokens in the same GM pool or GLV vault.<0/><1/>Annualized figures based on short periods may be distorted by short-term volatility.<2/><3/>For detailed stats and comparisons, see the <4>GMX V2 LP Dashboard</4>."
-msgstr "Rendimiento anualizado de la reserva o bóveda durante el período seleccionado, comparado con un benchmark que sigue el rebalanceo estilo Uniswap V2 de los tokens de respaldo en la misma reserva GM o bóveda GLV.<0/><1/>Las cifras anualizadas basadas en períodos cortos pueden distorsionarse por volatilidad a corto plazo.<2/><3/>Para estadísticas detalladas y comparaciones, consulta el <4>Panel GMX V2 LP</4>."
+msgid "Annualized return of the pool or vault over the selected period, compared to a benchmark that follows Uniswap V2–style rebalancing of the backing tokens in the same GM pool or GLV vault.<0/><1/>Annualized figures based on short periods may be distorted by short-term volatility.<2/><3/>For detailed stats and comparisons, see the <4>HFDX V2 LP Dashboard</4>."
+msgstr "Rendimiento anualizado de la reserva o bóveda durante el período seleccionado, comparado con un benchmark que sigue el rebalanceo estilo Uniswap V2 de los tokens de respaldo en la misma reserva GM o bóveda GLV.<0/><1/>Las cifras anualizadas basadas en períodos cortos pueden distorsionarse por volatilidad a corto plazo.<2/><3/>Para estadísticas detalladas y comparaciones, consulta el <4>Panel HFDX V2 LP</4>."
 
 #: src/components/TradeHistory/TradeHistory.tsx
 msgid "Realized PnL after fees and net price impact."
@@ -231,8 +231,8 @@ msgid "Note that there may be rare cases where the order cannot be executed, for
 msgstr "Ten en cuenta que puede haber casos raros en los que la orden no se pueda ejecutar, por ejemplo, si la cadena está caída y no se producen informes de oráculo o si no hay suficiente liquidez disponible."
 
 #: src/components/GmList/GmList.tsx
-msgid "Pools providing liquidity to specific GMX markets, supporting <0/> single-asset and native asset options."
-msgstr "Pools que proporcionan liquidez a mercados específicos de GMX, soportando <0/> opciones de activo único y activo nativo."
+msgid "Pools providing liquidity to specific HFDX markets, supporting <0/> single-asset and native asset options."
+msgstr "Pools que proporcionan liquidez a mercados específicos de HFDX, soportando <0/> opciones de activo único y activo nativo."
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
 msgid "In progress"
@@ -318,8 +318,8 @@ msgid "What is GLV?"
 msgstr ""
 
 #: src/components/TokenSelector/MultichainTokenSelector.tsx
-msgid "To begin trading on GMX deposit assets into GMX account."
-msgstr "Para comenzar a operar en GMX, deposita activos en la cuenta de GMX."
+msgid "To begin trading on HFDX deposit assets into HFDX account."
+msgstr "Para comenzar a operar en HFDX, deposita activos en la cuenta de HFDX."
 
 #: src/components/SettingsModal/TradingSettings.tsx
 msgid "TWAP Number of Parts"
@@ -330,7 +330,7 @@ msgid "The mark price has changed, consider increasing your allowed slippage by 
 msgstr "El precio de marca ha cambiado, considera aumentar tu slippage permitido haciendo clic en el icono \"...\" junto a tu dirección."
 
 #: src/components/GmxAccountModal/DepositStatusView.tsx
-msgid "Funds will appear in your GMX Account soon."
+msgid "Funds will appear in your HFDX Account soon."
 msgstr ""
 
 #: src/pages/NftWallet/NftWallet.jsx
@@ -449,7 +449,7 @@ msgid "Positions"
 msgstr "Posiciones"
 
 #: src/components/Earn/Discovery/EarnProductCard.tsx
-msgid "The GMX token serves as the governance token of the GMX protocol, and unlocks benefits for users. By staking GMX, you earn continuous rewards: a share of the revenue generated by the trading platform."
+msgid "The HFDX token serves as the governance token of the HFDX protocol, and unlocks benefits for users. By staking HFDX, you earn continuous rewards: a share of the revenue generated by the trading platform."
 msgstr ""
 
 #: src/domain/synthetics/trade/utils/validation.ts
@@ -461,8 +461,8 @@ msgid "Expand"
 msgstr "Expandir"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0>Tried <1>@GMX_IO</1> for the first time. </0><2> Pretty impressive experience - no slippage, fast execution </2><3> Low size caps, but fun to do some degen gambling with </3>"
-msgstr "<0>Probé <1>@GMX_IO</1> por primera vez. </0><2> Experiencia bastante impresionante - sin slippage, ejecución rápida </2><3> Límites de tamaño bajos, pero divertido para hacer apuestas degen </3>"
+msgid "<0>Tried <1>@HFDX_IO</1> for the first time. </0><2> Pretty impressive experience - no slippage, fast execution </2><3> Low size caps, but fun to do some degen gambling with </3>"
+msgstr "<0>Probé <1>@HFDX_IO</1> por primera vez. </0><2> Experiencia bastante impresionante - sin slippage, ejecución rápida </2><3> Límites de tamaño bajos, pero divertido para hacer apuestas degen </3>"
 
 #: src/components/Errors/errorToasts.tsx
 msgid "Transaction failed due to RPC error.<0/><1/>Please enable <2>Express trading</2> under settings, which should offer a better experience."
@@ -533,8 +533,8 @@ msgid "Realized PnL"
 msgstr "PnL Realizado"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX V2 Data Analytics within Telegram"
-msgstr "Análisis de Datos GMX V2 dentro de Telegram"
+msgid "HFDX V2 Data Analytics within Telegram"
+msgstr "Análisis de Datos HFDX V2 dentro de Telegram"
 
 #: src/components/HighPriceImpactOrFeesWarningCard/HighPriceImpactOrFeesWarningCard.tsx
 msgid "High external swap impact"
@@ -547,8 +547,8 @@ msgstr "Agregando"
 
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/useGmSwapSubmitState.tsx
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/useGmSwapSubmitState.tsx
-msgid "{0} balance in GMX account is insufficient to cover gas fees and input amount"
-msgstr "El saldo de {0} en la cuenta GMX es insuficiente para cubrir las tarifas de gas y el monto ingresado"
+msgid "{0} balance in HFDX account is insufficient to cover gas fees and input amount"
+msgstr "El saldo de {0} en la cuenta HFDX es insuficiente para cubrir las tarifas de gas y el monto ingresado"
 
 #: landing/src/pages/Home/HeroSection/AnimatedTitle.tsx
 msgid "90+ crypto tokens"
@@ -585,7 +585,7 @@ msgstr "Historial de Operaciones"
 msgid "GM Pools:"
 msgstr ""
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "Buy {nativeTokenSymbol} directly on {chainName} or transfer it there."
 msgstr "Compra {nativeTokenSymbol} directamente en {chainName} o transfiérelo allí."
 
@@ -698,7 +698,7 @@ msgid "{typeString} Long Stop Market: {0} a short position when the price is bel
 msgstr "{typeString} Mercado Stop Largo: {0} una posición corta cuando el precio está por debajo del precio de activación."
 
 #: src/components/Earn/Discovery/EarnFaq.tsx
-msgid "GLV and GM both enable liquidity provision on GMX, allowing users to earn fees from three revenue sources that auto-compound into the token's price. GM tokens represent liquidity in a single pool that supports one specific market on GMX. GLV vaults contain multiple GM tokens in an auto-rebalancing composition, thereby aggregating liquidity across various markets that have the same backing tokens (ex: ETH-USDC, or BTC-USDC). GM enables users to provide isolated liquidity with exposure to a specific market, while GLV allows users to passively earn yield from a diverse range of highly utilized pools."
+msgid "GLV and GM both enable liquidity provision on HFDX, allowing users to earn fees from three revenue sources that auto-compound into the token's price. GM tokens represent liquidity in a single pool that supports one specific market on HFDX. GLV vaults contain multiple GM tokens in an auto-rebalancing composition, thereby aggregating liquidity across various markets that have the same backing tokens (ex: ETH-USDC, or BTC-USDC). GM enables users to provide isolated liquidity with exposure to a specific market, while GLV allows users to passively earn yield from a diverse range of highly utilized pools."
 msgstr ""
 
 #: src/components/OrderEditor/OrderEditor.tsx
@@ -737,9 +737,9 @@ msgstr "Buscar Token"
 msgid "DeltaPrime"
 msgstr "DeltaPrime"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX using Decentralized Exchange Aggregators:"
-msgstr "Compra GMX usando Agregadores de Exchanges Descentralizados:"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX using Decentralized Exchange Aggregators:"
+msgstr "Compra HFDX usando Agregadores de Exchanges Descentralizados:"
 
 #: src/components/TradeHistory/TradeHistoryRow/utils/position.ts
 msgid "Min. Required Collateral"
@@ -890,7 +890,7 @@ msgstr ""
 msgid "MAX"
 msgstr "MÁX"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "No centralized exchanges available for this network."
 msgstr "No hay exchanges centralizados disponibles para esta red."
 
@@ -943,8 +943,8 @@ msgid "Rewards"
 msgstr "Recompensas"
 
 #: landing/src/pages/Home/SolanaRedirectModal/SolanaRedirectModal.tsx
-msgid "You're about to navigate to GMX Solana, which is operated by a separate team, so the experience may vary slightly."
-msgstr "Estás a punto de navegar a GMX Solana, que es operado por un equipo separado, por lo que la experiencia puede variar ligeramente."
+msgid "You're about to navigate to HFDX Solana, which is operated by a separate team, so the experience may vary slightly."
+msgstr "Estás a punto de navegar a HFDX Solana, que es operado por un equipo separado, por lo que la experiencia puede variar ligeramente."
 
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/GmDepositWithdrawalBox.tsx
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/GmDepositWithdrawalBox.tsx
@@ -970,8 +970,8 @@ msgid "Solana"
 msgstr "Solana"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Governance Page"
-msgstr "Página de Gobernanza GMX"
+msgid "HFDX Governance Page"
+msgstr "Página de Gobernanza HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Decentralized Money Market"
@@ -983,8 +983,8 @@ msgid "Stop Price"
 msgstr "Precio Stop"
 
 #: src/components/BotanixBanner/BotanixBanner.tsx
-msgid "using GLV and GM tokens. Buying or staking GMX, or using referrals, is not supported at this time."
-msgstr "usando tokens GLV y GM. Comprar o stakear GMX, o usar referidos, no está soportado en este momento."
+msgid "using GLV and GM tokens. Buying or staking HFDX, or using referrals, is not supported at this time."
+msgstr "usando tokens GLV y GM. Comprar o stakear HFDX, o usar referidos, no está soportado en este momento."
 
 #: src/components/OrderEditor/OrderEditor.tsx
 msgid "As network fees have increased, an additional network fee is needed."
@@ -1003,16 +1003,16 @@ msgid "Asset Management"
 msgstr "Gestión de Activos"
 
 #: src/pages/Actions/SyntheticsActions.tsx
-msgid "GMX {VERSION_NAME} {networkName} actions for all accounts."
-msgstr "Acciones GMX {VERSION_NAME} {networkName} para todas las cuentas."
+msgid "HFDX {VERSION_NAME} {networkName} actions for all accounts."
+msgstr "Acciones HFDX {VERSION_NAME} {networkName} para todas las cuentas."
 
 #: src/pages/Ecosystem/Ecosystem.tsx
-msgid "GMX uses TradingView to provide real-time cryptocurrency charts, so you can easily follow <0>BTCUSD</0> price in real-time, along with other currency pair rates. The interactive charts offer advanced tools and a user-friendly interface for easier market analysis and decision-making."
-msgstr "GMX usa TradingView para proporcionar gráficos de criptomonedas en tiempo real, para que puedas seguir fácilmente el precio <0>BTCUSD</0> en tiempo real, junto con otras tasas de pares de monedas. Los gráficos interactivos ofrecen herramientas avanzadas y una interfaz amigable para un análisis de mercado y toma de decisiones más fácil."
+msgid "HFDX uses TradingView to provide real-time cryptocurrency charts, so you can easily follow <0>BTCUSD</0> price in real-time, along with other currency pair rates. The interactive charts offer advanced tools and a user-friendly interface for easier market analysis and decision-making."
+msgstr "HFDX usa TradingView para proporcionar gráficos de criptomonedas en tiempo real, para que puedas seguir fácilmente el precio <0>BTCUSD</0> en tiempo real, junto con otras tasas de pares de monedas. Los gráficos interactivos ofrecen herramientas avanzadas y una interfaz amigable para un análisis de mercado y toma de decisiones más fácil."
 
 #: src/components/Referrals/TradersStats.tsx
-msgid "GMX V2 Rebates are automatically applied as fee discounts on each trade and are not displayed on this table."
-msgstr "Los Reembolsos de GMX V2 se aplican automáticamente como descuentos en tarifas en cada operación y no se muestran en esta tabla."
+msgid "HFDX V2 Rebates are automatically applied as fee discounts on each trade and are not displayed on this table."
+msgstr "Los Reembolsos de HFDX V2 se aplican automáticamente como descuentos en tarifas en cada operación y no se muestran en esta tabla."
 
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/useGmSwapSubmitState.tsx
 msgid "Buy {operationTokenSymbol}"
@@ -1032,12 +1032,12 @@ msgid "Average leverage used."
 msgstr "Apalancamiento promedio utilizado."
 
 #: src/components/Earn/Discovery/EarnDocumentation.tsx
-msgid "GMX Rewards"
+msgid "HFDX Rewards"
 msgstr ""
 
 #: src/components/InterviewModal/InterviewModal.tsx
-msgid "We want your insights to help improve GMX for Liquidity Providers. For security reasons, we won't contact you first. Please send the message \"I’m a Liquidity Provider\" to our official telegram account:"
-msgstr "Queremos tus insights para ayudar a mejorar GMX para Proveedores de Liquidez. Por razones de seguridad, no te contactaremos primero. Por favor, envía el mensaje \"Soy un Proveedor de Liquidez\" a nuestra cuenta oficial de Telegram:"
+msgid "We want your insights to help improve HFDX for Liquidity Providers. For security reasons, we won't contact you first. Please send the message \"I’m a Liquidity Provider\" to our official telegram account:"
+msgstr "Queremos tus insights para ayudar a mejorar HFDX para Proveedores de Liquidez. Por razones de seguridad, no te contactaremos primero. Por favor, envía el mensaje \"Soy un Proveedor de Liquidez\" a nuestra cuenta oficial de Telegram:"
 
 #: src/components/NetworkFeeRow/NetworkFeeRow.tsx
 msgid "The max network fee is overestimated, including by the buffer set under settings. Upon execution, any excess network fee is sent back to your account."
@@ -1074,8 +1074,8 @@ msgid "Trigger Orders"
 msgstr "Órdenes de Activación"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX fundamentals"
-msgstr "Fundamentales de GMX"
+msgid "HFDX fundamentals"
+msgstr "Fundamentales de HFDX"
 
 #: landing/src/pages/Home/LeaveHomepageRedirectModal/LeaveHompageRedirectModal.tsx
 msgid "Alternative links can be found in the <0>docs</0>. By clicking Agree you accept the <1>T&Cs</1> and <2>Referral T&Cs</2>."
@@ -1103,15 +1103,15 @@ msgid "Estimated Fee Refund"
 msgstr "Reembolso de Comisión Estimado"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Swaps"
-msgstr "Intercambios GMX"
+msgid "HFDX Swaps"
+msgstr "Intercambios HFDX"
 
 #: src/context/SubaccountContext/SubaccountContextProvider.tsx
 msgid "Deactivating..."
 msgstr "Desactivando..."
 
 #: src/components/Earn/Discovery/EarnFaq.tsx
-msgid "GMX staking rewards are generated through a 'buyback and distribute' process. GMX tokens are purchased on the open market using the revenue generated by the protocol. These tokens are then distributed back to stakers. No new GMX tokens are minted during this process."
+msgid "HFDX staking rewards are generated through a 'buyback and distribute' process. HFDX tokens are purchased on the open market using the revenue generated by the protocol. These tokens are then distributed back to stakers. No new HFDX tokens are minted during this process."
 msgstr ""
 
 #: landing/src/pages/Home/HeaderMenu/HeaderMenu.tsx
@@ -1158,7 +1158,7 @@ msgid "Start Earning"
 msgstr "Comienza a Ganar"
 
 #: src/components/TVChart/Chart.tsx
-msgid "This simulated depth chart offers a hypothetical orderbook-style view of GMX liquidity—it's not how trades actually execute. Opens always execute at the mark price with zero impact applied, so any shown execution price for opening is purely virtual. The actual net price impact, applied only on closes, sums the displayed open and close impacts but is capped at 0.5%. <0>Read more</0>."
+msgid "This simulated depth chart offers a hypothetical orderbook-style view of HFDX liquidity—it's not how trades actually execute. Opens always execute at the mark price with zero impact applied, so any shown execution price for opening is purely virtual. The actual net price impact, applied only on closes, sums the displayed open and close impacts but is capped at 0.5%. <0>Read more</0>."
 msgstr ""
 
 #: src/components/PositionItem/PositionItem.tsx
@@ -1206,8 +1206,8 @@ msgstr "Copiado"
 
 #: src/components/GmxAccountModal/GmxAccountModal.tsx
 #: src/components/GmxAccountModal/GmxAccountModal.tsx
-msgid "Deposit to GMX Account"
-msgstr "Depositar en Cuenta GMX"
+msgid "Deposit to HFDX Account"
+msgstr "Depositar en Cuenta HFDX"
 
 #: src/components/SettingsModal/SettingsModal.tsx
 msgid "Invalid TWAP number of parts value"
@@ -1232,8 +1232,8 @@ msgid "Markets"
 msgstr "Mercados"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Real-time rants about GMX Trades"
-msgstr "Rants en tiempo real sobre Operaciones GMX"
+msgid "Real-time rants about HFDX Trades"
+msgstr "Rants en tiempo real sobre Operaciones HFDX"
 
 #: src/pages/LeaderboardPage/components/LeaderboardPositionsTable.tsx
 msgid "The total realized and unrealized profit and loss for the period, considering price impact and fees but excluding swap fees."
@@ -1309,7 +1309,7 @@ msgid "Market - Long Inc."
 msgstr "Mercado - Long Inc."
 
 #: src/components/GmxAccountModal/DepositStatusView.tsx
-msgid "Funds are now in your GMX Account."
+msgid "Funds are now in your HFDX Account."
 msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.tsx
@@ -1334,8 +1334,8 @@ msgid "TWAP Swap"
 msgstr "Intercambio TWAP"
 
 #: src/pages/Dashboard/DashboardPageTitle.tsx
-msgid "GM is the liquidity provider token for GMX V2 markets. Accrues 63% of the V2 markets generated fees."
-msgstr "GM es el token de proveedor de liquidez para mercados GMX V2. Acumula 63% de las comisiones generadas por mercados V2."
+msgid "GM is the liquidity provider token for HFDX V2 markets. Accrues 63% of the V2 markets generated fees."
+msgstr "GM es el token de proveedor de liquidez para mercados HFDX V2. Acumula 63% de las comisiones generadas por mercados V2."
 
 #: src/components/AcceptablePriceImpactInputRow/AcceptablePriceImpactInputRow.tsx
 msgid "The current price impact is {0}. Consider adding a buffer of 0.30% to it so the order is more likely to be processed."
@@ -1401,8 +1401,8 @@ msgid "Page not found"
 msgstr "Página no encontrada"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Telegram bot for GMX position updates"
-msgstr "Bot de Telegram para actualización de posiciones GMX"
+msgid "Telegram bot for HFDX position updates"
+msgstr "Bot de Telegram para actualización de posiciones HFDX"
 
 #: src/pages/LeaderboardPage/components/LeaderboardNavigation.tsx
 #: src/pages/LeaderboardPage/components/LeaderboardNavigation.tsx
@@ -1448,8 +1448,8 @@ msgid "The amount you are trying to withdraw exceeds the limit. Please try an am
 msgstr "La cantidad que intentas retirar excede el límite. Por favor, intenta una cantidad menor que <0>{upperLimitFormatted}</0>."
 
 #: src/components/NotifyModal/NotifyModal.tsx
-msgid "Discover GMX Alerts"
-msgstr "Descubre Alertas GMX"
+msgid "Discover HFDX Alerts"
+msgstr "Descubre Alertas HFDX"
 
 #: src/pages/Dashboard/GmxCard.tsx
 msgid "Price on Avalanche"
@@ -1469,8 +1469,8 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardPageTitle.tsx
 #: src/pages/Dashboard/DashboardPageTitle.tsx
-msgid "GMX is the utility and governance token. It also accrues 27% of the protocol fees via a buyback and distribution mechanism."
-msgstr "GMX es el token de utilidad y gobernanza. También acumula el 27% de las tarifas del protocolo a través de un mecanismo de recompra y distribución."
+msgid "HFDX is the utility and governance token. It also accrues 27% of the protocol fees via a buyback and distribution mechanism."
+msgstr "HFDX es el token de utilidad y gobernanza. También acumula el 27% de las tarifas del protocolo a través de un mecanismo de recompra y distribución."
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
 #: src/pages/AccountTransfer/CompleteAccountTransfer/CompleteAccountTransfer.tsx
@@ -1491,8 +1491,8 @@ msgid "Permits Testing"
 msgstr ""
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Announcements and Updates"
-msgstr "Anuncios y Actualizaciones de GMX"
+msgid "HFDX Announcements and Updates"
+msgstr "Anuncios y Actualizaciones de HFDX"
 
 #: src/components/PositionShare/PositionShare.tsx
 #: src/components/SettingsModal/DisplaySettings.tsx
@@ -1554,8 +1554,8 @@ msgid "NFT Wallet"
 msgstr "Monedero NFT"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Proposals Voting page"
-msgstr "Página de votación de propuestas GMX"
+msgid "HFDX Proposals Voting page"
+msgstr "Página de votación de propuestas HFDX"
 
 #: src/components/UserIncentiveDistribution/utils.tsx
 msgid "GLP Reimbursement"
@@ -1596,7 +1596,7 @@ msgid "Withdrawn {balanceFormatted} to main account."
 msgstr "Retirado {balanceFormatted} a cuenta principal."
 
 #: src/components/Earn/Discovery/EarnDocumentation.tsx
-msgid "GMX Token"
+msgid "HFDX Token"
 msgstr ""
 
 #: src/components/ChartTokenSelector/ChartTokenSelector.tsx
@@ -1617,8 +1617,8 @@ msgid "Number of parts must be between {MIN_TWAP_NUMBER_OF_PARTS} and {MAX_TWAP_
 msgstr "El número de partes debe estar entre {MIN_TWAP_NUMBER_OF_PARTS} y {MAX_TWAP_NUMBER_OF_PARTS}"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX (Chinese)"
-msgstr "GMX (Chino)"
+msgid "HFDX (Chinese)"
+msgstr "HFDX (Chino)"
 
 #: src/components/SearchInput/SearchInput.tsx
 #: src/pages/LeaderboardPage/components/LeaderboardContainer.tsx
@@ -1742,12 +1742,12 @@ msgstr "Airdrop V1"
 #: src/components/Earn/Portfolio/RecommendedAssets/RecommendedAssets.tsx
 #: src/components/Earn/Portfolio/RecommendedAssets/RecommendedAssets.tsx
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX"
-msgstr "GMX"
+msgid "HFDX"
+msgstr "HFDX"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from Uniswap or directly on GMX (make sure to select Arbitrum):"
-msgstr "Compra GMX desde Uniswap o directamente en GMX (asegúrate de seleccionar Arbitrum):"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX from Uniswap or directly on HFDX (make sure to select Arbitrum):"
+msgstr "Compra HFDX desde Uniswap o directamente en HFDX (asegúrate de seleccionar Arbitrum):"
 
 #: src/components/ExpressTradingOutOfGasBanner.ts/ExpressTradingOutOfGasBanner.tsx
 #: src/components/TradeBox/ExpressTradingWarningCard.tsx
@@ -1778,15 +1778,15 @@ msgid "Pair"
 msgstr "Par"
 
 #: src/domain/multichain/useMultichainFundingToast.tsx
-msgid "Depositing funds to GMX Account"
-msgstr "Depositando fondos en Cuenta GMX"
+msgid "Depositing funds to HFDX Account"
+msgstr "Depositando fondos en Cuenta HFDX"
 
 #: src/components/SwapCard/SwapCard.tsx
 msgid "Max {0} out"
 msgstr "Máx. {0} fuera"
 
 #: src/components/Earn/Discovery/EarnProductCard.tsx
-msgid "GM tokens represent shares in a liquidity pool for a single GMX market. Buy GM to provide liquidity and earn fees from leverage trading, swaps, and market-making activity on that specific market. All rewards are auto-compounded for you instantly."
+msgid "GM tokens represent shares in a liquidity pool for a single HFDX market. Buy GM to provide liquidity and earn fees from leverage trading, swaps, and market-making activity on that specific market. All rewards are auto-compounded for you instantly."
 msgstr ""
 
 #: src/components/DepthChart/DepthChartTooltip.tsx
@@ -1841,8 +1841,8 @@ msgid "of close fee"
 msgstr "de comisión de cierre"
 
 #: src/components/NotifyModal/NotifyModal.tsx
-msgid "GMX Alerts"
-msgstr "Alertas GMX"
+msgid "HFDX Alerts"
+msgstr "Alertas HFDX"
 
 #: src/components/StatusNotification/FeesSettlementStatusNotification.tsx
 msgid "Settling position fees"
@@ -1874,8 +1874,8 @@ msgid "USD Value may not be accurate since the data does not contain prices for 
 msgstr "Valor USD puede no ser preciso ya que los datos no contienen precios para {0}"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Blueberry Club"
-msgstr "Club Blueberry GMX"
+msgid "HFDX Blueberry Club"
+msgstr "Club Blueberry HFDX"
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal.tsx
 msgid "Withdrawn."
@@ -1987,12 +1987,12 @@ msgid "Est. time: ~5 min"
 msgstr ""
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0>Have to keep an eye on <1>@GMX_IO</1> here. While all of DeFi is in shambles, GMX continues to show impressive sustained performance in users, AUM, volume/fees, open interest, and utilization of capital. Best place to swap between major assets on Arbitrum and exposure to the Arb airdrop</0>"
-msgstr "<0>Hay que vigilar a <1>@GMX_IO</1> aquí. Mientras todo DeFi está en ruinas, GMX continúa mostrando un rendimiento sostenido impresionante en usuarios, AUM, volumen/tarifas, interés abierto y utilización de capital. El mejor lugar para intercambiar entre activos mayores en Arbitrum y exposición al airdrop de Arb</0>"
+msgid "<0>Have to keep an eye on <1>@HFDX_IO</1> here. While all of DeFi is in shambles, HFDX continues to show impressive sustained performance in users, AUM, volume/fees, open interest, and utilization of capital. Best place to swap between major assets on Arbitrum and exposure to the Arb airdrop</0>"
+msgstr "<0>Hay que vigilar a <1>@HFDX_IO</1> aquí. Mientras todo DeFi está en ruinas, HFDX continúa mostrando un rendimiento sostenido impresionante en usuarios, AUM, volumen/tarifas, interés abierto y utilización de capital. El mejor lugar para intercambiar entre activos mayores en Arbitrum y exposición al airdrop de Arb</0>"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX on {chainName}"
-msgstr "Comprar GMX en {chainName}"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX on {chainName}"
+msgstr "Comprar HFDX en {chainName}"
 
 #: src/components/Claims/ClaimsHistory.tsx
 #: src/components/Claims/ClaimsHistory.tsx
@@ -2013,7 +2013,7 @@ msgid "Size"
 msgstr "Tamaño"
 
 #: src/components/Earn/AdditionalOpportunities/useOpportunities.tsx
-msgid "Umami GM vaults enable depositors to provide single-sided liquidity to GMX liquidity pools. Deposits are actively managed through a system of hedges and index rebalancing, optimizing for capital efficiency while minimizing exposure to impermanent loss."
+msgid "Umami GM vaults enable depositors to provide single-sided liquidity to HFDX liquidity pools. Deposits are actively managed through a system of hedges and index rebalancing, optimizing for capital efficiency while minimizing exposure to impermanent loss."
 msgstr ""
 
 #: src/components/InterviewToast/InterviewToast.tsx
@@ -2166,7 +2166,7 @@ msgstr ""
 msgid "Initial collateral (collateral excluding borrow and funding fee)."
 msgstr "Colateral inicial (colateral excluyendo préstamo y tarifa de funding)."
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "No options available to buy {nativeTokenSymbol} directly on {chainName}."
 msgstr "No hay opciones disponibles para comprar {nativeTokenSymbol} directamente en {chainName}."
 
@@ -2213,12 +2213,12 @@ msgid "Net value is the amount held in the position inclusive of PnL, fees and n
 msgstr "El valor neto es la cantidad mantenida en la posición inclusive de PnL, tarifas e impacto de precio neto al cierre."
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Receiver has not staked GMX tokens before"
+msgid "Receiver has not staked HFDX tokens before"
 msgstr ""
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Telegram bot for GMX Swaps monitoring"
-msgstr "Bot de Telegram para monitoreo de Intercambios GMX"
+msgid "Telegram bot for HFDX Swaps monitoring"
+msgstr "Bot de Telegram para monitoreo de Intercambios HFDX"
 
 #: src/components/MarketsList/MarketsList.tsx
 msgid "LIQUIDITY"
@@ -2281,11 +2281,11 @@ msgid "Your transfer has been initiated."
 msgstr ""
 
 #: src/components/GmList/FeeApyLabel.tsx
-msgid "Estimated annualized fees generated by trading activity (open, close, borrow, liquidations, swaps) over the selected period. Does not include backing token price changes, trading PnL, or funding fees.<0/><1/>For detailed stats and comparisons, see the <2>GMX V2 LP Dashboard</2>."
-msgstr "Comisiones anualizadas estimadas generadas por actividad de trading (apertura, cierre, préstamo, liquidaciones, intercambios) durante el período seleccionado. No incluye cambios de precio de tokens de respaldo, PnL de trading o comisiones de financiación.<0/><1/>Para estadísticas detalladas y comparaciones, consulta el <2>Panel GMX V2 LP</2>."
+msgid "Estimated annualized fees generated by trading activity (open, close, borrow, liquidations, swaps) over the selected period. Does not include backing token price changes, trading PnL, or funding fees.<0/><1/>For detailed stats and comparisons, see the <2>HFDX V2 LP Dashboard</2>."
+msgstr "Comisiones anualizadas estimadas generadas por actividad de trading (apertura, cierre, préstamo, liquidaciones, intercambios) durante el período seleccionado. No incluye cambios de precio de tokens de respaldo, PnL de trading o comisiones de financiación.<0/><1/>Para estadísticas detalladas y comparaciones, consulta el <2>Panel HFDX V2 LP</2>."
 
 #: src/components/GmxAccountModal/DepositStatusView.tsx
-msgid "Faster execution with GMX premium RPCs"
+msgid "Faster execution with HFDX premium RPCs"
 msgstr ""
 
 #: src/components/NotifyModal/NotifyModal.tsx
@@ -2358,8 +2358,8 @@ msgid "TVL"
 msgstr "TVL"
 
 #: src/components/GmxAccountModal/MainView.tsx
-msgid "Your GMX Account balance, usable for trading from any supported chain. <0>Read more</0>."
-msgstr "Tu saldo de Cuenta GMX, utilizable para trading desde cualquier cadena soportada. <0>Leer más</0>."
+msgid "Your HFDX Account balance, usable for trading from any supported chain. <0>Read more</0>."
+msgstr "Tu saldo de Cuenta HFDX, utilizable para trading desde cualquier cadena soportada. <0>Leer más</0>."
 
 #: src/components/GmSwap/GmFees/GmFees.tsx
 msgid "Shift Fee"
@@ -2369,9 +2369,9 @@ msgstr "Tarifa de Shift"
 msgid "GLP Pool"
 msgstr "Reserva de GLP"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from Traderjoe:"
-msgstr "Comprar GMX en Traderjoe:"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX from Traderjoe:"
+msgstr "Comprar HFDX en Traderjoe:"
 
 #: src/pages/Actions/ActionsRouter.tsx
 msgid "V1 is not supported on {chainName}. Please switch to Arbitrum to use V1."
@@ -2384,26 +2384,26 @@ msgid "Insufficient available liquidity."
 msgstr "Liquidez disponible insuficiente."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Saulius GMX Analytics"
-msgstr "Saulius GMX Analytics"
+msgid "Saulius HFDX Analytics"
+msgstr "Saulius HFDX Analytics"
 
 #: src/components/SwapCard/SwapCard.tsx
 #: src/components/SwapCard/SwapCard.tsx
 msgid "{0} Price"
 msgstr "Precio de {0}"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from centralized services"
-msgstr "Comprar GMX en servicios centralizados"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX from centralized services"
+msgstr "Comprar HFDX en servicios centralizados"
 
 #: src/components/UserIncentiveDistribution/UserIncentiveDistribution.tsx
 msgid "The distribution history for your incentives, airdrops, and prizes will be displayed here."
 msgstr "El historial de distribución para tus incentivos, airdrops y premios se mostrará aquí."
 
 #: src/components/SettingsModal/TradingSettings.tsx
-msgid "You sign each transaction off-chain. Trades use GMX-sponsored premium RPCs for reliability, even during network congestion. Gas payments in {gasPaymentTokensText}."
-msgstr "Firmas cada transacción off-chain. Las operaciones usan RPCs premium patrocinados por GMX para fiabilidad, incluso durante congestión de red. Pagos de gas en {gasPaymentTokensText}."
+msgid "You sign each transaction off-chain. Trades use HFDX-sponsored premium RPCs for reliability, even during network congestion. Gas payments in {gasPaymentTokensText}."
+msgstr "Firmas cada transacción off-chain. Las operaciones usan RPCs premium patrocinados por HFDX para fiabilidad, incluso durante congestión de red. Pagos de gas en {gasPaymentTokensText}."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Bridge and swap"
@@ -2430,12 +2430,12 @@ msgid "Available to Pay"
 msgstr "Disponible para Pagar"
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Receiver has staked GMX/GLP before"
+msgid "Receiver has staked HFDX/GLP before"
 msgstr ""
 
 #: src/domain/multichain/useMultichainFundingToast.tsx
-msgid "Withdrawing funds from GMX Account"
-msgstr "Retirando fondos de Cuenta GMX"
+msgid "Withdrawing funds from HFDX Account"
+msgstr "Retirando fondos de Cuenta HFDX"
 
 #: src/components/TVChart/Chart.tsx
 msgid "Market Graph"
@@ -2450,8 +2450,8 @@ msgid "Unable to sign message with EOA"
 msgstr "No se puede firmar mensaje con EOA"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Dune Analytics for GMX"
-msgstr "Dune Analytics para GMX"
+msgid "Dune Analytics for HFDX"
+msgstr "Dune Analytics para HFDX"
 
 #: src/components/MarketsList/MarketsList.tsx
 msgid "NET RATE / 1 H"
@@ -2470,8 +2470,8 @@ msgid "Transfer Account"
 msgstr ""
 
 #: src/pages/Actions/ActionsRouter.tsx
-msgid "GMX V1 Actions"
-msgstr "Acciones de GMX V1"
+msgid "HFDX V1 Actions"
+msgstr "Acciones de HFDX V1"
 
 #: src/components/TradeHistory/keys.ts
 msgid "Execute TWAP Part"
@@ -2482,8 +2482,8 @@ msgid "Swap Profit Fee"
 msgstr "Tarifa de Beneficio de Intercambio"
 
 #: src/pages/Jobs/Jobs.jsx
-msgid "Job openings at GMX."
-msgstr "Ofertas de empleo en GMX."
+msgid "Job openings at HFDX."
+msgstr "Ofertas de empleo en HFDX."
 
 #: src/components/Earn/AdditionalOpportunities/useOpportunities.tsx
 msgid "Autocompound"
@@ -2493,7 +2493,7 @@ msgstr ""
 msgid "Trade from your wallet"
 msgstr "Opera desde tu billetera"
 
-#: src/components/Stake/GMXAprTooltip.tsx
+#: src/components/Stake/HFDXAprTooltip.tsx
 msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week."
 msgstr "Los APRs se actualizan semanalmente los miércoles y dependerán de las comisiones recolectadas durante la semana."
 
@@ -2515,8 +2515,8 @@ msgid "Testnet LayerZero Scan"
 msgstr "LayerZero Scan de Testnet"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0><1>$GMX</1> has rightfully earned its title as the perpetual trading juggernaut, and the reasons behind this recognition are manifold.</0><2><3>@GMX_IO</3> stands out as a project that's navigated its path without relying on VC backing. Remarkably, it has risen to the top, securing the No. #1 spot by TVL on Arbitrum Chain at $488.34M and an impressive overall Rank #23 on DeFiLlama... <4>see more</4></2>"
-msgstr "<0><1>$GMX</1> ha ganado justamente su título como el gigante del trading perpetuo, y las razones detrás de este reconocimiento son múltiples.</0><2><3>@GMX_IO</3> se destaca como un proyecto que ha navegado su camino sin depender de respaldo VC. Notablemente, ha ascendido a la cima, asegurando el puesto No. #1 por TVL en la Cadena Arbitrum a $488.34M y un impresionante Rank #23 general en DeFiLlama... <4>ver más</4></2>"
+msgid "<0><1>$HFDX</1> has rightfully earned its title as the perpetual trading juggernaut, and the reasons behind this recognition are manifold.</0><2><3>@HFDX_IO</3> stands out as a project that's navigated its path without relying on VC backing. Remarkably, it has risen to the top, securing the No. #1 spot by TVL on Arbitrum Chain at $488.34M and an impressive overall Rank #23 on DeFiLlama... <4>see more</4></2>"
+msgstr "<0><1>$HFDX</1> ha ganado justamente su título como el gigante del trading perpetuo, y las razones detrás de este reconocimiento son múltiples.</0><2><3>@HFDX_IO</3> se destaca como un proyecto que ha navegado su camino sin depender de respaldo VC. Notablemente, ha ascendido a la cima, asegurando el puesto No. #1 por TVL en la Cadena Arbitrum a $488.34M y un impresionante Rank #23 general en DeFiLlama... <4>ver más</4></2>"
 
 #: src/components/Earn/Discovery/EarnFaq.tsx
 msgid "What networks are supported?"
@@ -2543,7 +2543,7 @@ msgid "Unstake failed."
 msgstr "Destakeo fallido."
 
 #: src/components/Earn/AdditionalOpportunities/useOpportunities.tsx
-msgid "Autocompound your earned GMX rewards periodically without having to manually claim and compound your rewards."
+msgid "Autocompound your earned HFDX rewards periodically without having to manually claim and compound your rewards."
 msgstr ""
 
 #: src/components/StatusNotification/OrderStatusNotification.tsx
@@ -2615,12 +2615,12 @@ msgid "Auto-Cancel TP/SL"
 msgstr "Auto-Cancelar TP/SL"
 
 #: landing/src/pages/Home/FaqSection/FaqSection.tsx
-msgid "What makes GMX more cost-efficient than other perpetual platforms?"
-msgstr "¿Qué hace a GMX más eficiente en costos que otras plataformas perpetuas?"
+msgid "What makes HFDX more cost-efficient than other perpetual platforms?"
+msgstr "¿Qué hace a HFDX más eficiente en costos que otras plataformas perpetuas?"
 
 #: landing/src/pages/Home/FaqSection/FaqSection.tsx
-msgid "<0>No KYC, no lengthy onboarding, and no depositing is required. All you need is a self-custody wallet:</0><1><2>Connect any EVM wallet (such as MetaMask, Rabby, Coinbase Wallet, Trust Wallet, OKX Wallet, Ledger, etc.)</2><3>Select a supported blockchain network where you have funds available</3><4>Start trading</4></1><5>You can trade directly using funds on Arbitrum, Avalanche, Solana, or Botanix, or deposit to your GMX Account to trade from any supported Multichain network.</5>"
-msgstr "<0>No KYC, no onboarding largo, y no se requiere depósito. Todo lo que necesitas es una billetera de autocustodia:</0><1><2>Conecta cualquier billetera EVM (como MetaMask, Rabby, Coinbase Wallet, Trust Wallet, OKX Wallet, Ledger, etc.)</2><3>Selecciona una red blockchain soportada donde tengas fondos disponibles</3><4>Comienza a operar</4></1><5>Puedes operar directamente usando fondos en Arbitrum, Avalanche, Solana o Botanix, o depositar en tu Cuenta GMX para operar desde cualquier red Multichain soportada.</5>"
+msgid "<0>No KYC, no lengthy onboarding, and no depositing is required. All you need is a self-custody wallet:</0><1><2>Connect any EVM wallet (such as MetaMask, Rabby, Coinbase Wallet, Trust Wallet, OKX Wallet, Ledger, etc.)</2><3>Select a supported blockchain network where you have funds available</3><4>Start trading</4></1><5>You can trade directly using funds on Arbitrum, Avalanche, Solana, or Botanix, or deposit to your HFDX Account to trade from any supported Multichain network.</5>"
+msgstr "<0>No KYC, no onboarding largo, y no se requiere depósito. Todo lo que necesitas es una billetera de autocustodia:</0><1><2>Conecta cualquier billetera EVM (como MetaMask, Rabby, Coinbase Wallet, Trust Wallet, OKX Wallet, Ledger, etc.)</2><3>Selecciona una red blockchain soportada donde tengas fondos disponibles</3><4>Comienza a operar</4></1><5>Puedes operar directamente usando fondos en Arbitrum, Avalanche, Solana o Botanix, o depositar en tu Cuenta HFDX para operar desde cualquier red Multichain soportada.</5>"
 
 #: src/pages/Dashboard/StatsCard.tsx
 msgid "In other tokens:"
@@ -2667,8 +2667,8 @@ msgid "The order may not execute at the desired {priceText} as its acceptable pr
 msgstr "La orden puede no ejecutarse al {priceText} deseado ya que su impacto de precio aceptable está establecido en {formattedOrderAcceptablePriceImpact}, que es menor que el impacto de precio de mercado actual de {formattedCurrentAcceptablePriceImpact}. Puede editarse usando el botón \"Editar\"."
 
 #: landing/src/pages/Home/FaqSection/FaqSection.tsx
-msgid "<0>Yes, we encourage you to build on top of GMX or integrate it into your DeFi app. GMX is fully composable and already integrated with hundreds of protocols across the ecosystem, including notable names like Pendle, Dolomite, Radiant, Silo Finance, Venus Protocol, Abracadabra, Compound, and Beefy. You can interact directly with GMX smart contracts or use available APIs and SDKs to plug into trading, liquidity, or data flows. Check out the <1>GMX Developer Docs</1> to get started.</0>"
-msgstr "<0>Sí, te animamos a construir sobre GMX o integrarlo en tu app DeFi. GMX es completamente componible y ya está integrado con cientos de protocolos en el ecosistema, incluyendo nombres notables como Pendle, Dolomite, Radiant, Silo Finance, Venus Protocol, Abracadabra, Compound y Beefy. Puedes interactuar directamente con los smart contracts de GMX o usar APIs y SDKs disponibles para conectarte a flujos de trading, liquidez o datos. Revisa los <1>Docs de Desarrollador de GMX</1> para comenzar.</0>"
+msgid "<0>Yes, we encourage you to build on top of HFDX or integrate it into your DeFi app. HFDX is fully composable and already integrated with hundreds of protocols across the ecosystem, including notable names like Pendle, Dolomite, Radiant, Silo Finance, Venus Protocol, Abracadabra, Compound, and Beefy. You can interact directly with HFDX smart contracts or use available APIs and SDKs to plug into trading, liquidity, or data flows. Check out the <1>HFDX Developer Docs</1> to get started.</0>"
+msgstr "<0>Sí, te animamos a construir sobre HFDX o integrarlo en tu app DeFi. HFDX es completamente componible y ya está integrado con cientos de protocolos en el ecosistema, incluyendo nombres notables como Pendle, Dolomite, Radiant, Silo Finance, Venus Protocol, Abracadabra, Compound y Beefy. Puedes interactuar directamente con los smart contracts de HFDX o usar APIs y SDKs disponibles para conectarte a flujos de trading, liquidez o datos. Revisa los <1>Docs de Desarrollador de HFDX</1> para comenzar.</0>"
 
 #: src/components/TradeHistory/TradeHistoryRow/utils/position.ts
 msgid "Liquidation Fee"
@@ -2723,20 +2723,20 @@ msgstr "La cantidad que intentas retirar está por debajo del límite. Por favor
 msgid "(Rebated)"
 msgstr "(Reembolsado)"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from centralized exchanges:"
-msgstr "Comprar GMX en exchanges centralizados:"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX from centralized exchanges:"
+msgstr "Comprar HFDX en exchanges centralizados:"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "GMX bonds can be bought on Bond Protocol with a discount and a small vesting period:"
-msgstr "Bonos GMX pueden comprarse en Bond Protocol con descuento y un pequeño período de adquisición:"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "HFDX bonds can be bought on Bond Protocol with a discount and a small vesting period:"
+msgstr "Bonos HFDX pueden comprarse en Bond Protocol con descuento y un pequeño período de adquisición:"
 
 #: src/domain/synthetics/sidecarOrders/utils.ts
 msgid "Trigger price above highest limit price"
 msgstr "Precio de activación por encima del precio límite más alto"
 
 #: src/components/Earn/Discovery/EarnFaq.tsx
-msgid "Yes, staking and providing liquidity are fully permissionless. The GMX, GLV, and GM tokens are liquid and can be unstaked and withdrawn at any time. For LP tokens, there could be some rare edge cases where your liquidity is being used for active trades. In that case, you can withdraw as soon as positions close."
+msgid "Yes, staking and providing liquidity are fully permissionless. The HFDX, GLV, and GM tokens are liquid and can be unstaked and withdrawn at any time. For LP tokens, there could be some rare edge cases where your liquidity is being used for active trades. In that case, you can withdraw as soon as positions close."
 msgstr ""
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
@@ -2767,8 +2767,8 @@ msgid "Annualized data based on the past 7 days."
 msgstr "Datos anualizados basados en los últimos 7 días."
 
 #: src/components/NetworkDropdown/SolanaNetworkItem.tsx
-msgid "GMX Solana is hosted on another website and run by a different team, so the experience may vary slightly.<0/><1/>Clicking on the button below will open the GMX Solana frontend in a new tab."
-msgstr "GMX Solana está alojado en otro sitio web y dirigido por un equipo diferente, por lo que la experiencia puede variar ligeramente.<0/><1/>Hacer clic en el botón a continuación abrirá el frontend de GMX Solana en una nueva pestaña."
+msgid "HFDX Solana is hosted on another website and run by a different team, so the experience may vary slightly.<0/><1/>Clicking on the button below will open the HFDX Solana frontend in a new tab."
+msgstr "HFDX Solana está alojado en otro sitio web y dirigido por un equipo diferente, por lo que la experiencia puede variar ligeramente.<0/><1/>Hacer clic en el botón a continuación abrirá el frontend de HFDX Solana en una nueva pestaña."
 
 #: src/components/UserIncentiveDistribution/utils.tsx
 msgid "Please continue signing on your wallet interface where the signature request should appear. You will be able to claim once all signers have signed."
@@ -2908,16 +2908,16 @@ msgid "Self-transfer not supported"
 msgstr ""
 
 #: src/domain/multichain/SettlementChainWarningContainer.tsx
-msgid "You switched your settlement network to {0}, but you still have {1} remaining in your {2} GMX Account."
-msgstr "Cambiaste tu red de liquidación a {0}, pero aún tienes {1} restante en tu Cuenta GMX de {2}."
+msgid "You switched your settlement network to {0}, but you still have {1} remaining in your {2} HFDX Account."
+msgstr "Cambiaste tu red de liquidación a {0}, pero aún tienes {1} restante en tu Cuenta HFDX de {2}."
 
 #: src/context/SubaccountContext/SubaccountContextProvider.tsx
 msgid "Generating session..."
 msgstr "Generando sesión..."
 
 #: landing/src/pages/Home/FaqSection/FaqSection.tsx
-msgid "How do I get started on GMX?"
-msgstr "¿Cómo empiezo en GMX?"
+msgid "How do I get started on HFDX?"
+msgstr "¿Cómo empiezo en HFDX?"
 
 #: src/pages/Dashboard/GmxCard.tsx
 msgid "Total Staked"
@@ -3077,7 +3077,7 @@ msgid "Trigger price below liq. price"
 msgstr "Precio de activación por debajo del precio de liq."
 
 #: src/components/PositionShare/PositionShare.tsx
-msgid "Share your successful GMX trade on X"
+msgid "Share your successful HFDX trade on X"
 msgstr ""
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/ClaimModal.tsx
@@ -3192,16 +3192,16 @@ msgid "Initial Collateral"
 msgstr "Garantía Inicial"
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/StakeModal.tsx
-msgid "<0>Delegate your undelegated {0} GMX DAO</0> voting power before staking."
-msgstr "<0>Delega tu poder de voto {0} GMX DAO no delegado</0> antes de stakear."
+msgid "<0>Delegate your undelegated {0} HFDX DAO</0> voting power before staking."
+msgstr "<0>Delega tu poder de voto {0} HFDX DAO no delegado</0> antes de stakear."
 
 #: src/pages/LeaderboardPage/components/LeaderboardAccountsTable.tsx
 msgid "Avg. Size"
 msgstr "Tamaño Prom."
 
 #: src/components/Referrals/AffiliatesStats.tsx
-msgid "V1 esGMX"
-msgstr "V1 esGMX"
+msgid "V1 esHFDX"
+msgstr "V1 esHFDX"
 
 #: src/components/TradeBox/TradeBoxRows/LimitAndTPSLRows.tsx
 msgid "Take Profit PnL"
@@ -3286,13 +3286,13 @@ msgid "Wallet Balance"
 msgstr "Saldo de Billetera"
 
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/useGmSwapSubmitState.tsx
-msgid "{0} balance in GMX account is insufficient to cover gas fees"
-msgstr "El saldo de {0} en la cuenta GMX es insuficiente para cubrir las tarifas de gas"
+msgid "{0} balance in HFDX account is insufficient to cover gas fees"
+msgstr "El saldo de {0} en la cuenta HFDX es insuficiente para cubrir las tarifas de gas"
 
 #: landing/src/pages/Home/LeaveHomepageRedirectModal/LeaveHompageRedirectModal.tsx
 #: src/components/ModalViews/RedirectModal.tsx
-msgid "The website is a community deployed and maintained instance of the open source <0>GMX front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
-msgstr "La página web es una instancia desplegada y mantenida por la comunidad del código abierto <0>frontend de GMX</0>, alojada y servida en la red distribuida peer-to-peer <1>IPFS</1>."
+msgid "The website is a community deployed and maintained instance of the open source <0>HFDX front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
+msgstr "La página web es una instancia desplegada y mantenida por la comunidad del código abierto <0>frontend de HFDX</0>, alojada y servida en la red distribuida peer-to-peer <1>IPFS</1>."
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal.tsx
 msgid "Deposit failed."
@@ -3312,8 +3312,8 @@ msgid "Defi Llama"
 msgstr "Defi Llama"
 
 #: src/pages/AccountDashboard/AccountDashboard.tsx
-msgid "GMX  Account"
-msgstr "Cuenta GMX"
+msgid "HFDX  Account"
+msgstr "Cuenta HFDX"
 
 #: src/pages/PoolsDetails/PoolsDetailsAbout.tsx
 msgid "Last Rebalance"
@@ -3389,8 +3389,8 @@ msgid "Failed Deposit"
 msgstr "Depósito Fallido"
 
 #: src/components/UserIncentiveDistribution/AboutGlpIncident.tsx
-msgid "Distribution happens in two GLV variants to mirror GLP's multi-asset exposure: one variant is optimized for ETH-based markets (50% ETH / 50% USDC) and the other for BTC-based markets (50% BTC / 50% USDC). This allocation reflects the composition of recovered funds and allows for dynamic shifting of GLV liquidity to all top GMX markets to enhance your yield."
-msgstr "La distribución ocurre en dos variantes de GLV para reflejar la exposición multi-activo de GLP: una variante optimizada para mercados basados en ETH (50% ETH / 50% USDC) y la otra para mercados basados en BTC (50% BTC / 50% USDC). Esta asignación refleja la composición de fondos recuperados y permite un cambio dinámico de liquidez GLV a todos los mercados top de GMX para mejorar tu rendimiento."
+msgid "Distribution happens in two GLV variants to mirror GLP's multi-asset exposure: one variant is optimized for ETH-based markets (50% ETH / 50% USDC) and the other for BTC-based markets (50% BTC / 50% USDC). This allocation reflects the composition of recovered funds and allows for dynamic shifting of GLV liquidity to all top HFDX markets to enhance your yield."
+msgstr "La distribución ocurre en dos variantes de GLV para reflejar la exposición multi-activo de GLP: una variante optimizada para mercados basados en ETH (50% ETH / 50% USDC) y la otra para mercados basados en BTC (50% BTC / 50% USDC). Esta asignación refleja la composición de fondos recuperados y permite un cambio dinámico de liquidez GLV a todos los mercados top de HFDX para mejorar tu rendimiento."
 
 #: src/components/TradeHistory/keys.ts
 msgid "Request Market Swap"
@@ -3423,12 +3423,12 @@ msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""
 
 #: src/components/SettingsModal/TradingSettings.tsx
-msgid "The settlement chain is the network used for your GMX Account and opening positions. GMX Account balances and positions are specific to the selected network."
-msgstr "La cadena de liquidación es la red usada para tu Cuenta GMX y apertura de posiciones. Los saldos y posiciones de Cuenta GMX son específicos de la red seleccionada."
+msgid "The settlement chain is the network used for your HFDX Account and opening positions. HFDX Account balances and positions are specific to the selected network."
+msgstr "La cadena de liquidación es la red usada para tu Cuenta HFDX y apertura de posiciones. Los saldos y posiciones de Cuenta HFDX son específicos de la red seleccionada."
 
 #: src/components/UserIncentiveDistribution/AboutGlpIncident.tsx
-msgid "Yes, GLV is fully liquid and permissionless. You can sell via the GMX interface to redeem for underlying assets, with low fees."
-msgstr "Sí, GLV es completamente líquido y sin permisos. Puedes vender a través de la interfaz de GMX para redimir por activos subyacentes, con bajas tarifas."
+msgid "Yes, GLV is fully liquid and permissionless. You can sell via the HFDX interface to redeem for underlying assets, with low fees."
+msgstr "Sí, GLV es completamente líquido y sin permisos. Puedes vender a través de la interfaz de HFDX para redimir por activos subyacentes, con bajas tarifas."
 
 #: src/components/NetworkDropdown/NetworkDropdown.tsx
 msgid "Network"
@@ -3553,7 +3553,7 @@ msgstr "Número máximo de días antes de requerir reautorización."
 msgid "Update Stop Market"
 msgstr "Actualizar Stop Mercado"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "Buy {nativeTokenSymbol}"
 msgstr "Comprar {nativeTokenSymbol}"
 
@@ -3572,8 +3572,8 @@ msgid "Referral code submitted."
 msgstr "Código de referencia enviado."
 
 #: src/pages/Jobs/Jobs.jsx
-msgid "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
-msgstr "GMX no está buscando activamente nuevas contrataciones en este momento. Sin embargo, si crees que puedes contribuir al proyecto, por favor envía un email a <0>jobs@gmx.io</0>."
+msgid "HFDX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
+msgstr "HFDX no está buscando activamente nuevas contrataciones en este momento. Sin embargo, si crees que puedes contribuir al proyecto, por favor envía un email a <0>jobs@gmx.io</0>."
 
 #: src/lib/wallets/connecters/binanceW3W/binanceWallet.ts
 msgid "After you scan, a connection prompt will appear for you to connect your wallet."
@@ -3681,8 +3681,8 @@ msgid "Existing executable trigger orders"
 msgstr "Órdenes de trigger ejecutables existentes"
 
 #: src/components/InterviewToast/InterviewToast.tsx
-msgid "We value your experience as GMX Liquidity Provider and invite you to participate in an anonymous one-on-one chat."
-msgstr "Valoramos tu experiencia como Proveedor de Liquidez de GMX e invitamos a participar en un chat anónimo uno a uno."
+msgid "We value your experience as HFDX Liquidity Provider and invite you to participate in an anonymous one-on-one chat."
+msgstr "Valoramos tu experiencia como Proveedor de Liquidez de HFDX e invitamos a participar en un chat anónimo uno a uno."
 
 #: src/components/GmList/GlvList.tsx
 #: src/components/GmList/GmList.tsx
@@ -3787,8 +3787,8 @@ msgstr "Estarás corto en {indexSymbol} desde tu posición corta, mientras está
 
 #: landing/src/pages/Home/SolanaRedirectModal/SolanaRedirectModal.tsx
 #: src/components/NetworkDropdown/SolanaNetworkItem.tsx
-msgid "Open GMX Solana"
-msgstr "Abrir GMX Solana"
+msgid "Open HFDX Solana"
+msgstr "Abrir HFDX Solana"
 
 #: src/components/PositionSeller/rows/AllowedSlippageRow.tsx
 #: src/components/TradeBox/TradeBoxRows/AllowedSlippageRow.tsx
@@ -3809,8 +3809,8 @@ msgid "Lend out your tokens, or borrow against it."
 msgstr ""
 
 #: landing/src/pages/Home/FaqSection/FaqSection.tsx
-msgid "<0>GMX executes trades against a dynamically balanced liquidity pool, unlike traditional order books. This model supports deep liquidity, allowing for opening positions of over $50m with reduced price impact, even when compared to the biggest order books in the space. In some cases, you may even get paid when executing an order due to a positive price impact.</0><1>GMX prevents unfair liquidations by using decentralized oracles from Chainlink and Chaos Labs, which aggregate prices from multiple trusted sources to avoid manipulation.</1>"
-msgstr "<0>GMX ejecuta operaciones contra un pool de liquidez equilibrado dinámicamente, a diferencia de los libros de órdenes tradicionales. Este modelo soporta liquidez profunda, permitiendo abrir posiciones de más de $50m con impacto de precio reducido, incluso comparado con los libros de órdenes más grandes en el espacio. En algunos casos, incluso puedes recibir pago al ejecutar una orden debido a un impacto de precio positivo.</0><1>GMX previene liquidaciones injustas usando oráculos descentralizados de Chainlink y Chaos Labs, que agregan precios de múltiples fuentes confiables para evitar manipulación.</1>"
+msgid "<0>HFDX executes trades against a dynamically balanced liquidity pool, unlike traditional order books. This model supports deep liquidity, allowing for opening positions of over $50m with reduced price impact, even when compared to the biggest order books in the space. In some cases, you may even get paid when executing an order due to a positive price impact.</0><1>HFDX prevents unfair liquidations by using decentralized oracles from Chainlink and Chaos Labs, which aggregate prices from multiple trusted sources to avoid manipulation.</1>"
+msgstr "<0>HFDX ejecuta operaciones contra un pool de liquidez equilibrado dinámicamente, a diferencia de los libros de órdenes tradicionales. Este modelo soporta liquidez profunda, permitiendo abrir posiciones de más de $50m con impacto de precio reducido, incluso comparado con los libros de órdenes más grandes en el espacio. En algunos casos, incluso puedes recibir pago al ejecutar una orden debido a un impacto de precio positivo.</0><1>HFDX previene liquidaciones injustas usando oráculos descentralizados de Chainlink y Chaos Labs, que agregan precios de múltiples fuentes confiables para evitar manipulación.</1>"
 
 #: landing/src/pages/Home/RoadmapSection/RoadmapSection.tsx
 #: landing/src/pages/Home/RoadmapSection/RoadmapSection.tsx
@@ -3977,8 +3977,8 @@ msgid "Links"
 msgstr ""
 
 #: src/components/Seo/SEO.tsx
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr "GMX | Exchange Perpetuo Descentralizado"
+msgid "HFDX | Decentralized Perpetual Exchange"
+msgstr "HFDX | Exchange Perpetuo Descentralizado"
 
 #: src/components/BotanixBanner/BotanixBanner.tsx
 msgid "<0>Botanix</0> currently only supports"
@@ -4036,8 +4036,8 @@ msgstr "Falló la reclamación de fondos"
 
 #: landing/src/pages/Home/LeaveHomepageRedirectModal/LeaveHompageRedirectModal.tsx
 #: src/components/ModalViews/RedirectModal.tsx
-msgid "You are leaving GMX.io and will be redirected to a third party, independent website."
-msgstr "Estás dejando GMX.io y serás redirigido a un sitio web independiente de terceros."
+msgid "You are leaving HFDX.io and will be redirected to a third party, independent website."
+msgstr "Estás dejando HFDX.io y serás redirigido a un sitio web independiente de terceros."
 
 #: src/domain/synthetics/trade/useMaxAutoCancelOrdersState.tsx
 msgid "Read more."
@@ -4071,16 +4071,16 @@ msgid "Unknown sell GM order"
 msgstr "Orden de venta GM desconocida"
 
 #: src/components/NotifyModal/NotifyModal.tsx
-msgid "<0>Notifications are provided by Notifi and not affiliated with GMX. By subscribing, you agree that info you provide to Notifi will be governed by its </0><1>Privacy Policy</1><2> and </2><3>Terms of Use</3>."
-msgstr "<0>Las notificaciones son proporcionadas por Notifi y no afiliadas con GMX. Al suscribirte, aceptas que la info que provees a Notifi estará gobernada por su </0><1>Política de Privacidad</1><2> y </2><3>Términos de Uso</3>."
+msgid "<0>Notifications are provided by Notifi and not affiliated with HFDX. By subscribing, you agree that info you provide to Notifi will be governed by its </0><1>Privacy Policy</1><2> and </2><3>Terms of Use</3>."
+msgstr "<0>Las notificaciones son proporcionadas por Notifi y no afiliadas con HFDX. Al suscribirte, aceptas que la info que provees a Notifi estará gobernada por su </0><1>Política de Privacidad</1><2> y </2><3>Términos de Uso</3>."
 
 #: src/components/TradeInfoIcon/TradeInfoIcon.tsx
 msgid "{typeString} Long Limit: {0} a long position when the price is below the trigger price."
 msgstr "{typeString} Largo Límite: {0} una posición larga cuando el precio está por debajo del precio de activación."
 
 #: src/components/TradeBox/hooks/useTradeButtonState.tsx
-msgid "{0} is required for collateral.<0/><1/>There is no swap path found for {1} to {2} within GMX.<2/><3/><4>You can buy {3} on 1inch.</4>"
-msgstr "{0} es requerido para garantía.<0/><1/>No se encontró ruta de intercambio para {1} a {2} dentro de GMX.<2/><3/><4>Puedes comprar {3} en 1inch.</4>"
+msgid "{0} is required for collateral.<0/><1/>There is no swap path found for {1} to {2} within HFDX.<2/><3/><4>You can buy {3} on 1inch.</4>"
+msgstr "{0} es requerido para garantía.<0/><1/>No se encontró ruta de intercambio para {1} a {2} dentro de HFDX.<2/><3/><4>Puedes comprar {3} en 1inch.</4>"
 
 #: src/components/Earn/Portfolio/AssetsList/GmGlvAssetCard.tsx
 msgid "Total Fee APY"
@@ -4120,8 +4120,8 @@ msgid "Select a token"
 msgstr "Seleccionar un token"
 
 #: src/components/InterviewToast/InterviewToast.tsx
-msgid "Click here to give us your feedback on GMX"
-msgstr "Haz clic aquí para darnos tus comentarios sobre GMX"
+msgid "Click here to give us your feedback on HFDX"
+msgstr "Haz clic aquí para darnos tus comentarios sobre HFDX"
 
 #: src/pages/PoolsDetails/PoolsDetails.tsx
 msgid "Exposure to Market Traders’ PnL"
@@ -4132,7 +4132,7 @@ msgid "Optimal"
 msgstr "Óptimo"
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
-msgid "{gmOrGlvLabel} tokens were bought successfully, but the bridge to Base failed. Your funds are safe and currently stored in your GMX account. You can retry the bridge or go to the{indexName} pool to manually withdraw your GM tokens."
+msgid "{gmOrGlvLabel} tokens were bought successfully, but the bridge to Base failed. Your funds are safe and currently stored in your HFDX account. You can retry the bridge or go to the{indexName} pool to manually withdraw your GM tokens."
 msgstr ""
 
 #: src/components/GmSwap/GmFees/GmFees.tsx
@@ -4153,8 +4153,8 @@ msgid "Support for"
 msgstr "Soporte para"
 
 #: src/components/MultichainBalanceTooltip/MultichainBalanceTooltip.tsx
-msgid "GMX account Balance"
-msgstr "Saldo de cuenta GMX"
+msgid "HFDX account Balance"
+msgstr "Saldo de cuenta HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Toros"
@@ -4191,12 +4191,12 @@ msgid "Docs"
 msgstr "Docs"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Trading Stats"
-msgstr "Estadísticas de Trading GMX"
+msgid "HFDX Trading Stats"
+msgstr "Estadísticas de Trading HFDX"
 
 #: src/domain/multichain/toastEnableExpress.tsx
-msgid "Express Trading was enabled to allow the use of collateral from your GMX Account balance. You can disable it in the <0>settings</0>."
-msgstr "El Trading Express fue habilitado para permitir el uso de colateral de tu saldo de Cuenta GMX. Puedes deshabilitarlo en las <0>configuraciones</0>."
+msgid "Express Trading was enabled to allow the use of collateral from your HFDX Account balance. You can disable it in the <0>settings</0>."
+msgstr "El Trading Express fue habilitado para permitir el uso de colateral de tu saldo de Cuenta HFDX. Puedes deshabilitarlo en las <0>configuraciones</0>."
 
 #: src/pages/Jobs/Jobs.jsx
 msgid "Jobs"
@@ -4212,8 +4212,8 @@ msgstr "Tienes una posición existente con {0} como colateral. Esta acción no a
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Technical Announcements"
-msgstr "Anuncios Técnicos de GMX"
+msgid "HFDX Technical Announcements"
+msgstr "Anuncios Técnicos de HFDX"
 
 #: src/components/TradeHistory/keys.ts
 msgid "Failed Stop Market"
@@ -4409,7 +4409,7 @@ msgid "Shorts Net Rate / 1h"
 msgstr "Tasa Neta de Cortos / 1h"
 
 #: src/pages/Earn/EarnDiscoveryPage.tsx
-msgid "Discover GMX Earn"
+msgid "Discover HFDX Earn"
 msgstr ""
 
 #: src/components/ExpressTradingOutOfGasBanner.ts/ExpressTradingOutOfGasBanner.tsx
@@ -4425,8 +4425,8 @@ msgid "GLV Vaults"
 msgstr "Vaults GLV"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX (Portuguese)"
-msgstr "GMX (Portugués)"
+msgid "HFDX (Portuguese)"
+msgstr "HFDX (Portugués)"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Mozaic Finance"
@@ -4441,8 +4441,8 @@ msgid "Withdraw failed."
 msgstr "Retiro fallido."
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/ClaimModal.tsx
-msgid "Pending GMX approval"
-msgstr "Aprobación GMX pendiente"
+msgid "Pending HFDX approval"
+msgstr "Aprobación HFDX pendiente"
 
 #: src/components/MarketsList/MarketsList.tsx
 msgid "No markets found."
@@ -4458,12 +4458,12 @@ msgstr "ODOS"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Substack"
-msgstr "Substack de GMX"
+msgid "HFDX Substack"
+msgstr "Substack de HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Positions Bot"
-msgstr "Bot de Posiciones GMX"
+msgid "HFDX Positions Bot"
+msgstr "Bot de Posiciones HFDX"
 
 #: src/components/Referrals/TradersStats.tsx
 msgid "Edit Referral Code"
@@ -4481,17 +4481,17 @@ msgstr "Stryke"
 msgid "External swap is temporarily disabled. Please try again."
 msgstr "Intercambio externo está temporalmente deshabilitado. Por favor intenta de nuevo."
 
-#: src/components/Stake/GMXAprTooltip.tsx
-msgid "GMX APR"
-msgstr "APR de GMX"
+#: src/components/Stake/HFDXAprTooltip.tsx
+msgid "HFDX APR"
+msgstr "APR de HFDX"
 
 #: src/components/StatusNotification/OrderStatusNotification.tsx
 msgid "{orderTypeText} {visualMultiplierPrefix}{0} {longShortText}: {sign}{1}"
 msgstr "{orderTypeText} {visualMultiplierPrefix}{0} {longShortText}: {sign}{1}"
 
 #: src/components/UserIncentiveDistribution/AboutGlpIncident.tsx
-msgid "GLV (GMX Liquidity Vaults) should be seen as GMX V2’s improved version of GLP. It is a yield-optimizing crypto-index token that"
-msgstr "GLV (GMX Liquidity Vaults) debe verse como la versión mejorada de GLP en GMX V2. Es un token de índice cripto optimizador de rendimiento que"
+msgid "GLV (HFDX Liquidity Vaults) should be seen as HFDX V2’s improved version of GLP. It is a yield-optimizing crypto-index token that"
+msgstr "GLV (HFDX Liquidity Vaults) debe verse como la versión mejorada de GLP en HFDX V2. Es un token de índice cripto optimizador de rendimiento que"
 
 #: src/components/StatusNotification/OrderStatusNotification.tsx
 msgid "Decreasing"
@@ -4506,8 +4506,8 @@ msgid "Create Referral Code"
 msgstr "Crear Código de Referido"
 
 #: landing/src/pages/Home/RoadmapSection/Quareters.tsx
-msgid "<0>Solana Support</0><1>Botanix Support</1><2>GMX Express</2>"
-msgstr "<0>Soporte para Solana</0><1>Soporte para Botanix</1><2>GMX Express</2>"
+msgid "<0>Solana Support</0><1>Botanix Support</1><2>HFDX Express</2>"
+msgstr "<0>Soporte para Solana</0><1>Soporte para Botanix</1><2>HFDX Express</2>"
 
 #: src/components/TradeBox/TradeBoxRows/LimitAndTPSLRows.tsx
 msgid "Combined take profits are at maximum (100%). Decrease existing values to add more orders."
@@ -4571,8 +4571,8 @@ msgid "Max slippage precision is -0.01%"
 msgstr "La precisión máxima de deslizamiento es -0.01%"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Weekly Updates"
-msgstr "Actualizaciones semanales de GMX"
+msgid "HFDX Weekly Updates"
+msgstr "Actualizaciones semanales de HFDX"
 
 #: src/components/TradeBox/hooks/useCollateralInTooltipContent.tsx
 msgid "You will be long {indexSymbol} only from your long position."
@@ -4712,12 +4712,12 @@ msgid "LIQ."
 msgstr "LIQ."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GLP and GMX autocompounding vaults"
-msgstr "Vaults de autocomposición de GLP y GMX"
+msgid "GLP and HFDX autocompounding vaults"
+msgstr "Vaults de autocomposición de GLP y HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "esGMX OTC Market"
-msgstr "Mercado OTC de esGMX"
+msgid "esHFDX OTC Market"
+msgstr "Mercado OTC de esHFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Leverage Trading Terminal"
@@ -4728,11 +4728,11 @@ msgid "Execution prices for increasing shorts and<0/>decreasing longs."
 msgstr "Precios de ejecución para aumentar cortos y<0/>disminuir largos."
 
 #: src/pages/Earn/EarnDiscoveryPage.tsx
-msgid "Welcome to GMX Earn! Learn how the GMX, GLV, and GM tokens work together to power a highly efficient, decentralized trading experience. Explore the unique role of each token, and discover how you can stake or provide liquidity to earn rewards — just like tens of thousands of other GMX users."
+msgid "Welcome to HFDX Earn! Learn how the HFDX, GLV, and GM tokens work together to power a highly efficient, decentralized trading experience. Explore the unique role of each token, and discover how you can stake or provide liquidity to earn rewards — just like tens of thousands of other HFDX users."
 msgstr ""
 
 #: src/components/Earn/Discovery/EarnProductCard.tsx
-msgid "Rewards are funded by protocol fees that fuel GMX buybacks"
+msgid "Rewards are funded by protocol fees that fuel HFDX buybacks"
 msgstr ""
 
 #: src/components/TradeFeesRow/TradeFeesRow.tsx
@@ -4740,7 +4740,7 @@ msgid "The bonus rebate is an estimate and can be up to {0}% of the open fee. It
 msgstr "El reembolso de bonificación es una estimación y puede ser hasta {0}% de la comisión de apertura. Se lanzará como tokens {incentivesTokenTitle} en base prorrateada. <0><1>Leer más</1>.</0>"
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
-msgid "{gmOrGlvLabel} tokens were sold successfully, but the bridge to Base failed. Your funds are safe and currently stored in your GMX account. You can retry the bridge or open GMX account modal to manually withdraw your tokens."
+msgid "{gmOrGlvLabel} tokens were sold successfully, but the bridge to Base failed. Your funds are safe and currently stored in your HFDX account. You can retry the bridge or open HFDX account modal to manually withdraw your tokens."
 msgstr ""
 
 #: src/components/OrderItem/OrderItem.tsx
@@ -4790,8 +4790,8 @@ msgid "Select a pool containing {0} to use it as collateral."
 msgstr "Selecciona una reserva que contenga {0} para usarla como garantía."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Trading Simulations on GMX using DOJO"
-msgstr "Simulaciones de Trading en GMX usando DOJO"
+msgid "Trading Simulations on HFDX using DOJO"
+msgstr "Simulaciones de Trading en HFDX usando DOJO"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Yield Farming"
@@ -4811,8 +4811,8 @@ msgstr "Configuraciones One-Click"
 
 #: src/components/NotifyModal/NotifyModal.tsx
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Announcements"
-msgstr "Anuncios de GMX"
+msgid "HFDX Announcements"
+msgstr "Anuncios de HFDX"
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/StakeModal.tsx
 msgid "Approve {tokenSymbol} to be spent"
@@ -4838,8 +4838,8 @@ msgstr ""
 
 #: landing/src/pages/Home/SolanaRedirectModal/SolanaRedirectModal.tsx
 #: src/components/NetworkDropdown/SolanaNetworkItem.tsx
-msgid "GMX Solana"
-msgstr "GMX Solana"
+msgid "HFDX Solana"
+msgstr "HFDX Solana"
 
 #: src/components/SwitchToSettlementChain/SwitchToSettlementChainWarning.tsx
 msgid "Shifting is only available on {chainNames}. Please switch to {chainNames} to access earning opportunities."
@@ -4922,7 +4922,7 @@ msgid "Vesting is only available on {chainNames}. Please switch to {chainNames} 
 msgstr "El vesting solo está disponible en {chainNames}. Por favor, cambia a {chainNames} para acceder a oportunidades de ganancias."
 
 #: src/pages/Earn/EarnAdditionalOpportunitiesPage.tsx
-msgid "Maximize your earnings on your ecosystem tokens (GMX, GLV and GM) with the following integrated partner protocols."
+msgid "Maximize your earnings on your ecosystem tokens (HFDX, GLV and GM) with the following integrated partner protocols."
 msgstr ""
 
 #: src/components/TradeBox/hooks/useTradeButtonState.tsx
@@ -5006,7 +5006,7 @@ msgid "Remaining Allowed Actions"
 msgstr "Acciones Permitidas Restantes"
 
 #: src/components/GmxAccountModal/DepositStatusView.tsx
-msgid "Reliable GMX-powered transactions"
+msgid "Reliable HFDX-powered transactions"
 msgstr ""
 
 #: src/domain/tokens/approveTokens.tsx
@@ -5030,7 +5030,7 @@ msgid "Incorrect Account"
 msgstr ""
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
-msgid "Buy {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your GMX account. You can switch to settlement chain and go to the {indexName} pool to manually buy your {gmOrGlvLabel} tokens."
+msgid "Buy {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your HFDX account. You can switch to settlement chain and go to the {indexName} pool to manually buy your {gmOrGlvLabel} tokens."
 msgstr ""
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
@@ -5060,8 +5060,8 @@ msgid "pay"
 msgstr "pagar"
 
 #: src/pages/Dashboard/GmxCard.tsx
-msgid "Total circulating supply of GMX tokens."
-msgstr "Suministro circulante total de tokens GMX."
+msgid "Total circulating supply of HFDX tokens."
+msgstr "Suministro circulante total de tokens HFDX."
 
 #: src/pages/Dashboard/WeightText.tsx
 #~ msgid "Target Weight"
@@ -5170,7 +5170,7 @@ msgid "Available to Deposit"
 msgstr "Disponible para Depositar"
 
 #: src/components/Earn/Discovery/EarnProductCard.tsx
-msgid "Stake GMX to earn GMX rewards"
+msgid "Stake HFDX to earn HFDX rewards"
 msgstr ""
 
 #: src/components/StatusNotification/GmStatusNotification.tsx
@@ -5207,16 +5207,16 @@ msgid "Trade with confidence"
 msgstr "Opera con confianza"
 
 #: src/pages/AccountDashboard/AccountDashboard.tsx
-msgid "GMX information for account"
-msgstr "Información de GMX para cuenta"
+msgid "HFDX information for account"
+msgstr "Información de HFDX para cuenta"
 
 #: src/components/Earn/Discovery/EarnProductCard.tsx
-msgid "GLV (GMX Liquidity Vault) contains various GM tokens, offering you diversified exposure to GMX's markets. The Vault automatically rebalances its liquidity to in-demand markets, unlocking higher potential yield compared to individual, isolated pools."
+msgid "GLV (HFDX Liquidity Vault) contains various GM tokens, offering you diversified exposure to HFDX's markets. The Vault automatically rebalances its liquidity to in-demand markets, unlocking higher potential yield compared to individual, isolated pools."
 msgstr ""
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Dashboard for GMX referral stats"
-msgstr "Panel de estadísticas programa de referidos GMX"
+msgid "Dashboard for HFDX referral stats"
+msgstr "Panel de estadísticas programa de referidos HFDX"
 
 #: src/components/Claims/ClaimsHistory.tsx
 #: src/components/Claims/filters/ActionFilter.tsx
@@ -5304,8 +5304,8 @@ msgid "There is no liquidation price, as the position's collateral value will in
 msgstr "No hay precio de liquidación, ya que el valor de la garantía de la posición aumentará para cubrir cualquier PnL negativo."
 
 #: src/components/InterviewToast/InterviewToast.tsx
-msgid "Give us your feedback on GMX"
-msgstr "Danos tus comentarios sobre GMX"
+msgid "Give us your feedback on HFDX"
+msgstr "Danos tus comentarios sobre HFDX"
 
 #: src/components/TVChartContainer/DynamicLine.tsx
 msgid "Edit Order"
@@ -5321,8 +5321,8 @@ msgid "Approval was cancelled."
 msgstr "Aprobación cancelada."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Trading Chat"
-msgstr "Chat de Trading GMX"
+msgid "HFDX Trading Chat"
+msgstr "Chat de Trading HFDX"
 
 #: src/components/ChartTokenSelector/ChartTokenSelector.tsx
 #: src/components/ChartTokenSelector/ChartTokenSelector.tsx
@@ -5381,8 +5381,8 @@ msgid "Market Decrease"
 msgstr "Disminución del Mercado"
 
 #: src/components/GmxAccountModal/GmxAccountModal.tsx
-msgid "Withdrawal from GMX Account"
-msgstr "Retiro de Cuenta GMX"
+msgid "Withdrawal from HFDX Account"
+msgstr "Retiro de Cuenta HFDX"
 
 #: src/components/NotifyModal/NotifyModal.tsx
 msgid "Governance Alerts"
@@ -5397,8 +5397,8 @@ msgid "For me"
 msgstr ""
 
 #: src/components/GmList/GlvList.tsx
-msgid "Yield-optimized vaults supplying liquidity across multiple GMX<0/> markets."
-msgstr "Vaults optimizados de rendimiento suministrando liquidez a múltiples mercados GMX<0/>."
+msgid "Yield-optimized vaults supplying liquidity across multiple HFDX<0/> markets."
+msgstr "Vaults optimizados de rendimiento suministrando liquidez a múltiples mercados HFDX<0/>."
 
 #: landing/src/pages/Home/HeaderMenu/HeaderMenu.tsx
 #: src/components/Earn/Discovery/EarnProductCard.tsx
@@ -5444,8 +5444,8 @@ msgid "Insufficient liquidity in the {0} market pool. Select a different pool fo
 msgstr "Liquidez insuficiente en el pool de mercado {0}. Selecciona un pool diferente para este mercado. Elegir un pool diferente abriría una nueva posición diferente de la existente.<0>Cambia a pool de mercado {1}</0>"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Telegram bot for Open Interest on GMX"
-msgstr "Bot de Telegram para Interés Abierto en GMX "
+msgid "Telegram bot for Open Interest on HFDX"
+msgstr "Bot de Telegram para Interés Abierto en HFDX "
 
 #: src/pages/AccountDashboard/GeneralPerformanceDetails.tsx
 #: src/pages/LeaderboardPage/components/LeaderboardAccountsTable.tsx
@@ -5474,16 +5474,16 @@ msgid "Liquidation"
 msgstr "Liquidación"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Risk Monitoring"
-msgstr "Monitoreo de Riesgos GMX"
+msgid "HFDX Risk Monitoring"
+msgstr "Monitoreo de Riesgos HFDX"
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
 msgid "Receiver has not staked GLP tokens before"
 msgstr ""
 
 #: src/pages/Dashboard/StatsCard.tsx
-msgid "In GMX:"
-msgstr "En GMX:"
+msgid "In HFDX:"
+msgstr "En HFDX:"
 
 #: src/domain/synthetics/trade/utils/validation.ts
 msgid "Min collateral: {0}"
@@ -5550,8 +5550,8 @@ msgid "My assets"
 msgstr ""
 
 #: src/components/GmxAccountModal/GmxAccountModal.tsx
-msgid "Withdraw from GMX Account"
-msgstr "Retirar de Cuenta GMX"
+msgid "Withdraw from HFDX Account"
+msgstr "Retirar de Cuenta HFDX"
 
 #: src/components/TradeHistory/TradeHistoryRow/utils/position.ts
 msgid "Collateral at Liquidation"
@@ -5585,8 +5585,8 @@ msgstr "Precio de Disparo de la Orden"
 
 #: src/components/NetworkFeeRow/NetworkFeeRow.tsx
 #: src/components/NetworkFeeRow/NetworkFeeRow.tsx
-msgid "The maximum network fee paid to the network. This fee is a blockchain cost not specific to GMX, and it does not impact your collateral."
-msgstr "La tarifa de red máxima pagada a la red. Esta tarifa es un costo de blockchain no específico de GMX, y no impacta tu colateral."
+msgid "The maximum network fee paid to the network. This fee is a blockchain cost not specific to HFDX, and it does not impact your collateral."
+msgstr "La tarifa de red máxima pagada a la red. Esta tarifa es un costo de blockchain no específico de HFDX, y no impacta tu colateral."
 
 #: src/domain/synthetics/orders/utils.tsx
 msgid "Limit Increase"
@@ -5604,9 +5604,9 @@ msgstr "Usa el icono de editar garantía para depositar o retirar garantía."
 msgid "No liquidity is available for increasing longs for<0/>this size. Max long size: {0}<1/><2/>There is no price impact. There is a single<3/>execution price for decreasing shorts for<4/>this size."
 msgstr "No hay liquidez disponible para aumentar largos para<0/>este tamaño. Tamaño máximo largo: {0}<1/><2/>No hay impacto de precio. Hay un solo<3/>precio de ejecución para disminuir cortos para<4/>este tamaño."
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX using any token from any network:"
-msgstr "Comprar GMX usando cualquier token de cualquier red:"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX using any token from any network:"
+msgstr "Comprar HFDX usando cualquier token de cualquier red:"
 
 #: src/components/Referrals/AffiliatesStats.tsx
 msgid "Volume traded by your referred traders."
@@ -5617,12 +5617,12 @@ msgid "Parts of this order will be executed once there is sufficient liquidity."
 msgstr "Partes de esta orden se ejecutarán una vez que haya suficiente liquidez."
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GLP, Multiplier Points and voting power to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your HFDX, esHFDX, GLP, Multiplier Points and voting power to your new account.<1/>Transfers are only supported if the receiving account has not staked HFDX or GLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 msgstr ""
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "SNTL esGMX Market"
-msgstr "Mercado SNTL esGMX"
+msgid "SNTL esHFDX Market"
+msgstr "Mercado SNTL esHFDX"
 
 #: src/domain/synthetics/orders/utils.tsx
 msgid "This order using {collateralSymbol} as collateral will not be valid for the existing {longText} position using {symbol} as collateral."
@@ -5638,8 +5638,8 @@ msgid "Pick an asset to deposit"
 msgstr "Elige un activo para depositar"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "Generative Market eXplore - AIGMX Agent"
-msgstr "Generative Market eXplore - Agente AIGMX"
+msgid "Generative Market eXplore - AIHFDX Agent"
+msgstr "Generative Market eXplore - Agente AIHFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Dolomite"
@@ -5650,8 +5650,8 @@ msgid "Order request sent"
 msgstr "Solicitud de orden enviada"
 
 #: src/components/NotifyModal/NotifyModal.tsx
-msgid "Get alerts and announcements from GMX to stay on top of your trades, liquidation risk, and more."
-msgstr "Recibe alertas y anuncios de GMX para estar al tanto de tus operaciones, riesgo de liquidación y más."
+msgid "Get alerts and announcements from HFDX to stay on top of your trades, liquidation risk, and more."
+msgstr "Recibe alertas y anuncios de HFDX para estar al tanto de tus operaciones, riesgo de liquidación y más."
 
 #: src/components/TradeboxPoolWarnings/TradeboxPoolWarnings.tsx
 msgid "You have an existing limit order in the {0} market pool.<0>Switch to {1} market pool</0>"
@@ -5682,7 +5682,7 @@ msgid "Show more"
 msgstr "Mostrar más"
 
 #: src/pages/Earn/EarnAdditionalOpportunitiesPage.tsx
-msgid "No eligible holdings detected. Acquire or stake GMX, GLV, or GM tokens to unlock personalized opportunities."
+msgid "No eligible holdings detected. Acquire or stake HFDX, GLV, or GM tokens to unlock personalized opportunities."
 msgstr ""
 
 #: src/pages/AccountDashboard/dailyAndCumulativePnLDebug.tsx
@@ -5727,8 +5727,8 @@ msgid "3rd Place"
 msgstr "3er Lugar"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0>🔷 24h Volume: $1.01 Billion.</0><1>Thank you to the hundreds of thousands of GMX users who continue to support permissionless onchain trading.</1>"
-msgstr "<0>🔷 Volumen 24h: $1.01 Mil Millones.</0><1>Gracias a los cientos de miles de usuarios de GMX que continúan apoyando el trading onchain sin permisos.</1>"
+msgid "<0>🔷 24h Volume: $1.01 Billion.</0><1>Thank you to the hundreds of thousands of HFDX users who continue to support permissionless onchain trading.</1>"
+msgstr "<0>🔷 Volumen 24h: $1.01 Mil Millones.</0><1>Gracias a los cientos de miles de usuarios de HFDX que continúan apoyando el trading onchain sin permisos.</1>"
 
 #: src/components/GmxAccountModal/DepositView.tsx
 msgid "Enter deposit amount"
@@ -5785,8 +5785,8 @@ msgid "Balance"
 msgstr "Balance"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX v2 Telegram & Discord Analytics"
-msgstr "Análisis de GMX v2 Telegram & Discord"
+msgid "HFDX v2 Telegram & Discord Analytics"
+msgstr "Análisis de HFDX v2 Telegram & Discord"
 
 #: src/components/TradeBox/ExpressTradingWarningCard.tsx
 #: src/components/TradeBox/ExpressTradingWarningCard.tsx
@@ -5794,7 +5794,7 @@ msgid "Re-enable"
 msgstr "Re-habilitar"
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "I do not want to transfer the Affiliate esGMX tokens"
+msgid "I do not want to transfer the Affiliate esHFDX tokens"
 msgstr ""
 
 #: src/components/OldSubaccountWithdraw/OldSubaccountWithdraw.tsx
@@ -5805,16 +5805,16 @@ msgstr "Retirando {balanceFormatted} a cuenta principal"
 msgid "Win/Loss"
 msgstr "Ganancia/Pérdida"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from decentralized exchanges"
-msgstr "Comprar GMX de exchanges descentralizados"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX from decentralized exchanges"
+msgstr "Comprar HFDX de exchanges descentralizados"
 
 #: src/components/NotifyModal/NotifyModal.tsx
 msgid "Powered by"
 msgstr "Impulsado por"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "No options available to transfer {nativeTokenSymbol} to {chainName}."
 msgstr "No hay opciones disponibles para transferir {nativeTokenSymbol} a {chainName}."
 
@@ -5861,7 +5861,7 @@ msgid "Same as current active code"
 msgstr "Igual que el código activo actual"
 
 #: src/components/Earn/AdditionalOpportunities/useOpportunities.tsx
-msgid "Autocompound your earned GMX rewards instantly without having to manually claim and compound your rewards."
+msgid "Autocompound your earned HFDX rewards instantly without having to manually claim and compound your rewards."
 msgstr ""
 
 #: src/components/AllowedSwapSlippageInputRowImpl/AllowedSwapSlippageInputRowImpl.tsx
@@ -5897,24 +5897,24 @@ msgid "Please <0>swap</0> to get {wrappedNativeTokenSymbol}."
 msgstr "Por favor, <0>intercambia</0> para obtener {wrappedNativeTokenSymbol}."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Community with NFTs, Trading and Education initiatives"
-msgstr "Comunidad GMX con iniciativas de NFTs, Trading y Educación"
+msgid "HFDX Community with NFTs, Trading and Education initiatives"
+msgstr "Comunidad HFDX con iniciativas de NFTs, Trading y Educación"
 
 #: src/components/NotifyModal/NotifyModal.tsx
 msgid "Liquidation Confirmations"
 msgstr "Confirmaciones de Liquidación"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0><1>#GMX V2</1>'s OI looks great</0><2>GMX V2 > GMX V1 + Kwenta + Polynomial</2><3>Check more: <4>https://tradao.xyz/#/open-interest</4></3>"
-msgstr "<0>El OI de <1>#GMX V2</1> se ve genial</0><2>GMX V2 > GMX V1 + Kwenta + Polynomial</2><3>Ver más: <4>https://tradao.xyz/#/open-interest</4></3>"
+msgid "<0><1>#HFDX V2</1>'s OI looks great</0><2>HFDX V2 > HFDX V1 + Kwenta + Polynomial</2><3>Check more: <4>https://tradao.xyz/#/open-interest</4></3>"
+msgstr "<0>El OI de <1>#HFDX V2</1> se ve genial</0><2>HFDX V2 > HFDX V1 + Kwenta + Polynomial</2><3>Ver más: <4>https://tradao.xyz/#/open-interest</4></3>"
 
 #: src/components/GmSwap/GmSwapBox/GmSwapWarningsRow.tsx
 msgid "High Price Impact"
 msgstr "Alto Impacto de Precio"
 
 #: src/components/InterviewModal/InterviewModal.tsx
-msgid "We want your insights to help improve GMX. For security reasons, we won't contact you first. Please send the message \"I have feedback\" to any of our official accounts:"
-msgstr "Queremos tus insights para mejorar GMX. Por razones de seguridad, no te contactaremos primero. Por favor, envía el mensaje \"Tengo feedback\" a cualquiera de nuestras cuentas oficiales:"
+msgid "We want your insights to help improve HFDX. For security reasons, we won't contact you first. Please send the message \"I have feedback\" to any of our official accounts:"
+msgstr "Queremos tus insights para mejorar HFDX. Por razones de seguridad, no te contactaremos primero. Por favor, envía el mensaje \"Tengo feedback\" a cualquiera de nuestras cuentas oficiales:"
 
 #: src/components/SwitchToSettlementChain/SwitchToSettlementChainWarning.tsx
 msgid "Vesting is only available on {chainNames} and {lastChainName}. Please switch to {chainNames} or {lastChainName} to access earning opportunities."
@@ -5933,7 +5933,7 @@ msgid "Order error. Prices are currently volatile for this market, try again by 
 msgstr "Error de orden. Los precios están actualmente volátiles para este mercado, intenta de nuevo <0>aumentando el slippage permitido</0> bajo la sección de detalles de ejecución."
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Approve GMX"
+msgid "Approve HFDX"
 msgstr ""
 
 #: src/components/PositionItem/PositionItem.tsx
@@ -5965,17 +5965,17 @@ msgstr ""
 msgid "Execute Limit Swap"
 msgstr "Ejecutar Intercambio Límite"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "To purchase GMX on the {0} blockchain, please <0>change your network</0>."
-msgstr "Para comprar GMX en la blockchain {0}, por favor <0>cambia tu red</0>."
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "To purchase HFDX on the {0} blockchain, please <0>change your network</0>."
+msgstr "Para comprar HFDX en la blockchain {0}, por favor <0>cambia tu red</0>."
 
 #: src/components/TableMarketFilter/MarketFilterLongShort.tsx
 msgid "Open positions with orders"
 msgstr "Posiciones abiertas con órdenes"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0>⬡ Chainlink Data Story ⬡ <1/><2>#Chainlink</2> Data Streams have secured over $56B in volume for the <3>@GMX_IO</3> V2 protocol.</0><4>Data Streams’ low-latency delivery of high-quality market data has supercharged GMX's perpetual markets across <5>@arbitrum</5> and <6>@avax</6>. <7>https://dune.com/gmx-io/gmx-analytics#v2-volume</7></4>"
-msgstr "<0>⬡ Historia de Datos Chainlink ⬡ <1/><2>#Chainlink</2> Data Streams han asegurado más de $56B en volumen para el protocolo V2 de <3>@GMX_IO</3>.</0><4>La entrega de baja latencia de datos de mercado de alta calidad de Data Streams ha supercargado los mercados perpetuos de GMX a través de <5>@arbitrum</5> y <6>@avax</6>. <7>https://dune.com/gmx-io/gmx-analytics#v2-volume</7></4>"
+msgid "<0>⬡ Chainlink Data Story ⬡ <1/><2>#Chainlink</2> Data Streams have secured over $56B in volume for the <3>@HFDX_IO</3> V2 protocol.</0><4>Data Streams’ low-latency delivery of high-quality market data has supercharged HFDX's perpetual markets across <5>@arbitrum</5> and <6>@avax</6>. <7>https://dune.com/gmx-io/gmx-analytics#v2-volume</7></4>"
+msgstr "<0>⬡ Historia de Datos Chainlink ⬡ <1/><2>#Chainlink</2> Data Streams han asegurado más de $56B en volumen para el protocolo V2 de <3>@HFDX_IO</3>.</0><4>La entrega de baja latencia de datos de mercado de alta calidad de Data Streams ha supercargado los mercados perpetuos de HFDX a través de <5>@arbitrum</5> y <6>@avax</6>. <7>https://dune.com/gmx-io/gmx-analytics#v2-volume</7></4>"
 
 #: src/components/NpsModal/NpsModal.tsx
 #: src/components/Referrals/JoinReferralCode.tsx
@@ -6045,16 +6045,16 @@ msgid "No rebates distribution history yet."
 msgstr "Aún no hay historial de distribución de reembolsos."
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Governance"
-msgstr "Gobernanza GMX"
+msgid "HFDX Governance"
+msgstr "Gobernanza HFDX"
 
 #: src/domain/synthetics/orders/utils.tsx
 msgid "trigger price"
 msgstr "precio de activación"
 
 #: src/components/SettingsModal/TradingSettings.tsx
-msgid "GMX executes transactions for you without individual signing, providing a seamless, CEX-like experience. Trades use GMX-sponsored premium RPCs for reliability, even during network congestion. Gas payments in {gasPaymentTokensText}."
-msgstr "GMX ejecuta transacciones por ti sin firma individual, proporcionando una experiencia fluida como CEX. Las operaciones usan RPCs premium patrocinados por GMX para fiabilidad, incluso durante congestión de red. Pagos de gas en {gasPaymentTokensText}."
+msgid "HFDX executes transactions for you without individual signing, providing a seamless, CEX-like experience. Trades use HFDX-sponsored premium RPCs for reliability, even during network congestion. Gas payments in {gasPaymentTokensText}."
+msgstr "HFDX ejecuta transacciones por ti sin firma individual, proporcionando una experiencia fluida como CEX. Las operaciones usan RPCs premium patrocinados por HFDX para fiabilidad, incluso durante congestión de red. Pagos de gas en {gasPaymentTokensText}."
 
 #: src/components/ClaimablePositionPriceImpactRebateModal/ClaimablePositionPriceImpactRebateModal.tsx
 #: src/components/ClaimablePositionPriceImpactRebateModal/ClaimablePositionPriceImpactRebateModal.tsx
@@ -6095,7 +6095,7 @@ msgstr "Código de referencia creado."
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "No decentralized exchanges available for this network."
 msgstr "No hay exchanges descentralizados disponibles para esta red."
 
@@ -6183,8 +6183,8 @@ msgstr "Orden de cambio GM desconocida"
 #: src/components/CollateralSelector/PositionEditorCollateralSelector.tsx
 #: src/components/GmxAccountModal/DepositView.tsx
 #: src/components/GmxAccountModal/WithdrawalView.tsx
-msgid "GMX Balance"
-msgstr "Saldo GMX"
+msgid "HFDX Balance"
+msgstr "Saldo HFDX"
 
 #: src/components/GmSwap/GmSwapBox/GmDepositWithdrawalBox/useGmSwapSubmitState.tsx
 msgid "Shifting {symbol}..."
@@ -6256,8 +6256,8 @@ msgid "Lending and Borrowing"
 msgstr "Préstamos y Empréstitos"
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal.tsx
-msgid "GMX Vault"
-msgstr "Vault GMX"
+msgid "HFDX Vault"
+msgstr "Vault HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Jones DAO"
@@ -6311,7 +6311,7 @@ msgid "Win Rate"
 msgstr "Tasa de Ganancia"
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "You have esGMX tokens in the Affiliate Vault, you need to withdraw these tokens if you want to transfer them to the new account"
+msgid "You have esHFDX tokens in the Affiliate Vault, you need to withdraw these tokens if you want to transfer them to the new account"
 msgstr ""
 
 #: src/components/PositionShare/PositionShare.tsx
@@ -6323,8 +6323,8 @@ msgid "{0} and {1} can be used to buy GM for this market up to the specified buy
 msgstr "{0} y {1} se pueden usar para comprar GM en este mercado hasta los límites de compra especificados."
 
 #: src/components/UserIncentiveDistribution/AboutGlpIncident.tsx
-msgid "GLV tokens are similar in composition to GLP, and enable seamless integration into GMX V2's liquidity ecosystem. Users can either sell or hold the tokens to earn yield. To encourage long-term participation, a $500,000 GLV incentive pool will be distributed proportionally to those who hold their allocated GLV for at least 3 months."
-msgstr "Los tokens GLV son similares en composición a GLP, y permiten integración fluida en el ecosistema de liquidez de GMX V2. Los usuarios pueden vender o mantener los tokens para ganar rendimiento. Para fomentar participación a largo plazo, un pool de incentivos GLV de $500,000 se distribuirá proporcionalmente a aquellos que mantengan su GLV asignado por al menos 3 meses."
+msgid "GLV tokens are similar in composition to GLP, and enable seamless integration into HFDX V2's liquidity ecosystem. Users can either sell or hold the tokens to earn yield. To encourage long-term participation, a $500,000 GLV incentive pool will be distributed proportionally to those who hold their allocated GLV for at least 3 months."
+msgstr "Los tokens GLV son similares en composición a GLP, y permiten integración fluida en el ecosistema de liquidez de HFDX V2. Los usuarios pueden vender o mantener los tokens para ganar rendimiento. Para fomentar participación a largo plazo, un pool de incentivos GLV de $500,000 se distribuirá proporcionalmente a aquellos que mantengan su GLV asignado por al menos 3 meses."
 
 #: src/components/StatusNotification/OrderStatusNotification.tsx
 #: src/components/StatusNotification/StakeNotification.tsx
@@ -6356,7 +6356,7 @@ msgstr ""
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Vested GMX not withdrawn"
+msgid "Vested HFDX not withdrawn"
 msgstr ""
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal.tsx
@@ -6578,7 +6578,7 @@ msgstr "mantén más de lo que ganas"
 msgid "This position could still be liquidated, excluding any price movement, due to funding and borrowing fee rates reducing the position's collateral over time."
 msgstr "Esta posición aún podría liquidarse, excluyendo cualquier movimiento de precio, debido a tasas de financiamiento y préstamo que reducen la garantía de la posición con el tiempo."
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "Transfer {nativeTokenSymbol}"
 msgstr "Transferir {nativeTokenSymbol}"
 
@@ -6625,18 +6625,18 @@ msgstr "Sesión generada"
 #: src/components/Earn/Discovery/EarnProductCard.tsx
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/GmxAssetCard.tsx
 #: src/components/Earn/Portfolio/RecommendedAssets/RecommendedAssets.tsx
-#: src/pages/BuyGMX/BuyGmxModal.tsx
+#: src/pages/BuyHFDX/BuyGmxModal.tsx
 #: src/pages/Dashboard/GmxCard.tsx
-msgid "Buy GMX"
-msgstr "Comprar GMX"
+msgid "Buy HFDX"
+msgstr "Comprar HFDX"
 
 #: src/components/ToastifyDebug/ToastifyDebug.tsx
 msgid "Copy error"
 msgstr "Error de copia"
 
 #: src/pages/Ecosystem/Ecosystem.tsx
-msgid "Projects developed by the GMX community. <0/>Please exercise caution when interacting with any app, apps are fully maintained by community developers."
-msgstr "Proyectos desarrollados por la comunidad GMX. <0/>Por favor, ejerce precaución al interactuar con cualquier app, las apps son mantenidas completamente por desarrolladores de la comunidad."
+msgid "Projects developed by the HFDX community. <0/>Please exercise caution when interacting with any app, apps are fully maintained by community developers."
+msgstr "Proyectos desarrollados por la comunidad HFDX. <0/>Por favor, ejerce precaución al interactuar con cualquier app, las apps son mantenidas completamente por desarrolladores de la comunidad."
 
 #: src/components/SettingsModal/RpcDebugSettings.tsx
 msgid "Add RPC"
@@ -6686,7 +6686,7 @@ msgid "limit price"
 msgstr "precio límite"
 
 #: src/components/Earn/Portfolio/RewardsBar.tsx
-msgid "Vested Claimable GMX:"
+msgid "Vested Claimable HFDX:"
 msgstr ""
 
 #: src/components/StatusNotification/OrderStatusNotification.tsx
@@ -6719,8 +6719,8 @@ msgid "Update Limit"
 msgstr "Actualizar Límite"
 
 #: src/components/GmxAccountModal/WithdrawalView.tsx
-msgid "Withdrawing requires <0/> while you have <1/>. Please <2>swap</2> or <3>deposit</3> more {0} to your GMX account."
-msgstr "Retirar requiere <0/> mientras tienes <1/>. Por favor, <2>intercambia</2> o <3>deposita</3> más {0} a tu cuenta GMX."
+msgid "Withdrawing requires <0/> while you have <1/>. Please <2>swap</2> or <3>deposit</3> more {0} to your HFDX account."
+msgstr "Retirar requiere <0/> mientras tienes <1/>. Por favor, <2>intercambia</2> o <3>deposita</3> más {0} a tu cuenta HFDX."
 
 #: src/components/OrderItem/OrderItem.tsx
 msgid "Edit order"
@@ -6751,16 +6751,16 @@ msgstr "Falló el retiro de {balanceFormatted} a cuenta principal."
 msgid "Date"
 msgstr "Fecha"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX using FIAT gateways:"
-msgstr "Comprar GMX usando pasarelas FIAT:"
+#: src/pages/BuyHFDX/BuyHFDX.tsx
+msgid "Buy HFDX using FIAT gateways:"
+msgstr "Comprar HFDX usando pasarelas FIAT:"
 
 #: src/domain/tokens/approveTokens.tsx
 msgid "Approval failed."
 msgstr "Aprobación fallida."
 
 #: src/components/Earn/Portfolio/RewardsBar.tsx
-msgid "GMX rewards:"
+msgid "HFDX rewards:"
 msgstr ""
 
 #: src/components/OrderEditor/OrderEditor.tsx
@@ -6823,8 +6823,8 @@ msgid "Vault Capacity"
 msgstr "Capacidad de Vault"
 
 #: src/components/SettingsModal/TradingSettings.tsx
-msgid "The max network fee is set to a higher value to handle potential increases in gas price during order execution. Any excess network fee will be refunded to your account when the order is executed. Only applicable to GMX V2."
-msgstr "La tarifa de red máx. se establece en un valor más alto para manejar posibles aumentos en precio de gas durante ejecución de orden. Cualquier exceso de tarifa de red se reembolsará a tu cuenta cuando se ejecute la orden. Solo aplicable a GMX V2."
+msgid "The max network fee is set to a higher value to handle potential increases in gas price during order execution. Any excess network fee will be refunded to your account when the order is executed. Only applicable to HFDX V2."
+msgstr "La tarifa de red máx. se establece en un valor más alto para manejar posibles aumentos en precio de gas durante ejecución de orden. Cualquier exceso de tarifa de red se reembolsará a tu cuenta cuando se ejecute la orden. Solo aplicable a HFDX V2."
 
 #: src/components/TVChart/Chart.tsx
 msgid "Depth"
@@ -6841,8 +6841,8 @@ msgid "Depositing"
 msgstr "Depositando"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0>With a 75.5% majority vote, GMX has selected LayerZero as its messaging partner for multichain expansion! The integration brings GMX:</0><1><2>The ability to expand to 125+ chains</2><3>Full ownership of all contracts and security</3><4>Fast, zero-slippage transfers</4><5>Battle-tested rails already trusted by billions of dollars in assets and hundreds of applications... <6>see more</6></5></1>"
-msgstr "<0>Con un voto mayoritario del 75.5%, GMX ha seleccionado a LayerZero como su socio de mensajería para expansión multicadena! La integración trae a GMX:</0><1><2>La capacidad de expandir a más de 125 cadenas</2><3>Propiedad completa de todos los contratos y seguridad</3><4>Transferencias rápidas, sin slippage</4><5>Rails probados en batalla ya confiados por miles de millones de dólares en activos y cientos de aplicaciones... <6>ver más</6></5></1>"
+msgid "<0>With a 75.5% majority vote, HFDX has selected LayerZero as its messaging partner for multichain expansion! The integration brings HFDX:</0><1><2>The ability to expand to 125+ chains</2><3>Full ownership of all contracts and security</3><4>Fast, zero-slippage transfers</4><5>Battle-tested rails already trusted by billions of dollars in assets and hundreds of applications... <6>see more</6></5></1>"
+msgstr "<0>Con un voto mayoritario del 75.5%, HFDX ha seleccionado a LayerZero como su socio de mensajería para expansión multicadena! La integración trae a HFDX:</0><1><2>La capacidad de expandir a más de 125 cadenas</2><3>Propiedad completa de todos los contratos y seguridad</3><4>Transferencias rápidas, sin slippage</4><5>Rails probados en batalla ya confiados por miles de millones de dólares en activos y cientos de aplicaciones... <6>ver más</6></5></1>"
 
 #: src/domain/synthetics/trade/utils/validation.ts
 #: src/domain/synthetics/trade/utils/validation.ts
@@ -6871,8 +6871,8 @@ msgid "Page outdated, please refresh"
 msgstr "Página obsoleta, por favor actualice"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Proposals"
-msgstr "Propuestas de GMX"
+msgid "HFDX Proposals"
+msgstr "Propuestas de HFDX"
 
 #: src/components/UserIncentiveDistribution/utils.tsx
 msgid "GLV Bonus Incentive (test)"
@@ -6892,22 +6892,22 @@ msgid "Perfectswap"
 msgstr "Perfectswap"
 
 #: src/pages/LeaderboardPage/components/LeaderboardContainer.tsx
-msgid "Leaderboard for traders on GMX V2."
-msgstr "Tabla de clasificación para traders en GMX V2."
+msgid "Leaderboard for traders on HFDX V2."
+msgstr "Tabla de clasificación para traders en HFDX V2."
 
 #: src/components/TradeHistory/keys.ts
 msgid "Failed Withdraw"
 msgstr "Retiro Fallido"
 
 #: src/pages/Referrals/Referrals.tsx
-msgid "Get fee discounts and earn rebates through the GMX referral program.<0/>For more information, please read the <1>referral program details</1>."
-msgstr "Obtenga descuentos en comisiones y gane reembolsos a través del programa de referidos de GMX.<0/>Para más información, lea los <1>detalles del programa de referidos</1>."
+msgid "Get fee discounts and earn rebates through the HFDX referral program.<0/>For more information, please read the <1>referral program details</1>."
+msgstr "Obtenga descuentos en comisiones y gane reembolsos a través del programa de referidos de HFDX.<0/>Para más información, lea los <1>detalles del programa de referidos</1>."
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
-msgid "Sell {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your GMX account. You can switch to settlement chain and go to the {indexName} pool to manually sell your {gmOrGlvLabel} tokens."
+msgid "Sell {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your HFDX account. You can switch to settlement chain and go to the {indexName} pool to manually sell your {gmOrGlvLabel} tokens."
 msgstr ""
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "Buy or Transfer {nativeTokenSymbol} to {chainName}"
 msgstr "Compra o Transfiere {nativeTokenSymbol} a {chainName}"
 
@@ -7005,8 +7005,8 @@ msgid "Telegram Group (Portuguese)"
 msgstr "Grupo de Telegram (Portugués)"
 
 #: src/pages/Actions/SyntheticsActions.tsx
-msgid "GMX V2 Actions"
-msgstr "Acciones de GMX V2"
+msgid "HFDX V2 Actions"
+msgstr "Acciones de HFDX V2"
 
 #: src/components/Referrals/ReferralCodeWarnings.tsx
 msgid "This code has been taken by someone else on {takenNetworkNames}, you will not receive rebates from traders using this code on {takenNetworkNames}."
@@ -7023,12 +7023,12 @@ msgstr "Confirmar Reclamación"
 #: src/components/GmxAccountModal/GmxAccountModal.tsx
 #: src/components/GmxAccountModal/MainView.tsx
 #: src/components/TokenSelector/MultichainMarketTokenSelector.tsx
-msgid "GMX Account Balance"
-msgstr "Saldo de Cuenta GMX"
+msgid "HFDX Account Balance"
+msgstr "Saldo de Cuenta HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX community discussion"
-msgstr "Discusión comunitaria de GMX"
+msgid "HFDX community discussion"
+msgstr "Discusión comunitaria de HFDX"
 
 #: src/components/GmSwap/GmSwapBox/GmSwapBoxHeader.tsx
 msgid "Sell GM"
@@ -7084,8 +7084,8 @@ msgid "Referral code creation failed."
 msgstr "Creación del código de referido fallida."
 
 #: src/pages/Ecosystem/Ecosystem.tsx
-msgid "GMX dashboards and analytics."
-msgstr "Paneles y análisis de GMX."
+msgid "HFDX dashboards and analytics."
+msgstr "Paneles y análisis de HFDX."
 
 #: src/components/TradeFeesRow/TradeFeesRow.tsx
 msgid "External Swap {0} to {1}"
@@ -7097,7 +7097,7 @@ msgid "Position"
 msgstr "Posición"
 
 #: src/components/Earn/Discovery/EarnProductCard.tsx
-msgid "What is GMX?"
+msgid "What is HFDX?"
 msgstr ""
 
 #: src/components/TradeFeesRow/TradeFeesRow.tsx
@@ -7140,7 +7140,7 @@ msgstr "Trading Fluido"
 msgid "Stake {tokenSymbol}"
 msgstr ""
 
-#: src/components/Stake/GMXAprTooltip.tsx
+#: src/components/Stake/HFDXAprTooltip.tsx
 msgid "{nativeTokenSymbol} APR"
 msgstr "APR de {nativeTokenSymbol}"
 
@@ -7184,7 +7184,7 @@ msgid "Invalid address. Please make sure you have entered a valid Ethereum addre
 msgstr "Dirección inválida. Asegúrate de haber ingresado una dirección Ethereum válida"
 
 #: src/pages/AccountTransfer/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Sender has withdrawn all tokens from GMX Vesting Vault"
+msgid "Sender has withdrawn all tokens from HFDX Vesting Vault"
 msgstr ""
 
 #: src/components/ClaimablePositionPriceImpactRebateModal/ClaimablePositionPriceImpactRebateModal.tsx
@@ -7197,8 +7197,8 @@ msgid "Failed Settlement of Funding Fees"
 msgstr "Liquidación Fallida de Comisiones de Financiación"
 
 #: src/pages/Dashboard/DashboardPageTitle.tsx
-msgid "GLP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees."
-msgstr "GLP es el token de proveedor de liquidez para mercados GMX V1. Acumula el 70% de las comisiones generadas por mercados V1."
+msgid "GLP is the liquidity provider token for HFDX V1 markets. Accrues 70% of the V1 markets generated fees."
+msgstr "GLP es el token de proveedor de liquidez para mercados HFDX V1. Acumula el 70% de las comisiones generadas por mercados V1."
 
 #: src/domain/synthetics/orders/utils.tsx
 msgid "{increaseOrDecreaseText} {tokenText} by {sizeText}"
@@ -7272,7 +7272,7 @@ msgstr "<0>Tu monedero no está conectado a {0}.</0><1/><2>Cambia a {1}</2>"
 msgid "Transaction was cancelled."
 msgstr "La transacción fue cancelada."
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "Choose to buy from decentralized or centralized exchanges."
 msgstr "Elige comprar en exchanges descentralizados o centralizados."
 
@@ -7281,12 +7281,12 @@ msgstr "Elige comprar en exchanges descentralizados o centralizados."
 #: src/components/GmxAccountModal/GmxAccountModal.tsx
 #: src/components/TokenSelector/MultichainTokenSelector.tsx
 #: src/pages/AccountDashboard/AccountDashboard.tsx
-msgid "GMX Account"
-msgstr "Cuenta GMX"
+msgid "HFDX Account"
+msgstr "Cuenta HFDX"
 
 #: src/pages/Ecosystem/Ecosystem.tsx
-msgid "GMX ecosystem pages."
-msgstr "Páginas del ecosistema GMX."
+msgid "HFDX ecosystem pages."
+msgstr "Páginas del ecosistema HFDX."
 
 #: src/components/StatusNotification/GmStatusNotification.tsx
 msgid "Shift order cancelled."
@@ -7326,7 +7326,7 @@ msgstr "Seleccionar red"
 
 #: src/lib/legacy.ts
 msgid "Decentralized Perpetual Exchange | HFDX"
-msgstr "Exchange Perpetuo Descentralizado | GMX"
+msgstr "Exchange Perpetuo Descentralizado | HFDX"
 
 #: landing/src/pages/Home/HeroSection/Features.tsx
 msgid "No loss of fund ownership"
@@ -7351,8 +7351,8 @@ msgid "Fee APY"
 msgstr "APY de Comisión"
 
 #: landing/src/pages/Home/FaqSection/FaqSection.tsx
-msgid "Can I build on top of GMX or integrate it into my DeFi app?"
-msgstr "¿Puedo construir sobre GMX o integrarlo en mi app DeFi?"
+msgid "Can I build on top of HFDX or integrate it into my DeFi app?"
+msgstr "¿Puedo construir sobre HFDX o integrarlo en mi app DeFi?"
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
 msgid "Your funds are safe and remain in your wallet."
@@ -7430,7 +7430,7 @@ msgid "Failed TWAP Swap Part"
 msgstr "Parte de Intercambio TWAP Fallida"
 
 #: src/domain/multichain/progress/MultichainTransferProgressView.tsx
-msgid "Your funds are safe and remain in GMX contracts on the destination chain. You can try retrying the compose tx in LayerZero Scan or ask support for help."
+msgid "Your funds are safe and remain in HFDX contracts on the destination chain. You can try retrying the compose tx in LayerZero Scan or ask support for help."
 msgstr ""
 
 #: src/components/Errors/errorToasts.tsx
@@ -7470,15 +7470,15 @@ msgid "Job Openings"
 msgstr "Ofertas de Empleo"
 
 #: src/pages/Ecosystem/Ecosystem.tsx
-msgid "Projects integrated with GMX."
-msgstr "Proyectos integrados con GMX."
+msgid "Projects integrated with HFDX."
+msgstr "Proyectos integrados con HFDX."
 
-#: src/components/Stake/GMXAprTooltip.tsx
-msgid "Escrowed GMX APR"
-msgstr "APR de GMX Escrowed"
+#: src/components/Stake/HFDXAprTooltip.tsx
+msgid "Escrowed HFDX APR"
+msgstr "APR de HFDX Escrowed"
 
 #: src/components/Earn/Portfolio/RewardsBar.tsx
-msgid "esGMX rewards:"
+msgid "esHFDX rewards:"
 msgstr ""
 
 #: src/context/SubaccountContext/SubaccountContextProvider.tsx
@@ -7577,7 +7577,7 @@ msgid "Increase Size (Stop Market)"
 msgstr "Incrementar Tamaño (Stop Mercado)"
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal.tsx
-msgid "Convert esGMX tokens to GMX tokens. Please read the vesting details before using the vaults."
+msgid "Convert esHFDX tokens to HFDX tokens. Please read the vesting details before using the vaults."
 msgstr ""
 
 #: src/components/TradeboxPoolWarnings/TradeboxPoolWarnings.tsx
@@ -7638,8 +7638,8 @@ msgstr "Funding reclamado."
 msgid "Keep leverage is not available as Position exceeds max. allowed leverage. <0>Read more</0>."
 msgstr "Mantener apalancamiento no disponible ya que la Posición excede el apal. máximo permitido. <0>Leer más</0>."
 
-#: src/pages/BuyGMX/BuyGmxModal.tsx
-msgid "Buy GMX directly"
+#: src/pages/BuyHFDX/BuyGmxModal.tsx
+msgid "Buy HFDX directly"
 msgstr ""
 
 #: src/components/TradeHistory/keys.ts
@@ -7650,7 +7650,7 @@ msgstr "Stop Loss Fallido"
 msgid "Daily Profit"
 msgstr "Ganancia Diaria"
 
-#: src/pages/BuyGMX/BuyGMX.tsx
+#: src/pages/BuyHFDX/BuyHFDX.tsx
 msgid "You can buy {nativeTokenSymbol} directly on <0>{chainName}</0> using these options:"
 msgstr "Puedes comprar {nativeTokenSymbol} directamente en <0>{chainName}</0> usando estas opciones:"
 
@@ -7699,7 +7699,7 @@ msgid "Tier {0}: {currentTierDiscount}% discount"
 msgstr "Nivel {0}: {currentTierDiscount}% de descuento"
 
 #: src/pages/Earn/EarnPageLayout.tsx
-msgid "Stake GMX and buy GLV or GM to earn rewards."
+msgid "Stake HFDX and buy GLV or GM to earn rewards."
 msgstr ""
 
 #: src/components/TradeBox/ExpressTradingWarningCard.tsx
@@ -7712,8 +7712,8 @@ msgid "Limit - Long Inc."
 msgstr "Límite - Inc. Largo"
 
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/ClaimModal.tsx
-msgid "<0>Delegate your undelegated {0} GMX DAO</0>voting power before claiming."
-msgstr "<0>Delega tu poder de voto {0} GMX DAO no delegado</0> antes de reclamar."
+msgid "<0>Delegate your undelegated {0} HFDX DAO</0>voting power before claiming."
+msgstr "<0>Delega tu poder de voto {0} HFDX DAO no delegado</0> antes de reclamar."
 
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "Claim funds"
@@ -7803,7 +7803,7 @@ msgid "Swap"
 msgstr "Intercambiar"
 
 #: src/components/Earn/Discovery/EarnFaq.tsx
-msgid "Where do GMX staking rewards come from?"
+msgid "Where do HFDX staking rewards come from?"
 msgstr ""
 
 #: src/domain/synthetics/orders/utils.tsx
@@ -7849,8 +7849,8 @@ msgid "Trigger price below lowest limit price"
 msgstr "Precio de activación por debajo del precio límite más bajo"
 
 #: src/components/Referrals/TradersStats.tsx
-msgid "GMX V2 discounts are automatically applied on each trade and are not displayed on this table."
-msgstr "Los descuentos de GMX V2 se aplican automáticamente en cada operación y no se muestran en esta tabla."
+msgid "HFDX V2 discounts are automatically applied on each trade and are not displayed on this table."
+msgstr "Los descuentos de HFDX V2 se aplican automáticamente en cada operación y no se muestran en esta tabla."
 
 #: src/components/PositionDropdown/PositionDropdown.tsx
 msgid "Share Position"
@@ -7874,8 +7874,8 @@ msgid "Unknown order"
 msgstr "Orden desconocida"
 
 #: src/pages/Jobs/Jobs.jsx
-msgid "No open positions at GMX currently"
-msgstr "No hay posiciones abiertas en GMX actualmente"
+msgid "No open positions at HFDX currently"
+msgstr "No hay posiciones abiertas en HFDX actualmente"
 
 #: src/pages/ParseTransaction/ParseTransaction.tsx
 msgid "Cancelled"
@@ -7899,7 +7899,7 @@ msgid "You do not have any eligible trade during the competition window."
 msgstr "No tienes ningún trade elegible durante la ventana de competencia."
 
 #: src/components/Earn/Portfolio/RewardsBar.tsx
-msgid "GMX Staked Rewards:"
+msgid "HFDX Staked Rewards:"
 msgstr ""
 
 #: src/components/DepthChart/DepthChartTooltip.tsx
@@ -8028,8 +8028,8 @@ msgid "You have {0} tokens reserved for vesting."
 msgstr ""
 
 #: src/domain/multichain/useMultichainFundingToast.tsx
-msgid "Depositing and withdrawing funds to/from GMX Account"
-msgstr "Depositando y retirando fondos a/de Cuenta GMX"
+msgid "Depositing and withdrawing funds to/from HFDX Account"
+msgstr "Depositando y retirando fondos a/de Cuenta HFDX"
 
 #: src/components/GmxAccountModal/MainView.tsx
 msgid "No funding activity matching your search"
@@ -8057,7 +8057,7 @@ msgid "24H VOL."
 msgstr "VOL. 24H"
 
 #: src/components/Earn/Discovery/EarnFaq.tsx
-msgid "Currently, staking GMX is only supported on Avalanche and Arbitrum. For providing liquidity, different GLV vaults and GM tokens are available on each blockchain. Please visit the Pools page for an overview of the liquidity products that are available on the chain you're connected to."
+msgid "Currently, staking HFDX is only supported on Avalanche and Arbitrum. For providing liquidity, different GLV vaults and GM tokens are available on each blockchain. Please visit the Pools page for an overview of the liquidity products that are available on the chain you're connected to."
 msgstr ""
 
 #: src/components/Referrals/TradersStats.tsx
@@ -8065,12 +8065,12 @@ msgid "You will receive a {currentTierDiscount}% discount on opening and closing
 msgstr "Recibirás un descuento de {currentTierDiscount}% en comisiones de apertura y cierre."
 
 #: src/components/InterviewModal/InterviewModal.tsx
-msgid "Anonymous chat with GMX team"
-msgstr "Chat anónimo con el equipo de GMX"
+msgid "Anonymous chat with HFDX team"
+msgstr "Chat anónimo con el equipo de HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
-msgid "GMX Market Token Price Chart"
-msgstr "Gráfico de Precio de Token de Mercado GMX"
+msgid "HFDX Market Token Price Chart"
+msgstr "Gráfico de Precio de Token de Mercado HFDX"
 
 #: src/pages/LeaderboardPage/components/LeaderboardContainer.tsx
 msgid "Top Addresses"
@@ -8110,8 +8110,8 @@ msgid "You have an existing limit order with {symbol} as collateral. <0>Switch t
 msgstr "Tienes una orden límite existente con {symbol} como colateral. <0>Cambia a colateral {symbol}</0>"
 
 #: landing/src/pages/Home/SocialSection/SocialSlider.tsx
-msgid "<0><1>@GMX_IO</1> enters into a Data Partnership with Token TerminalGMX is a leading permissionless perpetual exchange built on <2>@Arbitrum</2> and <3>@Avax</3>.</0><4>The protocol serves as a foundational liquidity baselayer for multichain DeFi.</4><5>With ~$280 billion in notional trading volume and counting, GMX recognized the need for reliable and data-driven stakeholder reporting.</5>"
-msgstr "<0><1>@GMX_IO</1> entra en una Asociación de Datos con Token TerminalGMX es un exchange perpetuo sin permisos líder construido en <2>@Arbitrum</2> y <3>@Avax</3>.</0><4>El protocolo sirve como capa base de liquidez fundacional para DeFi multicadena.</4><5>Con ~$280 mil millones en volumen de trading nocional y contando, GMX reconoció la necesidad de reportes confiables y basados en datos para stakeholders.</5>"
+msgid "<0><1>@HFDX_IO</1> enters into a Data Partnership with Token TerminalHFDX is a leading permissionless perpetual exchange built on <2>@Arbitrum</2> and <3>@Avax</3>.</0><4>The protocol serves as a foundational liquidity baselayer for multichain DeFi.</4><5>With ~$280 billion in notional trading volume and counting, HFDX recognized the need for reliable and data-driven stakeholder reporting.</5>"
+msgstr "<0><1>@HFDX_IO</1> entra en una Asociación de Datos con Token TerminalHFDX es un exchange perpetuo sin permisos líder construido en <2>@Arbitrum</2> y <3>@Avax</3>.</0><4>El protocolo sirve como capa base de liquidez fundacional para DeFi multicadena.</4><5>Con ~$280 mil millones en volumen de trading nocional y contando, HFDX reconoció la necesidad de reportes confiables y basados en datos para stakeholders.</5>"
 
 #: src/domain/synthetics/orders/cancelOrdersTxn.ts
 msgid "{count, plural, one {Order} other {# Orders}}"
@@ -8158,7 +8158,7 @@ msgstr "Tasa neta combina comisiones de financiación y préstamo pero excluye c
 msgid "Accrued Price Impact Rebates"
 msgstr "Reembolsos de Impacto de Precio Acumulados"
 
-#: src/pages/BuyGMX/BuyGmxModal.tsx
+#: src/pages/BuyHFDX/BuyGmxModal.tsx
 msgid "Buy on other platforms"
 msgstr ""
 
@@ -8196,7 +8196,7 @@ msgid "Market order will be cancellable in ..."
 msgstr "Orden de mercado será cancelable en ..."
 
 #: src/components/Earn/Discovery/EarnYieldOverview.tsx
-msgid "Staking GMX is currently not supported on Botanix. For access to these features, please visit the Arbitrum and Avalanche deployments."
+msgid "Staking HFDX is currently not supported on Botanix. For access to these features, please visit the Arbitrum and Avalanche deployments."
 msgstr ""
 
 #: src/pages/PoolsDetails/PoolsDetailsHeader.tsx
@@ -8204,8 +8204,8 @@ msgid "Deposit {glvOrGm}"
 msgstr ""
 
 #: src/components/InterviewModal/InterviewModal.tsx
-msgid "Anonymous chat with GMX"
-msgstr "Chat anónimo con GMX"
+msgid "Anonymous chat with HFDX"
+msgstr "Chat anónimo con HFDX"
 
 #: src/components/BridgeModal/BridgeOutModal.tsx
 #: src/components/ClaimModal/ClaimModal.tsx
@@ -8313,8 +8313,8 @@ msgid "{longOrShort} positions do not pay a funding fee and pay a borrow fee of 
 msgstr "Posiciones {longOrShort} no pagan comisión de financiación y pagan comisión de préstamo de {borrowRate} por hora."
 
 #: src/pages/Ecosystem/Ecosystem.tsx
-msgid "GMX Pages"
-msgstr "Páginas GMX"
+msgid "HFDX Pages"
+msgstr "Páginas HFDX"
 
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "Decentralized Options Protocol"

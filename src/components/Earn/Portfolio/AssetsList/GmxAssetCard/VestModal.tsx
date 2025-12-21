@@ -290,7 +290,7 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
 
   const vaultTabs = useMemo(
     () => [
-      { value: "gmx", label: <Trans>GMX Vault</Trans> },
+      { value: "gmx", label: <Trans>HFDX Vault</Trans> },
       { value: "affiliate", label: <Trans>Affiliate Vault</Trans> },
     ],
     []
@@ -430,7 +430,7 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
             <AlertInfoCard type="info" onClose={() => setIsReadVestingDetailsBannerClosed(true)}>
               <div>
                 <Trans>
-                  Convert esGMX tokens to GMX tokens. Please read the vesting details before using the vaults.
+                  Convert esHFDX tokens to HFDX tokens. Please read the vesting details before using the vaults.
                 </Trans>
 
                 <ColorfulButtonLink to="https://docs.gmx.io/docs/tokenomics/rewards#vesting" newTab>
@@ -461,7 +461,7 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
               >
                 <div className="flex items-center gap-4">
                   <EsGmxIcon />
-                  esGMX
+                  esHFDX
                 </div>
               </BuyInputSection>
               <SwitchToSettlementChainWarning topic="vesting" />
@@ -480,7 +480,7 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
               >
                 <div className="flex items-center gap-4">
                   <EsGmxIcon />
-                  esGMX
+                  esHFDX
                 </div>
               </BuyInputSection>
               <SwitchToSettlementChainWarning topic="vesting" />
@@ -495,7 +495,7 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
               <BuyInputSection topLeftLabel={t`Claim`} inputValue={formatGmxAmount(claimableAmount)} isDisabled>
                 <div className="flex items-center gap-4">
                   <GmxIcon className="size-20" />
-                  GMX
+                  HFDX
                 </div>
               </BuyInputSection>
               <SwitchToSettlementChainWarning topic="staking" />
@@ -508,7 +508,7 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
           <div className="mt-8 flex flex-col gap-12">
             <ProgressRow
               label={<Trans>Claimable</Trans>}
-              value={`${formatGmxAmount(claimableAmount)} GMX`}
+              value={`${formatGmxAmount(claimableAmount)} HFDX`}
               currentValue={claimableAmount}
               totalValue={vestedAmount}
             />
@@ -521,8 +521,8 @@ export function VestModal({ isVisible, setIsVisible, processedData, reservedAmou
                   handleClassName="whitespace-nowrap"
                   content={
                     <span>
-                      {formatGmxAmount(claimSum)} tokens have been converted to GMX from the{" "}
-                      {formatGmxAmount(vestedAmount)} esGMX deposited for vesting.
+                      {formatGmxAmount(claimSum)} tokens have been converted to HFDX from the{" "}
+                      {formatGmxAmount(vestedAmount)} esHFDX deposited for vesting.
                     </span>
                   }
                 />

@@ -22,7 +22,7 @@ const createGetLink =
     return links[chainId] ?? fallback;
   };
 
-export const BUY_GMX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
+export const BUY_HFDX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
   {
     id: "uniswap",
     icon: <UniswapIcon className="size-20" />,
@@ -41,8 +41,8 @@ export const BUY_GMX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
     label: "1inch",
     getLink: createGetLink(
       {
-        [ARBITRUM]: "https://app.1inch.io/#/42161/unified/swap/ETH/GMX",
-        [AVALANCHE]: "https://app.1inch.io/#/43114/unified/swap/AVAX/GMX",
+        [ARBITRUM]: "https://app.1inch.io/#/42161/unified/swap/ETH/HFDX",
+        [AVALANCHE]: "https://app.1inch.io/#/43114/unified/swap/AVAX/HFDX",
       },
       "https://1inch.io/"
     ),
@@ -65,8 +65,8 @@ export const BUY_GMX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
     label: "Binance",
     getLink: createGetLink(
       {
-        [ARBITRUM]: "https://www.binance.com/en/trade/GMX_USDT",
-        [AVALANCHE]: "https://www.binance.com/en/trade/GMX_USDT",
+        [ARBITRUM]: "https://www.binance.com/en/trade/HFDX_USDT",
+        [AVALANCHE]: "https://www.binance.com/en/trade/HFDX_USDT",
       },
       "https://www.binance.com/"
     ),
@@ -77,8 +77,8 @@ export const BUY_GMX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
     label: "Bybit",
     getLink: createGetLink(
       {
-        [ARBITRUM]: "https://www.bybit.com/en-US/trade/spot/GMX/USDT",
-        [AVALANCHE]: "https://www.bybit.com/en-US/trade/spot/GMX/USDT",
+        [ARBITRUM]: "https://www.bybit.com/en-US/trade/spot/HFDX/USDT",
+        [AVALANCHE]: "https://www.bybit.com/en-US/trade/spot/HFDX/USDT",
       },
       "https://www.bybit.com/"
     ),
@@ -89,8 +89,8 @@ export const BUY_GMX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
     label: "Banxa",
     getLink: createGetLink(
       {
-        [ARBITRUM]: "https://gmx.banxa.com/?coinType=GMX&fiatType=USD&fiatAmount=500&blockchain=arbitrum",
-        [AVALANCHE]: "https://gmx.banxa.com/?coinType=GMX&fiatType=USD&fiatAmount=500&blockchain=avalanche",
+        [ARBITRUM]: "https://gmx.banxa.com/?coinType=HFDX&fiatType=USD&fiatAmount=500&blockchain=arbitrum",
+        [AVALANCHE]: "https://gmx.banxa.com/?coinType=HFDX&fiatType=USD&fiatAmount=500&blockchain=avalanche",
       },
       "https://gmx.banxa.com"
     ),
@@ -102,7 +102,7 @@ export const BUY_GMX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
     getLink: createGetLink(
       {
         [ARBITRUM]:
-          "https://global.transak.com/?apiKey=28a15a9b-d94e-4944-99cc-6aa35b45cc74&networks=arbitrum&defaultCryptoCurrency=GMX&isAutoFillUserData=true&hideMenu=true&isFeeCalculationHidden=true",
+          "https://global.transak.com/?apiKey=28a15a9b-d94e-4944-99cc-6aa35b45cc74&networks=arbitrum&defaultCryptoCurrency=HFDX&isAutoFillUserData=true&hideMenu=true&isFeeCalculationHidden=true",
       },
       "https://global.transak.com"
     ),

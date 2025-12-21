@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useMemo, useState } from "react";
 
 import {
   getChainName,
-  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
+  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
   type AnyChainId,
   type ContractsChainId,
   type GmxAccountPseudoChainId,
@@ -99,9 +99,9 @@ export function MultichainTokenSelector({
 
   const onSelectTokenAddress = (tokenAddress: string, tokenChainId: AnyChainId | GmxAccountPseudoChainId) => {
     setIsModalVisible(false);
-    const isGmxAccount = tokenChainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID;
+    const isGmxAccount = tokenChainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID;
     const tokenSrcChainId =
-      tokenChainId !== chainId && tokenChainId !== GMX_ACCOUNT_PSEUDO_CHAIN_ID && isSourceChain(tokenChainId)
+      tokenChainId !== chainId && tokenChainId !== HFDX_ACCOUNT_PSEUDO_CHAIN_ID && isSourceChain(tokenChainId)
         ? tokenChainId
         : undefined;
     propsOnSelectTokenAddress(tokenAddress, isGmxAccount, tokenSrcChainId);
@@ -203,7 +203,7 @@ export function MultichainTokenSelector({
               />
               {isGmxAccountEmpty && srcChainId !== undefined ? (
                 <div className="text-body-medium text-typography-secondary">
-                  <Trans>To begin trading on GMX deposit assets into GMX account.</Trans>
+                  <Trans>To begin trading on HFDX deposit assets into HFDX account.</Trans>
                 </div>
               ) : (
                 <Tabs type="inline" options={tabsOptions} selectedValue={activeFilter} onChange={setActiveFilter} />
@@ -296,7 +296,7 @@ export function useAvailableToTradeTokenList({
         concatenatedTokens.push({
           ...token,
           balanceType: TokenBalanceType.GmxAccount,
-          chainId: GMX_ACCOUNT_PSEUDO_CHAIN_ID,
+          chainId: HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
           balance: token.gmxAccountBalance,
           balanceUsd,
         });
@@ -472,8 +472,8 @@ export function AvailableToTradeTokenList({
                     </div>
                     <span className="text-body-small text-typography-secondary">
                       <Trans>From</Trans>{" "}
-                      {token.chainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID ? (
-                        <Trans>GMX Account</Trans>
+                      {token.chainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID ? (
+                        <Trans>HFDX Account</Trans>
                       ) : (
                         getChainName(token.chainId)
                       )}

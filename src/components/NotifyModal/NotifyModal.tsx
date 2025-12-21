@@ -18,11 +18,11 @@ export function NotifyModal() {
   const { notifyModalOpen, setNotifyModalOpen } = useNotifyModalState();
 
   return (
-    <ModalWithPortal isVisible={notifyModalOpen} setIsVisible={setNotifyModalOpen} label={t`GMX Alerts`}>
+    <ModalWithPortal isVisible={notifyModalOpen} setIsVisible={setNotifyModalOpen} label={t`HFDX Alerts`}>
       <div className="NotifyModal">
         <p className="text-body-medium">
           <Trans>
-            Get alerts and announcements from GMX to stay on top of your trades, liquidation risk, and&nbsp;more.
+            Get alerts and announcements from HFDX to stay on top of your trades, liquidation risk, and&nbsp;more.
           </Trans>
         </p>
         <NotifyBulletList />
@@ -33,13 +33,13 @@ export function NotifyModal() {
           className="NotifyModal-button w-full"
           type="submit"
         >
-          <Trans>Discover GMX Alerts</Trans>
+          <Trans>Discover HFDX Alerts</Trans>
           <ExternalLinkIcon />
         </Button>
         <div className="NotifyModal-terms text-caption">
           <Trans>
             <span>
-              Notifications are provided by Notifi and not affiliated with&nbsp;GMX. By subscribing, you agree that info
+              Notifications are provided by Notifi and not affiliated with&nbsp;HFDX. By subscribing, you agree that info
               you provide to Notifi will be governed by its{" "}
             </span>
             <ExternalLink href="https://notifi.network/privacy">Privacy Policy</ExternalLink>
@@ -60,7 +60,7 @@ const NotifyBulletList = memo(function NotifyBulletList() {
   return (
     <div className="NotifyModal-bullet-list">
       {[
-        t`GMX Announcements`,
+        t`HFDX Announcements`,
         t`Trade Confirmations`,
         t`Liquidation Confirmations`,
         t`Governance Alerts`,

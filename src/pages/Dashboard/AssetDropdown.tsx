@@ -20,7 +20,7 @@ import nansenPortfolioIcon from "img/nansen_portfolio.svg";
 import "./AssetDropdown.scss";
 
 const PLATFORM_TOKEN_ROUTES = {
-  GMX: "/buy_gmx",
+  HFDX: "/buy_gmx",
   GLP: "/buy_glp",
   GM: "/pools",
 };

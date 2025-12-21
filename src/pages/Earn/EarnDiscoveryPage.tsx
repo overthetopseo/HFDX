@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 
 import { Theme, useTheme } from "context/ThemeContext/ThemeContext";
 import { useBreakpoints } from "lib/useBreakpoints";
-import { BuyGmxModal } from "pages/BuyGMX/BuyGmxModal";
+import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
 import EarnPageLayout from "pages/Earn/EarnPageLayout";
 
 import EarnDocumentation from "components/Earn/Discovery/EarnDocumentation";
@@ -39,13 +39,13 @@ export default function EarnDiscoveryPage() {
         <div className="flex grow flex-col gap-8">
           <div className="flex flex-col gap-8 rounded-8 bg-slate-900 p-20" style={style}>
             <h4 className="text-16 font-medium text-typography-primary">
-              <Trans>Discover GMX Earn</Trans>
+              <Trans>Discover HFDX Earn</Trans>
             </h4>
             <p className="text-13 text-typography-secondary xl:max-w-[50%]">
               <Trans>
-                Welcome to GMX Earn! Learn how the GMX, GLV, and GM tokens work together to power a highly efficient,
+                Welcome to HFDX Earn! Learn how the HFDX, GLV, and GM tokens work together to power a highly efficient,
                 decentralized trading experience. Explore the unique role of each token, and discover how you can stake
-                or provide liquidity to earn rewards — just like tens of thousands of other GMX users.
+                or provide liquidity to earn rewards — just like tens of thousands of other HFDX users.
               </Trans>
             </p>
           </div>

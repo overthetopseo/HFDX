@@ -3,12 +3,12 @@ import { BN_ZERO } from "lib/numbers";
 
 export function useRecommendStakeGmxAmount(
   p: {
-    accumulatedGMX?: bigint;
-    accumulatedBnGMX?: bigint;
-    accumulatedEsGMX?: bigint;
-    stakedGMX?: bigint;
-    stakedBnGMX?: bigint;
-    stakedEsGMX?: bigint;
+    accumulatedHFDX?: bigint;
+    accumulatedBnHFDX?: bigint;
+    accumulatedEsHFDX?: bigint;
+    stakedHFDX?: bigint;
+    stakedBnHFDX?: bigint;
+    stakedEsHFDX?: bigint;
   },
   conditions: {
     shouldStakeGmx?: boolean;

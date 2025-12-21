@@ -77,9 +77,9 @@ export const DepositStatusView = () => {
   const statusVariant: "loading" | "success" = isCompleted ? "success" : "loading";
 
   const description = isCompleted ? (
-    <Trans>Funds are now in your GMX Account.</Trans>
+    <Trans>Funds are now in your HFDX Account.</Trans>
   ) : (
-    <Trans>Funds will appear in your GMX Account soon.</Trans>
+    <Trans>Funds will appear in your HFDX Account soon.</Trans>
   );
   const statusLabel = isCompleted ? <Trans>Deposit completed</Trans> : <Trans>Deposit in progress</Trans>;
 
@@ -124,13 +124,13 @@ export const DepositStatusView = () => {
             <div className="flex items-center gap-8">
               <div className="size-6 rotate-[45deg] transform rounded-1 bg-blue-300" />
               <span className="text-12 text-typography-secondary">
-                <Trans>Faster execution with GMX premium RPCs</Trans>
+                <Trans>Faster execution with HFDX premium RPCs</Trans>
               </span>
             </div>
             <div className="flex items-center gap-8">
               <div className="size-6 rotate-[45deg] transform rounded-1 bg-blue-300" />
               <span className="text-12 text-typography-secondary">
-                <Trans>Reliable GMX-powered transactions</Trans>
+                <Trans>Reliable HFDX-powered transactions</Trans>
               </span>
             </div>
           </div>

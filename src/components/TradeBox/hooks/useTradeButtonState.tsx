@@ -773,7 +773,7 @@ function NoSwapPathTooltipContent({
         <br />
         <br />
         There is no swap path found for {fromToken?.assetSymbol ?? fromToken?.symbol} to{" "}
-        {collateralToken?.assetSymbol ?? collateralToken?.symbol} within GMX.
+        {collateralToken?.assetSymbol ?? collateralToken?.symbol} within HFDX.
         <br />
         <br />
         <ExternalLink href={get1InchSwapUrlFromAddresses(chainId, fromToken?.address, collateralToken?.address)}>

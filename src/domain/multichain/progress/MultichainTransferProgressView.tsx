@@ -439,7 +439,7 @@ function ToastContent({ chainId, task, finishedState, finishedError, closeToast 
                           {finishedError.fundsLeftIn === "gmx-lz" && (
                             <Trans>
                               {" "}
-                              Your funds are safe and remain in GMX contracts on the destination chain. You can try
+                              Your funds are safe and remain in HFDX contracts on the destination chain. You can try
                               retrying the compose tx in LayerZero Scan or ask support for help.
                             </Trans>
                           )}
@@ -453,13 +453,13 @@ function ToastContent({ chainId, task, finishedState, finishedError, closeToast 
                         (task.operation === Operation.Deposit ? (
                           <Trans>
                             {gmOrGlvLabel} tokens were bought successfully, but the bridge to Base failed. Your funds
-                            are safe and currently stored in your GMX account. You can retry the bridge or go to the
+                            are safe and currently stored in your HFDX account. You can retry the bridge or go to the
                             {indexName} pool to manually withdraw your GM tokens.
                           </Trans>
                         ) : (
                           <Trans>
                             {gmOrGlvLabel} tokens were sold successfully, but the bridge to Base failed. Your funds are
-                            safe and currently stored in your GMX account. You can retry the bridge or open GMX account
+                            safe and currently stored in your HFDX account. You can retry the bridge or open HFDX account
                             modal to manually withdraw your tokens.
                           </Trans>
                         ))}
@@ -467,13 +467,13 @@ function ToastContent({ chainId, task, finishedState, finishedError, closeToast 
                       {finishedError instanceof MultichainTransferProgress.errors.ConversionFailed &&
                         (task.operation === Operation.Deposit ? (
                           <Trans>
-                            Buy {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your GMX
+                            Buy {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your HFDX
                             account. You can switch to settlement chain and go to the {indexName} pool to manually buy
                             your {gmOrGlvLabel} tokens.
                           </Trans>
                         ) : (
                           <Trans>
-                            Sell {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your GMX
+                            Sell {gmOrGlvLabel} operation failed. Your funds are safe and currently stored in your HFDX
                             account. You can switch to settlement chain and go to the {indexName} pool to manually sell
                             your {gmOrGlvLabel} tokens.
                           </Trans>

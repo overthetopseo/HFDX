@@ -25,7 +25,7 @@ function hasGmxTokenBalance(chainId: ContractsChainId, tokensData: TokensData | 
     return false;
   }
 
-  const tokenAddress = getTokenBySymbolSafe(chainId, "GMX")?.address;
+  const tokenAddress = getTokenBySymbolSafe(chainId, "HFDX")?.address;
   if (!tokenAddress) {
     return false;
   }

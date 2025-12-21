@@ -13,7 +13,7 @@ import {
 
 import { BOTANIX } from "config/chains";
 import { getContract } from "config/contracts";
-import { GMX_SIMULATION_ORIGIN, multichainBalanceKey } from "config/dataStore";
+import { HFDX_SIMULATION_ORIGIN, multichainBalanceKey } from "config/dataStore";
 import { BASIS_POINTS_DIVISOR_BIGINT } from "config/factors";
 import { isSourceChain } from "config/multichain";
 import { calculateMappingSlot, DATASTORE_SLOT_INDEXES } from "domain/multichain/arbitraryRelayParams";
@@ -363,7 +363,7 @@ export async function estimateExpressParams({
         }
 
         gasLimit = await estimateGasLimit(provider, {
-          from: GMX_SIMULATION_ORIGIN,
+          from: HFDX_SIMULATION_ORIGIN,
           to: baseTxn.txnData.to,
           data: baseTxn.txnData.callData,
           value: 0n,
@@ -373,7 +373,7 @@ export async function estimateExpressParams({
           async () =>
             client
               .estimateGas({
-                account: GMX_SIMULATION_ORIGIN,
+                account: HFDX_SIMULATION_ORIGIN,
                 to: baseTxn.txnData.to,
                 data: baseTxn.txnData.callData,
                 value: 0n,

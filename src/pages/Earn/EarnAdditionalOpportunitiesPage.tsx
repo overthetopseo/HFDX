@@ -23,7 +23,7 @@ import OpportunityFilters, {
 } from "components/Earn/AdditionalOpportunities/OpportunityFilters";
 import {
   OpportunityAsset,
-  ST_GMX_OPPORTUNITY_ASSET,
+  ST_HFDX_OPPORTUNITY_ASSET,
   getOpportunityAssetKey,
   getOpportunityAssetLabel,
   useOpportunities,
@@ -99,7 +99,7 @@ export default function EarnAdditionalOpportunitiesPage() {
     });
 
     if (processedData && (processedData.gmxInStakedGmx ?? 0n) > 0n) {
-      userAssetKeys.add(getOpportunityAssetKey(ST_GMX_OPPORTUNITY_ASSET));
+      userAssetKeys.add(getOpportunityAssetKey(ST_HFDX_OPPORTUNITY_ASSET));
     }
 
     return userAssetKeys;
@@ -162,7 +162,7 @@ export default function EarnAdditionalOpportunitiesPage() {
       if (userAssets.size === 0) {
         return (
           <Trans>
-            No eligible holdings detected. Acquire or stake GMX, GLV, or GM tokens to unlock personalized opportunities.
+            No eligible holdings detected. Acquire or stake HFDX, GLV, or GM tokens to unlock personalized opportunities.
           </Trans>
         );
       }
@@ -181,7 +181,7 @@ export default function EarnAdditionalOpportunitiesPage() {
     <EarnPageLayout>
       <ColorfulBanner>
         <Trans>
-          Maximize your earnings on your ecosystem tokens (GMX, GLV and GM) with the following integrated partner
+          Maximize your earnings on your ecosystem tokens (HFDX, GLV and GM) with the following integrated partner
           protocols.
         </Trans>
       </ColorfulBanner>

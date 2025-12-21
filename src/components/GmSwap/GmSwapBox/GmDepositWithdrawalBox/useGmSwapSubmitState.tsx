@@ -190,7 +190,7 @@ export const useGmSwapSubmitState = ({
   const formattedEstimationError = useMemo(() => {
     if (estimationError instanceof ExpressEstimationInsufficientGasPaymentTokenBalanceError) {
       if (gasPaymentToken) {
-        return t`${gasPaymentToken.symbol} balance in GMX account is insufficient to cover gas fees and input amount`;
+        return t`${gasPaymentToken.symbol} balance in HFDX account is insufficient to cover gas fees and input amount`;
       }
     } else if (estimationError) {
       return estimationError.name;
@@ -359,11 +359,11 @@ function useExpressError({
     const totalRequired = collateralAmount + gasPaymentTokenAmount;
 
     if (gasPaymentTokenAmount > gmxAccountBalance) {
-      return t`${gasPaymentToken.symbol} balance in GMX account is insufficient to cover gas fees`;
+      return t`${gasPaymentToken.symbol} balance in HFDX account is insufficient to cover gas fees`;
     }
 
     if (totalRequired > gmxAccountBalance) {
-      return t`${gasPaymentToken.symbol} balance in GMX account is insufficient to cover gas fees and input amount`;
+      return t`${gasPaymentToken.symbol} balance in HFDX account is insufficient to cover gas fees and input amount`;
     }
 
     return undefined;

@@ -24,7 +24,7 @@ const chainsMap: Record<ContractsChainIdProduction, ContractsChainIdProduction> 
   [BOTANIX]: BOTANIX,
 };
 const chains = Object.values(chainsMap);
-const gmxTokenAddresses = chains.map((chain) => getTokenBySymbol(chain, "GMX").address);
+const gmxTokenAddresses = chains.map((chain) => getTokenBySymbol(chain, "HFDX").address);
 const gmGmxTokenAddresses = chains.map((chain) =>
   Object.keys(MARKETS[chain]).filter((address) => {
     return (
@@ -202,7 +202,7 @@ export function StatsCard() {
                     value={formatAmountHuman(treasuryWithoutGmxUsd, USD_DECIMALS, false, 2)}
                   />
                   <StatsTooltipRow
-                    label={<Trans>In GMX:</Trans>}
+                    label={<Trans>In HFDX:</Trans>}
                     value={formatAmountHuman(gmxInTreasuryUsd, USD_DECIMALS, false, 2)}
                   />
                 </div>

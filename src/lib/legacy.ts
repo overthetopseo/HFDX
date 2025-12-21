@@ -42,7 +42,7 @@ export const DEPOSIT_FEE = 30n;
 export const DUST_BNB = "2000000000000000";
 export const DUST_USD = expandDecimals(1, USD_DECIMALS);
 export const GLP_DECIMALS = 18;
-export const GMX_DECIMALS = 18;
+export const HFDX_DECIMALS = 18;
 export const GM_DECIMALS = 18;
 export const DEFAULT_MAX_USDG_AMOUNT = expandDecimals(200 * 1000 * 1000, 18);
 
@@ -1264,7 +1264,7 @@ export function getStakingProcessedData(
 
   data.totalRewardsUsd = data.totalEsGmxRewardsUsd + data.totalNativeTokenRewardsUsd + data.totalGmxRewardsUsd;
 
-  data.avgGMXAprTotal = data.gmxAprTotal ? data.gmxAprTotal + (data.avgBoostAprForNativeToken ?? 0n) : undefined;
+  data.avgHFDXAprTotal = data.gmxAprTotal ? data.gmxAprTotal + (data.avgBoostAprForNativeToken ?? 0n) : undefined;
 
   return data;
 }

@@ -117,7 +117,7 @@ function OpportunityTokenIcon({
       const token = tokensData?.[asset.address];
       const symbol = token?.symbol;
 
-      if (symbol === "GMX") {
+      if (symbol === "HFDX") {
         return <GmxRoundedIcon className={className} />;
       }
 
@@ -143,7 +143,7 @@ export const OpportunityTokenLabel = ({
 }) => {
   switch (asset.type) {
     case "stGmx": {
-      return "Staked GMX";
+      return "Staked HFDX";
     }
     case "token": {
       const token = tokensData?.[asset.address];

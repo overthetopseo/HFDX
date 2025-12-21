@@ -48,7 +48,7 @@ type Props = {
 };
 
 /**
- * GMX v1 launch date is 06 sept 2021
+ * HFDX v1 launch date is 06 sept 2021
  */
 const MIN_DATE = new Date(2021, 8, 6);
 const MAX_DATE = addYears(new Date(), 1);

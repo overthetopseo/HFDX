@@ -4,7 +4,7 @@ import useSWR from "swr";
 
 import { USD_DECIMALS } from "config/factors";
 import { getIndexerUrl } from "config/indexers";
-import { GMX_DECIMALS } from "lib/legacy";
+import { HFDX_DECIMALS } from "lib/legacy";
 import { expandDecimals } from "lib/numbers";
 import useWallet from "lib/wallets/useWallet";
 import type { ContractsChainId, SourceChainId } from "sdk/configs/chains";
@@ -228,7 +228,7 @@ export const useUserEarnings = (chainId: ContractsChainId, srcChainId: SourceCha
 
           const price = token.prices.maxPrice;
 
-          const expected365d = bigMath.mulDiv(apy * balance, price, expandDecimals(1, GMX_DECIMALS + USD_DECIMALS));
+          const expected365d = bigMath.mulDiv(apy * balance, price, expandDecimals(1, HFDX_DECIMALS + USD_DECIMALS));
           result.allMarkets.expected365d = result.allMarkets.expected365d + expected365d;
         }
       });

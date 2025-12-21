@@ -3,7 +3,7 @@ import { encodeAbiParameters, encodePacked, keccak256, maxUint256, PublicClient,
 
 import type { ContractsChainId } from "config/chains";
 import { getContract } from "config/contracts";
-import { GMX_SIMULATION_ORIGIN, multichainBalanceKey } from "config/dataStore";
+import { HFDX_SIMULATION_ORIGIN, multichainBalanceKey } from "config/dataStore";
 import { selectExpressGlobalParams } from "context/SyntheticsStateContext/selectors/expressSelectors";
 import {
   selectAccount,
@@ -155,7 +155,7 @@ async function estimateArbitraryGasLimit({
     async () =>
       client
         .estimateGas({
-          account: GMX_SIMULATION_ORIGIN,
+          account: HFDX_SIMULATION_ORIGIN,
           to: baseTxnData.to,
           data: baseData,
           value: 0n,

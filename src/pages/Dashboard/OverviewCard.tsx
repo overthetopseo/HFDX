@@ -11,7 +11,7 @@ import { usePositionsTotalCollateral } from "domain/synthetics/positions/usePosi
 import useV2Stats from "domain/synthetics/stats/useV2Stats";
 import { useChainId } from "lib/chains";
 import { arrayURLFetcher } from "lib/fetcher";
-import { GLP_DECIMALS, GMX_DECIMALS } from "lib/legacy";
+import { GLP_DECIMALS, HFDX_DECIMALS } from "lib/legacy";
 import { expandDecimals, formatAmountHuman } from "lib/numbers";
 import { sumBigInts } from "lib/sumBigInts";
 import useWallet from "lib/wallets/useWallet";
@@ -120,10 +120,10 @@ export function OverviewCard({
     avalanchePositionsCollateralUsd !== undefined &&
     botanixPositionsCollateralUsd !== undefined
   ) {
-    const stakedGmxUsdArbitrum = bigMath.mulDiv(gmxPrice, stakedGmxArbitrum, expandDecimals(1, GMX_DECIMALS));
-    const stakedGmxUsdAvalanche = bigMath.mulDiv(gmxPrice, stakedGmxAvalanche, expandDecimals(1, GMX_DECIMALS));
+    const stakedGmxUsdArbitrum = bigMath.mulDiv(gmxPrice, stakedGmxArbitrum, expandDecimals(1, HFDX_DECIMALS));
+    const stakedGmxUsdAvalanche = bigMath.mulDiv(gmxPrice, stakedGmxAvalanche, expandDecimals(1, HFDX_DECIMALS));
 
-    // GMX Staked + GLP Pools + GM Pools
+    // HFDX Staked + GLP Pools + GM Pools
     displayTvlArbitrum = stakedGmxUsdArbitrum + glpMarketCapArbitrum + gmTvlArbitrum + arbitrumPositionsCollateralUsd;
     displayTvlAvalanche =
       stakedGmxUsdAvalanche + glpMarketCapAvalanche + gmTvlAvalanche + avalanchePositionsCollateralUsd;
@@ -397,7 +397,7 @@ export function OverviewCard({
                       <Trans>Total value locked takes into account:</Trans>
                       <br />
                       <ul className="my-8 list-disc">
-                        <li className="p-2">GMX Staked</li>
+                        <li className="p-2">HFDX Staked</li>
                         <li className="p-2">GLP Pool</li>
                         <li className="p-2">GM Pools</li>
                         <li className="p-2">Positions' Collateral</li>

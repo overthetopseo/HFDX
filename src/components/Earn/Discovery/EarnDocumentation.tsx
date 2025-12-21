@@ -14,14 +14,14 @@ export default function EarnDocumentation() {
           variant="icon"
           className="text-12 font-medium text-typography-secondary"
         >
-          <Trans>GMX Token</Trans>
+          <Trans>HFDX Token</Trans>
         </ExternalLink>
         <ExternalLink
           href="https://docs.gmx.io/docs/tokenomics/rewards"
           variant="icon"
           className="text-12 font-medium text-typography-secondary"
         >
-          <Trans>GMX Rewards</Trans>
+          <Trans>HFDX Rewards</Trans>
         </ExternalLink>
         <ExternalLink
           href="https://docs.gmx.io/docs/providing-liquidity#glv-pools"

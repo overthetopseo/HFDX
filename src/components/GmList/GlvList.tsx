@@ -81,7 +81,7 @@ export function GlvList({
       className="shrink-0"
       description={
         <Trans>
-          Yield-optimized vaults supplying liquidity across multiple GMX
+          Yield-optimized vaults supplying liquidity across multiple HFDX
           <br /> markets.
         </Trans>
       }

@@ -15,7 +15,7 @@ import ArrowRightIcon from "img/ic_arrow_right.svg?react";
 import GmxRoundedWhiteIcon from "img/ic_gmx_rounded_white.svg?react";
 import SpinnerIcon from "img/ic_spinner.svg?react";
 
-import { BUY_GMX_MODAL_LINKS } from "./buyGmxModalConfig";
+import { BUY_HFDX_MODAL_LINKS } from "./buyGmxModalConfig";
 
 const DIRECT_BUY_PATH = "/trade/swap?from=usdc&to=gmx";
 
@@ -64,7 +64,7 @@ export function BuyGmxModal({
     <ModalWithPortal
       isVisible={isVisible}
       setIsVisible={setIsVisible}
-      label={<Trans>Buy GMX</Trans>}
+      label={<Trans>Buy HFDX</Trans>}
       contentClassName="w-[420px]"
       withMobileBottomPosition={true}
     >
@@ -77,14 +77,14 @@ export function BuyGmxModal({
           isLoading={isSwitching}
           disabled={isSwitching}
         >
-          <Trans>Buy GMX directly</Trans>
+          <Trans>Buy HFDX directly</Trans>
         </BuyGmxModalButton>
         <div className="flex flex-col gap-8">
           <span className="text-14 font-medium text-typography-secondary">
             <Trans>Buy on other platforms</Trans>
           </span>
           <div className="grid grid-cols-2 gap-12">
-            {BUY_GMX_MODAL_LINKS.map((button) => {
+            {BUY_HFDX_MODAL_LINKS.map((button) => {
               const link = button.getLink(chainId);
 
               return (

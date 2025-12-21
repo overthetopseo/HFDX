@@ -17,7 +17,7 @@ export const IS_AUTO_CANCEL_TPSL_KEY = "is-auto-cancel-tpsl";
 export const DISABLE_ORDER_VALIDATION_KEY = "disable-order-validation";
 export const DISABLE_SHARE_MODAL_PNL_CHECK_KEY = "disable-share-modal-pnl-check";
 export const SHOULD_SHOW_POSITION_LINES_KEY = "Exchange-swap-should-show-position-lines-key";
-export const REFERRAL_CODE_KEY = "GMX-referralCode";
+export const REFERRAL_CODE_KEY = "HFDX-referralCode";
 export const REFERRALS_SELECTED_TAB_KEY = "Referrals-selected-tab";
 export const TV_SAVE_LOAD_CHARTS_KEY = "tv-save-load-charts";
 export const TV_CHART_RELOAD_TIMESTAMP_KEY = "tv-chart-reload-timestamp";
@@ -52,7 +52,7 @@ export const SYNTHETICS_LIST_SECTION_KEY = "synthetics-list-section";
 export const ACCOUNT_DASHBOARD_TAB_KEY = "account-dashboard-tab";
 export const LAST_EARN_TAB_KEY = "last-earn-tab";
 export const SYNTHETICS_COLLATERAL_EDIT_TOKEN_MAP_KEY = "synthetics-collateral-edit-token-map";
-export const SYNTHETICS_COLLATERAL_EDIT_TOKEN_IS_FROM_GMX_ACCOUNT_KEY =
+export const SYNTHETICS_COLLATERAL_EDIT_TOKEN_IS_FROM_HFDX_ACCOUNT_KEY =
   "synthetics-collateral-edit-token-is-from-gmx-account";
 export const PRODUCTION_PREVIEW_KEY = "production-preview";
 export const REQUIRED_UI_VERSION_KEY = "required-ui-version";
@@ -144,7 +144,7 @@ export function getSyntheticsCollateralEditAddressMapKey(chainId: number) {
 }
 
 export function getSyntheticsCollateralEditTokenIsFromGmxAccountMapKey(chainId: number) {
-  return [chainId, SYNTHETICS_COLLATERAL_EDIT_TOKEN_IS_FROM_GMX_ACCOUNT_KEY];
+  return [chainId, SYNTHETICS_COLLATERAL_EDIT_TOKEN_IS_FROM_HFDX_ACCOUNT_KEY];
 }
 
 export function getLeverageKey(chainId: number) {

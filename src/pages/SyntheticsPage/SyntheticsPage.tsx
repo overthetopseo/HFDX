@@ -336,9 +336,9 @@ export function SyntheticsPage(p: Props) {
         <AppHeader
           leftContent={
             isTablet ? (
-              <Link to="/" className="flex items-center gap-16 p-12 max-md:p-8">
-                <img src={logoIcon} alt="HFDX Logo" className="h-[72px] w-auto" />
-                <LogoText className="max-md:hidden h-[48px]" />
+              <Link to="/" className="flex items-center gap-10 p-8 max-md:p-4">
+                <img src={logoIcon} alt="HFDX Logo" className="h-32 w-auto" />
+                <LogoText className="max-md:hidden h-20" />
               </Link>
             ) : (
               <ChartHeader />

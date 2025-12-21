@@ -16,7 +16,7 @@ export type EarnPageActionEvent = {
 };
 
 export type EarnRecommendationContext = "AboutTokens" | "YieldLandscape" | "PortfolioRecommendations";
-export type EarnRecommendationToken = "GM" | "GLV" | "GMX";
+export type EarnRecommendationToken = "GM" | "GLV" | "HFDX";
 export type EarnPageRecommendationClickedEvent = {
   event: "EarnPageAction";
   data: {
@@ -27,7 +27,7 @@ export type EarnPageRecommendationClickedEvent = {
   };
 };
 
-export type EarnPagePortfolioItem = "GMX" | "esGMX" | "GLV" | "GM";
+export type EarnPagePortfolioItem = "HFDX" | "esHFDX" | "GLV" | "GM";
 export type EarnPagePortfolioItemType = "stake" | "vest" | "buy" | "sell" | "details";
 export type EarnPagePortfolioItemClickEvent = {
   event: "EarnPageAction";

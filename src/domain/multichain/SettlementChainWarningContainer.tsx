@@ -51,7 +51,7 @@ export function SettlementChainWarningContainer() {
     <ColorfulBanner color="blue" icon={InfoIcon} className="text-body-small">
       <Trans>
         You switched your settlement network to {getChainName(settlementChainId)}, but you still have{" "}
-        {formatUsd(gmxAccountUsd)} remaining in your {getChainName(anyNonEmptyGmxAccountChainId)} GMX Account.
+        {formatUsd(gmxAccountUsd)} remaining in your {getChainName(anyNonEmptyGmxAccountChainId)} HFDX Account.
       </Trans>
 
       <ColorfulButtonLink color="blue" onClick={handleNetworkSwitch}>

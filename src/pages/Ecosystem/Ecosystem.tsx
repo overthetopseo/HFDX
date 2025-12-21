@@ -42,7 +42,7 @@ export default function Ecosystem() {
       <SEO title={getPageTitle(t`Ecosystem Projects`)}>
         <div className="default-container page-layout">
           <div className="flex flex-col gap-20">
-            <PageTitle isTop title={t`GMX Pages`} subtitle={t`GMX ecosystem pages.`} qa="ecosystem-page" />
+            <PageTitle isTop title={t`HFDX Pages`} subtitle={t`HFDX ecosystem pages.`} qa="ecosystem-page" />
             <div className="Ecosystem-projects">
               {gmxPages.map((item) => {
                 const linkLabel = item.linkLabel ? item.linkLabel : item.link;
@@ -78,7 +78,7 @@ export default function Ecosystem() {
               title={t`Community Projects`}
               subtitle={
                 <Trans>
-                  Projects developed by the GMX community. <br />
+                  Projects developed by the HFDX community. <br />
                   Please exercise caution when interacting with any app, apps are fully maintained by community
                   developers.
                 </Trans>
@@ -132,7 +132,7 @@ export default function Ecosystem() {
                 );
               })}
             </div>
-            <PageTitle title={t`Dashboards`} subtitle={t`GMX dashboards and analytics.`} />
+            <PageTitle title={t`Dashboards`} subtitle={t`HFDX dashboards and analytics.`} />
             <div className="Ecosystem-projects">
               {dashboardProjects.map((item) => {
                 const linkLabel = item.linkLabel ? item.linkLabel : item.link;
@@ -172,7 +172,7 @@ export default function Ecosystem() {
                 );
               })}
             </div>
-            <PageTitle title={t`Partnerships and Integrations`} subtitle={t`Projects integrated with GMX.`} />
+            <PageTitle title={t`Partnerships and Integrations`} subtitle={t`Projects integrated with HFDX.`} />
             <div className="Ecosystem-projects">
               {integrations.map((item) => {
                 const linkLabel = item.linkLabel ? item.linkLabel : item.link;
@@ -205,7 +205,7 @@ export default function Ecosystem() {
             </div>
             <div className="text-body-large mt-16">
               <Trans>
-                GMX uses TradingView to provide real-time cryptocurrency charts, so you can easily follow{" "}
+                HFDX uses TradingView to provide real-time cryptocurrency charts, so you can easily follow{" "}
                 <ExternalLink href="https://www.tradingview.com/symbols/BTCUSD/">BTCUSD</ExternalLink> price in
                 real-time, along with other currency pair rates. The interactive charts offer advanced tools and a
                 user-friendly interface for easier market analysis and decision-making.

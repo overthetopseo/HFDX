@@ -119,14 +119,14 @@ function TotalEarned({
       stakingRows.push(
         <StatsTooltipRow
           key="gmx"
-          label={<Trans>GMX rewards:</Trans>}
+          label={<Trans>HFDX rewards:</Trans>}
           showDollar={false}
           value={
             <AmountWithUsdBalance
               amount={processedData.cumulativeGmxRewards}
               decimals={18}
               usd={processedData.cumulativeGmxRewardsUsd}
-              symbol="GMX"
+              symbol="HFDX"
             />
           }
         />
@@ -137,14 +137,14 @@ function TotalEarned({
       stakingRows.push(
         <StatsTooltipRow
           key="esgmx"
-          label={<Trans>esGMX rewards:</Trans>}
+          label={<Trans>esHFDX rewards:</Trans>}
           showDollar={false}
           value={
             <AmountWithUsdBalance
               amount={processedData.cumulativeEsGmxRewards}
               decimals={18}
               usd={processedData.cumulativeEsGmxRewardsUsd}
-              symbol="esGMX"
+              symbol="esHFDX"
             />
           }
         />
@@ -238,41 +238,41 @@ function TotalPendingRewards({
       content={
         <div className="flex flex-col">
           <StatsTooltipRow
-            label={<Trans>GMX Staked Rewards:</Trans>}
+            label={<Trans>HFDX Staked Rewards:</Trans>}
             showDollar={false}
             value={
               <AmountWithUsdBalance
                 amount={processedData?.extendedGmxTrackerRewards ?? 0n}
                 decimals={18}
                 usd={processedData?.extendedGmxTrackerRewardsUsd ?? 0n}
-                symbol="GMX"
+                symbol="HFDX"
               />
             }
           />
 
           <StatsTooltipRow
-            label={<Trans>Vested Claimable GMX:</Trans>}
+            label={<Trans>Vested Claimable HFDX:</Trans>}
             showDollar={false}
             value={
               <AmountWithUsdBalance
                 amount={processedData?.totalVesterRewards ?? 0n}
                 decimals={18}
                 usd={processedData?.totalVesterRewardsUsd ?? 0n}
-                symbol="GMX"
+                symbol="HFDX"
               />
             }
           />
 
           {hasEsGmxRewards && (
             <StatsTooltipRow
-              label={<Trans>esGMX Rewards:</Trans>}
+              label={<Trans>esHFDX Rewards:</Trans>}
               showDollar={false}
               value={
                 <AmountWithUsdBalance
                   amount={processedData?.totalEsGmxRewards ?? 0n}
                   decimals={18}
                   usd={processedData?.totalEsGmxRewardsUsd ?? 0n}
-                  symbol="esGMX"
+                  symbol="esHFDX"
                 />
               }
             />

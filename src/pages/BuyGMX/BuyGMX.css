@@ -1,13 +1,13 @@
-.BuyGMXGLP {
+.BuyHFDXGLP {
   justify-content: space-between;
 }
 
-.BuyGMXGLP-container {
+.BuyHFDXGLP-container {
   padding-bottom: 3.1rem;
   width: 100%;
 }
 
-.BuyGMXGLP-description {
+.BuyHFDXGLP-description {
   letter-spacing: 0px;
   color: var(--color-slate-100);
 }
@@ -40,7 +40,7 @@
   justify-content: center;
 }
 
-.GMX-btn {
+.HFDX-btn {
   display: flex;
   align-items: center;
   background: #ffffff0a;
@@ -51,21 +51,21 @@
   margin: 3.1rem 0;
 }
 
-.GMX-btn:hover {
+.HFDX-btn:hover {
   background: var(--color-gray-900);
 }
 
-.GMX-btn:focus,
-.GMX-btn:active {
+.HFDX-btn:focus,
+.HFDX-btn:active {
   background: #ffffff1f;
 }
 
-.GMX-btn-icon-block {
+.HFDX-btn-icon-block {
   display: flex;
   margin-right: 1.165rem;
 }
 
-.GMX-btn-icon {
+.HFDX-btn-icon {
   display: flex;
   position: relative;
   width: 3rem;
@@ -74,21 +74,21 @@
   justify-content: center;
 }
 
-.GMX-btn-icon-network {
+.HFDX-btn-icon-network {
   position: absolute;
   bottom: 0;
   right: 0;
   display: flex;
 }
 
-.GMX-btn-label {
+.HFDX-btn-label {
   letter-spacing: 0px;
   color: var(--color-typography-primary);
   font-size: 1.85rem;
   line-height: 2.325rem;
 }
 
-.GMX-block-section {
+.HFDX-block-section {
   display: flex;
   justify-content: center;
 }
@@ -172,7 +172,7 @@
 }
 
 @media (max-width: 400px) {
-  .BuyGMXGLP-description {
+  .BuyHFDXGLP-description {
     font-size: var(--font-size-body-medium);
     line-height: 2rem;
   }

@@ -76,7 +76,7 @@ function AffiliatesStats({
   const { marketsInfoData } = useMarketsInfoRequest(chainId, { tokensData });
   const { affiliateRewardsData } = useAffiliateRewards(chainId);
 
-  const esGmxAddress = getTokenBySymbol(chainId, "esGMX").address;
+  const esGmxAddress = getTokenBySymbol(chainId, "esHFDX").address;
 
   const [isClaiming, setIsClaiming] = useState(false);
   const [, copyToClipboard] = useCopyToClipboard();
@@ -490,7 +490,7 @@ function AffiliatesStats({
 
                   if (rebate.typeId === RebateDistributionType.Rebate) {
                     if (rebate.tokens[0] === esGmxAddress) {
-                      rebateType = t`V1 esGMX`;
+                      rebateType = t`V1 esHFDX`;
                     } else {
                       rebateType = t`V1 Airdrop`;
                     }

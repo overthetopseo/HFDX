@@ -6296,8 +6296,8 @@ export const createOrderStopMarketLong = prepare({
   swapPath: ["0x55391D178Ce46e7AC8eaAEa50A72D1A5a8A622Da"],
   initialCollateralTokenAddress: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
   initialCollateralToken: {
-    name: "GMX",
-    symbol: "GMX",
+    name: "HFDX",
+    symbol: "HFDX",
     address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
     decimals: 18,
     isPlatformToken: true,
@@ -6522,8 +6522,8 @@ export const executeOrderStopMarketLong = prepare({
   swapPath: ["0x55391D178Ce46e7AC8eaAEa50A72D1A5a8A622Da"],
   initialCollateralTokenAddress: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
   initialCollateralToken: {
-    name: "GMX",
-    symbol: "GMX",
+    name: "HFDX",
+    symbol: "HFDX",
     address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
     decimals: 18,
     isPlatformToken: true,

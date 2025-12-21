@@ -11,19 +11,19 @@ type Props = {
   isUserConnected?: boolean;
 };
 
-function renderEscrowedGMXApr(processedData) {
+function renderEscrowedHFDXApr(processedData) {
   if (!processedData?.gmxAprForEsGmx || processedData.gmxAprForEsGmx <= 0) return;
   return (
     <StatsTooltipRow
-      label={t`Escrowed GMX APR`}
+      label={t`Escrowed HFDX APR`}
       showDollar={false}
       value={`${formatKeyAmount(processedData, "gmxAprForEsGmx", 2, 2, true)}%`}
     />
   );
 }
 
-export default function GMXAprTooltip({ processedData, nativeTokenSymbol, isUserConnected = false }: Props) {
-  const escrowedGMXApr = renderEscrowedGMXApr(processedData);
+export default function HFDXAprTooltip({ processedData, nativeTokenSymbol, isUserConnected = false }: Props) {
+  const escrowedHFDXApr = renderEscrowedHFDXApr(processedData);
   const gmxAprForNativeTokenPercentage = formatKeyAmount(processedData, "gmxAprForNativeToken", 2, 2, true);
   const gmxAprForGmxPercentage = formatKeyAmount(processedData, "gmxAprForGmx", 2, 2, true);
 
@@ -34,10 +34,10 @@ export default function GMXAprTooltip({ processedData, nativeTokenSymbol, isUser
   return (
     <>
       <div>
-        <StatsTooltipRow label={t`GMX APR`} showDollar={false} value={`${gmxAprForGmxPercentage}%`} />
-        {isUserConnected && escrowedGMXApr && (
+        <StatsTooltipRow label={t`HFDX APR`} showDollar={false} value={`${gmxAprForGmxPercentage}%`} />
+        {isUserConnected && escrowedHFDXApr && (
           <>
-            <br /> {escrowedGMXApr}
+            <br /> {escrowedHFDXApr}
           </>
         )}
         {shouldShowNativeTokenApr ? (

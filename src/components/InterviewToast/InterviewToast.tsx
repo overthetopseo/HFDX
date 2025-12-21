@@ -20,7 +20,7 @@ export function InterviewToast({ type, onButtonClick }: Props) {
         <br />
         <br />
         <ColorfulButtonLink color="blue" onClick={onButtonClick}>
-          <Trans>Give us your feedback on GMX</Trans>
+          <Trans>Give us your feedback on HFDX</Trans>
         </ColorfulButtonLink>
         <br />
         <Trans>
@@ -38,7 +38,7 @@ export function InterviewToast({ type, onButtonClick }: Props) {
     return (
       <div>
         <Trans>
-          We value your experience as GMX Liquidity Provider and invite you to participate in an anonymous one-on-one
+          We value your experience as HFDX Liquidity Provider and invite you to participate in an anonymous one-on-one
           chat.
         </Trans>
         <br />
@@ -53,7 +53,7 @@ export function InterviewToast({ type, onButtonClick }: Props) {
         <br />
         <br />
         <ColorfulButtonLink color="blue" onClick={onButtonClick}>
-          <Trans>Click here to give us your feedback on GMX</Trans>
+          <Trans>Click here to give us your feedback on HFDX</Trans>
         </ColorfulButtonLink>
       </div>
     );

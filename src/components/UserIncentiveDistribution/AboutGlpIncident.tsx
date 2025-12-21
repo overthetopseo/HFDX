@@ -36,7 +36,7 @@ export function AboutGlpIncident() {
         >
           <div className="text-typography-primary">
             <Trans>
-              GLV tokens are similar in composition to GLP, and enable seamless integration into GMX V2's liquidity
+              GLV tokens are similar in composition to GLP, and enable seamless integration into HFDX V2's liquidity
               ecosystem. Users can either sell or hold the tokens to earn yield. To encourage long-term participation, a
               $500,000 GLV incentive pool will be distributed proportionally to those who hold their allocated GLV for
               at least 3 months.
@@ -56,13 +56,13 @@ export function AboutGlpIncident() {
           <div className="text-typography-primary">
             <p className="mb-8">
               <Trans>
-                GLV (GMX Liquidity Vaults) should be seen as GMX V2’s improved version of GLP. It is a yield-optimizing
+                GLV (HFDX Liquidity Vaults) should be seen as HFDX V2’s improved version of GLP. It is a yield-optimizing
                 crypto-index token that
               </Trans>
             </p>
             <ul className="list-disc pl-12">
               <li>
-                <Trans>earns fees from providing liquidity to multiple GMX V2 markets</Trans>
+                <Trans>earns fees from providing liquidity to multiple HFDX V2 markets</Trans>
               </li>
               <li>
                 <Trans>
@@ -91,7 +91,7 @@ export function AboutGlpIncident() {
               Distribution happens in two GLV variants to mirror GLP's multi-asset exposure: one variant is optimized
               for ETH-based markets (50% ETH / 50% USDC) and the other for BTC-based markets (50% BTC / 50% USDC). This
               allocation reflects the composition of recovered funds and allows for dynamic shifting of GLV liquidity to
-              all top GMX markets to enhance your yield.
+              all top HFDX markets to enhance your yield.
             </Trans>
           </div>
         </ExpandableRow>
@@ -107,7 +107,7 @@ export function AboutGlpIncident() {
         >
           <div className="text-typography-primary">
             <Trans>
-              Yes, GLV is fully liquid and permissionless. You can sell via the GMX interface to redeem for underlying
+              Yes, GLV is fully liquid and permissionless. You can sell via the HFDX interface to redeem for underlying
               assets, with low fees.
             </Trans>
           </div>

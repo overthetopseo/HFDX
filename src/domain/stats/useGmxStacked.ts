@@ -7,7 +7,7 @@ import type { ContractsChainId } from "sdk/configs/chains";
 
 export function useGmxStaked(chainId: ContractsChainId) {
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");
-  const gmxAddress = getContract(chainId, "GMX");
+  const gmxAddress = getContract(chainId, "HFDX");
 
   const { data: stakedGmxSupply } = useSWR<bigint>(
     gmxAddress !== zeroAddress && [

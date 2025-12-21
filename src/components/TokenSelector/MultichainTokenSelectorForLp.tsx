@@ -2,7 +2,7 @@ import cx from "classnames";
 import { useMemo, useState } from "react";
 
 import {
-  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
+  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
   type AnyChainId,
   type ContractsChainId,
   type GmxAccountPseudoChainId,
@@ -70,7 +70,7 @@ export function MultichainTokenSelectorForLp({
 
   const onSelectTokenAddress = (tokenAddress: string, tokenChainId: AnyChainId | GmxAccountPseudoChainId) => {
     setIsModalVisible(false);
-    const isGmxAccount = tokenChainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID;
+    const isGmxAccount = tokenChainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID;
     const tokenSrcChainId =
       tokenChainId !== chainId && !isGmxAccount && isSourceChain(tokenChainId) ? tokenChainId : undefined;
     propsOnSelectTokenAddress(tokenAddress, isGmxAccount, tokenSrcChainId);

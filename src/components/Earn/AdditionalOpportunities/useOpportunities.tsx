@@ -37,7 +37,7 @@ export type Opportunity = {
 
 export type OpportunityAsset = { type: "market" | "glv" | "token"; address: string } | { type: "stGmx" };
 
-export const ST_GMX_OPPORTUNITY_ASSET: OpportunityAsset = { type: "stGmx" };
+export const ST_HFDX_OPPORTUNITY_ASSET: OpportunityAsset = { type: "stGmx" };
 
 const makeMarketAsset = (chainId: ContractsChainId, marketLabel: MarketLabel): OpportunityAsset => {
   const market = getMarketByLabel(chainId, marketLabel);
@@ -79,7 +79,7 @@ export const getOpportunityAssetLabel = (
 ): string | undefined => {
   switch (asset.type) {
     case "stGmx":
-      return "Staked GMX";
+      return "Staked HFDX";
     case "token": {
       const token = tokensData?.[asset.address];
       return token?.symbol;
@@ -140,15 +140,15 @@ export const useOpportunities = () => {
             makeMarketAsset(ARBITRUM, "AAVE/USD [AAVE-USDC]"),
             makeMarketAsset(ARBITRUM, "ARB/USD [ARB-USDC]"),
             makeMarketAsset(ARBITRUM, "DOGE/USD [WETH-USDC]"),
-            makeMarketAsset(ARBITRUM, "GMX/USD [GMX-GMX]"),
-            makeMarketAsset(ARBITRUM, "GMX/USD [GMX-USDC]"),
+            makeMarketAsset(ARBITRUM, "HFDX/USD [HFDX-HFDX]"),
+            makeMarketAsset(ARBITRUM, "HFDX/USD [HFDX-USDC]"),
             makeMarketAsset(ARBITRUM, "LINK/USD [LINK-USDC]"),
             makeMarketAsset(ARBITRUM, "PENDLE/USD [PENDLE-USDC]"),
             makeMarketAsset(ARBITRUM, "PEPE/USD [PEPE-USDC]"),
             makeMarketAsset(ARBITRUM, "SOL/USD [SOL-USDC]"),
             makeMarketAsset(ARBITRUM, "UNI/USD [UNI-USDC]"),
             makeMarketAsset(ARBITRUM, "WIF/USD [WIF-USDC]"),
-            makeTokenAsset(ARBITRUM, "GMX"),
+            makeTokenAsset(ARBITRUM, "HFDX"),
             makeTokenAsset(ARBITRUM, "USDC"),
           ],
           link: "https://dolomite.io/",
@@ -158,12 +158,12 @@ export const useOpportunities = () => {
           icon: beefyIcon,
           description: (
             <Trans>
-              Autocompound your earned GMX rewards periodically without having to manually claim and compound your
+              Autocompound your earned HFDX rewards periodically without having to manually claim and compound your
               rewards.
             </Trans>
           ),
           tags: ["autocompound"],
-          assets: [makeTokenAsset(ARBITRUM, "GMX")],
+          assets: [makeTokenAsset(ARBITRUM, "HFDX")],
           link: "https://beefy.com/",
         },
         {
@@ -183,7 +183,7 @@ export const useOpportunities = () => {
           icon: umamiIcon,
           description: (
             <Trans>
-              Umami GM vaults enable depositors to provide single-sided liquidity to GMX liquidity pools. Deposits are
+              Umami GM vaults enable depositors to provide single-sided liquidity to HFDX liquidity pools. Deposits are
               actively managed through a system of hedges and index rebalancing, optimizing for capital efficiency while
               minimizing exposure to impermanent loss.
             </Trans>
@@ -218,7 +218,7 @@ export const useOpportunities = () => {
           icon: deltaPrimeIcon,
           description: <Trans>Lend out your tokens, or borrow against it.</Trans>,
           tags: ["lending-and-borrowing"],
-          assets: [makeTokenAsset(ARBITRUM, "GMX")],
+          assets: [makeTokenAsset(ARBITRUM, "HFDX")],
           link: "https://deltaprime.io/",
         },
         {
@@ -240,11 +240,11 @@ export const useOpportunities = () => {
           icon: beefyIcon,
           description: (
             <Trans>
-              Autocompound your earned GMX rewards instantly without having to manually claim and compound your rewards.
+              Autocompound your earned HFDX rewards instantly without having to manually claim and compound your rewards.
             </Trans>
           ),
           tags: ["autocompound"],
-          assets: [makeTokenAsset(AVALANCHE, "GMX")],
+          assets: [makeTokenAsset(AVALANCHE, "HFDX")],
           link: "https://beefy.com/",
         },
         {
@@ -252,7 +252,7 @@ export const useOpportunities = () => {
           icon: deltaPrimeIcon,
           description: <Trans>Lend out your tokens, or borrow against it.</Trans>,
           tags: ["lending-and-borrowing"],
-          assets: [makeTokenAsset(AVALANCHE, "GMX")],
+          assets: [makeTokenAsset(AVALANCHE, "HFDX")],
           link: "https://deltaprime.io/",
         },
       ],

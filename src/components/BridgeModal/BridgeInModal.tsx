@@ -4,7 +4,7 @@ import { useAccount } from "wagmi";
 
 import {
   type AnyChainId,
-  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
+  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
   type GmxAccountPseudoChainId,
   type SettlementChainId,
   type SourceChainId,
@@ -97,7 +97,7 @@ export function BridgeInModal({
           Object.entries(multichainMarketTokenBalances.balances)
             .filter(([chainIdStr, data]) => {
               const chainIdNum = Number(chainIdStr);
-              return data && chainIdNum !== chainId && chainIdNum !== GMX_ACCOUNT_PSEUDO_CHAIN_ID;
+              return data && chainIdNum !== chainId && chainIdNum !== HFDX_ACCOUNT_PSEUDO_CHAIN_ID;
             })
             .map(([chainIdStr, data]) => [chainIdStr, data.balance])
         )
@@ -109,7 +109,7 @@ export function BridgeInModal({
       : undefined;
 
   const gmxAccountMarketTokenBalance: bigint | undefined =
-    multichainMarketTokenBalances?.balances[GMX_ACCOUNT_PSEUDO_CHAIN_ID]?.balance;
+    multichainMarketTokenBalances?.balances[HFDX_ACCOUNT_PSEUDO_CHAIN_ID]?.balance;
 
   const nextGmxAccountMarketTokenBalance: bigint | undefined =
     gmxAccountMarketTokenBalance !== undefined && bridgeInAmount !== undefined
@@ -185,7 +185,7 @@ export function BridgeInModal({
       if (
         !isSourceChain(chainIdNum) ||
         (chainIdNum as number) === chainId ||
-        (chainIdNum as number) === GMX_ACCOUNT_PSEUDO_CHAIN_ID
+        (chainIdNum as number) === HFDX_ACCOUNT_PSEUDO_CHAIN_ID
       ) {
         return false;
       }
@@ -334,7 +334,7 @@ export function BridgeInModal({
         </Button>
         <SyntheticsInfoRow label={t`Network Fee`} value={formatUsd(nativeFeeUsd)} />
         <SyntheticsInfoRow
-          label={t`GMX Account Balance`}
+          label={t`HFDX Account Balance`}
           value={
             <ValueTransition
               from={

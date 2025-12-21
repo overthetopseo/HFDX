@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import { useMemo } from "react";
 
-import { getChainName, GMX_ACCOUNT_PSEUDO_CHAIN_ID } from "config/chains";
+import { getChainName, HFDX_ACCOUNT_PSEUDO_CHAIN_ID } from "config/chains";
 import { MultichainMarketTokenBalances } from "domain/multichain/types";
 import { useSortedTokenBalances } from "domain/multichain/useSortedTokenBalances";
 import { formatBalanceAmount, formatUsd } from "lib/numbers";
@@ -28,8 +28,8 @@ export function MultichainBalanceTooltip({ multichainBalances, symbol, decimals 
       <>
         {sortedTokenBalancesDataArray.map((tokenBalancesData) => {
           const label =
-            tokenBalancesData.chainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID
-              ? t`GMX account Balance`
+            tokenBalancesData.chainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+              ? t`HFDX account Balance`
               : t({
                   message: `${getChainName(tokenBalancesData.chainId)} Balance`,
                   comment: "chainname balance",

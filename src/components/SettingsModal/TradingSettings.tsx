@@ -107,7 +107,7 @@ export function TradingSettings({
               description={<Trans>High execution reliability using premium RPCs.</Trans>}
               info={
                 <Trans>
-                  You sign each transaction off-chain. Trades use GMX-sponsored premium RPCs for reliability, even
+                  You sign each transaction off-chain. Trades use HFDX-sponsored premium RPCs for reliability, even
                   during network congestion. Gas payments in {gasPaymentTokensText}.
                 </Trans>
               }
@@ -139,8 +139,8 @@ export function TradingSettings({
               }
               info={
                 <Trans>
-                  GMX executes transactions for you without individual signing, providing a seamless, CEX-like
-                  experience. Trades use GMX-sponsored premium RPCs for reliability, even during network congestion. Gas
+                  HFDX executes transactions for you without individual signing, providing a seamless, CEX-like
+                  experience. Trades use HFDX-sponsored premium RPCs for reliability, even during network congestion. Gas
                   payments in {gasPaymentTokensText}.
                 </Trans>
               }
@@ -181,7 +181,7 @@ export function TradingSettings({
               variant="icon"
               content={
                 <Trans>
-                  The settlement chain is the network used for your GMX Account and opening positions. GMX Account
+                  The settlement chain is the network used for your HFDX Account and opening positions. HFDX Account
                   balances and positions are specific to the selected network.
                 </Trans>
               }
@@ -252,7 +252,7 @@ export function TradingSettings({
                 <Trans>
                   The max network fee is set to a higher value to handle potential increases in gas price during order
                   execution. Any excess network fee will be refunded to your account when the order is executed. Only
-                  applicable to GMX V2.
+                  applicable to HFDX V2.
                 </Trans>
                 <br />
                 <br />

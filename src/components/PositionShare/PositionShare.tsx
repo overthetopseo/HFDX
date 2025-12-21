@@ -106,7 +106,7 @@ function PositionShare({
   const [promptedToCreateReferralCode, setPromptedToCreateReferralCode] = useState(false);
 
   const tweetLink = getTwitterIntentURL(
-    `Latest $\u200a${indexToken?.symbol} trade on @GMX_IO`,
+    `Latest $\u200a${indexToken?.symbol} trade on @HFDX_IO`,
     getShareURL(uploadedImageInfo, shareAffiliateCode)
   );
 
@@ -298,7 +298,7 @@ function PositionShare({
       contentClassName="md:!max-w-[500px]"
       isVisible={isPositionShareModalOpen}
       setIsVisible={setIsPositionShareModalOpen}
-      label={t`Share your successful GMX trade on X`}
+      label={t`Share your successful HFDX trade on X`}
       contentPadding={false}
       withMobileBottomPosition
     >

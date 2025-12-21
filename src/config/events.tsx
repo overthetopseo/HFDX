@@ -38,7 +38,7 @@ export const appEventsData: EventData[] = [
     bodyText: (
       <>
         From 22nd December, the open interest will now be tracked in token amounts instead of USD values for improved
-        balance accuracy. <ExternalLink href="https://t.me/GMX_Announcements/1175">Read more</ExternalLink>.
+        balance accuracy. <ExternalLink href="https://t.me/HFDX_Announcements/1175">Read more</ExternalLink>.
       </>
     ),
   },
@@ -136,7 +136,7 @@ export const appEventsData: EventData[] = [
     bodyText: (
       <>
         The app has a revamped interface, including a new light theme. Price impact is now capped and charged only on
-        position close. <ExternalLink href="https://x.com/GMX_IO/status/1965077965236056467">Read more</ExternalLink>.
+        position close. <ExternalLink href="https://x.com/HFDX_IO/status/1965077965236056467">Read more</ExternalLink>.
       </>
     ),
   },
