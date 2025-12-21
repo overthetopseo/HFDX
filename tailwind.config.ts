@@ -86,10 +86,10 @@ function customUtilsPlugin({ addUtilities, addVariant, addComponents }: any) {
   addVariant("not-disabled", [`&:not([disabled])`]);
   addComponents({
     ".gmx-hover-gradient": {
-      "@apply gmx-hover:bg-gradient-to-r gmx-hover:from-[#23263B] gmx-hover:to-[#16182E]": {},
+      "@apply gmx-hover:bg-gradient-to-r gmx-hover:from-[#1a1a1a] gmx-hover:to-[#0f0f0f]": {},
     },
     ".gmx-hover-gradient-to-l": {
-      "@apply gmx-hover:bg-gradient-to-l gmx-hover:from-[#23263B] gmx-hover:to-[#16182E]": {},
+      "@apply gmx-hover:bg-gradient-to-l gmx-hover:from-[#1a1a1a] gmx-hover:to-[#0f0f0f]": {},
     },
   });
 }

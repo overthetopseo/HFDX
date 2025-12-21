@@ -1,0 +1,62 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../broker-web-sdk-master/docs"
+		},
+		{
+			"path": "../broker-web-sdk-master/examples"
+		},
+		{
+			"path": "../cloud_sdk.4.0.3"
+		},
+		{
+			"path": "../broker-web-sdk-4.0.3"
+		},
+		{
+			"path": "../HFDX Logo"
+		},
+		{
+			"path": "../GMX/gmx-assets-main"
+		},
+		{
+			"path": "../GMX/gmx-automation-main"
+		},
+		{
+			"path": "../GMX/gmx-contracts-master"
+		},
+		{
+			"path": "../GMX/gmx-integration-api-main"
+		},
+		{
+			"path": "../GMX/gmx-interface-release"
+		},
+		{
+			"path": "../GMX/gmx-share-api-master"
+		},
+		{
+			"path": "../GMX/gmx-stats-master"
+		},
+		{
+			"path": "../GMX/gmx-subgraph-master"
+		},
+		{
+			"path": "../GMX/gmx-synthetics-main"
+		},
+		{
+			"path": "../GMX/gmx-token-lz-main"
+		},
+		{
+			"path": "../GMX/gmx-utils-main"
+		},
+		{
+			"path": "../GMX/layer-zero-main"
+		},
+		{
+			"path": "../GMX/protocol-info-master"
+		}
+	],
+	"settings": {}
+}
