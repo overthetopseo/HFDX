@@ -64,12 +64,12 @@ export function LogoSection({ isCollapsed }: { isCollapsed: boolean | undefined 
   return (
     <Link
       to="/"
-      className={cx("flex cursor-pointer items-center justify-center gap-12 pb-20 pt-16 text-typography-primary", {
-        "pl-8 pr-12": !isCollapsed,
+      className={cx("flex cursor-pointer items-center justify-center gap-16 pb-24 pt-20 text-typography-primary", {
+        "pl-4 pr-8": !isCollapsed,
       })}
     >
-      <img src={logoIcon} alt="HFDX Logo" className="h-48 w-auto" />
-      {!isCollapsed ? <LogoText className="h-32" /> : null}
+      <img src={logoIcon} alt="HFDX Logo" className="h-[64px] w-auto" />
+      {!isCollapsed ? <LogoText className="h-[44px]" /> : null}
     </Link>
   );
 }
