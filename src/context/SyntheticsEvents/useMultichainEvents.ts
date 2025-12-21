@@ -14,7 +14,7 @@ import {
   isSettlementChain,
   MultichainTokenId,
 } from "config/multichain";
-import { useGmxAccountSelectedTransferGuid } from "context/GmxAccountContext/hooks";
+import { useGmxAccountSelectedTransferGuid } from "context/HfdxAccountContext/hooks";
 import {
   OftSentInfo,
   subscribeToComposeDeliveredEvents,
@@ -25,7 +25,7 @@ import {
 import { useWebsocketProvider, useWsAdditionalSourceChains } from "context/WebsocketContext/WebsocketContextProvider";
 import { CodecUiHelper } from "domain/multichain/codecs/CodecUiHelper";
 import { MultichainFundingHistoryItem } from "domain/multichain/types";
-import { isStepGreater } from "domain/multichain/useGmxAccountFundingHistory";
+import { isStepGreater } from "domain/multichain/useHfdxAccountFundingHistory";
 import { useChainId } from "lib/chains";
 import {
   getMultichainDepositMetricId,

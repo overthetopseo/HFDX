@@ -7,7 +7,7 @@ import { getIsExpressSupported } from "config/features";
 import { CHAIN_ID_TO_NETWORK_ICON } from "config/icons";
 import { MULTICHAIN_SOURCE_TO_SETTLEMENTS_MAPPING } from "config/multichain";
 import { DEFAULT_TIME_WEIGHTED_NUMBER_OF_PARTS } from "config/twap";
-import { useGmxAccountSettlementChainId } from "context/GmxAccountContext/hooks";
+import { useGmxAccountSettlementChainId } from "context/HfdxAccountContext/hooks";
 import { useSettings } from "context/SettingsContext/SettingsContextProvider";
 import { useSubaccountContext } from "context/SubaccountContext/SubaccountContextProvider";
 import { SettlementChainWarningContainer } from "domain/multichain/SettlementChainWarningContainer";

@@ -7,7 +7,7 @@ import {
   getSyntheticsCollateralEditTokenIsFromGmxAccountMapKey,
 } from "config/localStorage";
 import { useSettings } from "context/SettingsContext/SettingsContextProvider";
-import { useIsGmxAccount } from "domain/multichain/useIsGmxAccount";
+import { useIsHfdxAccount } from "domain/multichain/useIsHfdxAccount";
 import { useLocalStorageSerializeKey } from "lib/localStorage";
 
 import { parsePositionKey } from "../positions";
@@ -25,7 +25,7 @@ export function usePositionEditorState(chainId: ContractsChainId, srcChainId: So
   const [storedIsCollateralTokenFromGmxAccount, setStoredIsCollateralTokenFromGmxAccount] =
     useLocalStorageSerializeKey<boolean>(getSyntheticsCollateralEditTokenIsFromGmxAccountMapKey(chainId), false);
 
-  const [isCollateralTokenFromGmxAccount, setIsCollateralTokenFromGmxAccount] = useIsGmxAccount({
+  const [isCollateralTokenFromGmxAccount, setIsCollateralTokenFromGmxAccount] = useIsHfdxAccount({
     chainId,
     srcChainId,
     storedIsGmxAccount: storedIsCollateralTokenFromGmxAccount,

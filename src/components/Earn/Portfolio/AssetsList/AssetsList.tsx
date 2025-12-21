@@ -15,7 +15,7 @@ import useWallet from "lib/wallets/useWallet";
 import EarnIcon from "img/ic_earn.svg?react";
 
 import { GmGlvAssetCard } from "./GmGlvAssetCard";
-import { GmxAssetCard } from "./GmxAssetCard/GmxAssetCard";
+import { GmxAssetCard } from "./HfdxAssetCard/HfdxAssetCard";
 
 export function AssetsList({
   chainId,

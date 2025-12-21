@@ -6,7 +6,7 @@ import { zeroAddress } from "viem";
 import { SourceChainId } from "config/chains";
 import { getContract } from "config/contracts";
 import { getMappedTokenId, getMultichainTokenId } from "config/multichain";
-import { useGmxAccountSettlementChainId } from "context/GmxAccountContext/hooks";
+import { useGmxAccountSettlementChainId } from "context/HfdxAccountContext/hooks";
 import {
   selectPoolsDetailsFirstTokenAddress,
   selectPoolsDetailsFirstTokenAmount,
@@ -33,7 +33,7 @@ import { useEthersSigner } from "lib/wallets/useEthersSigner";
 import { isMarketTokenAddress } from "sdk/configs/markets";
 import { getToken, isValidTokenSafe } from "sdk/configs/tokens";
 
-import { wrapChainAction } from "components/GmxAccountModal/wrapChainAction";
+import { wrapChainAction } from "components/HfdxAccountModal/wrapChainAction";
 
 type TokensToApproveResult = {
   tokensToApproveSymbols: string[];

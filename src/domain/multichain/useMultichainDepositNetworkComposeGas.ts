@@ -4,7 +4,7 @@ import { useAccount, usePublicClient } from "wagmi";
 import { type SourceChainId } from "config/chains";
 import { tryGetContract } from "config/contracts";
 import { CHAIN_ID_PREFERRED_DEPOSIT_TOKEN, getStargatePoolAddress } from "config/multichain";
-import { useGmxAccountDepositViewChain } from "context/GmxAccountContext/hooks";
+import { useGmxAccountDepositViewChain } from "context/HfdxAccountContext/hooks";
 import { useChainId } from "lib/chains";
 
 import { MultichainAction } from "./codecs/CodecUiHelper";

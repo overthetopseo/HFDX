@@ -33,8 +33,8 @@ import {
   useGmxAccountSelector,
   useGmxAccountSelectedTransferGuid,
   useGmxAccountSettlementChainId,
-} from "context/GmxAccountContext/hooks";
-import { selectGmxAccountDepositViewTokenInputAmount } from "context/GmxAccountContext/selectors";
+} from "context/HfdxAccountContext/hooks";
+import { selectGmxAccountDepositViewTokenInputAmount } from "context/HfdxAccountContext/selectors";
 import { useSubaccountContext } from "context/SubaccountContext/SubaccountContextProvider";
 import { useSyntheticsEvents } from "context/SyntheticsEvents";
 import { useMultichainApprovalsActiveListener } from "context/SyntheticsEvents/useMultichainEvents";
@@ -42,7 +42,7 @@ import { getMultichainTransferSendParams } from "domain/multichain/getSendParams
 import { sendCrossChainDepositTxn } from "domain/multichain/sendCrossChainDepositTxn";
 import { sendSameChainDepositTxn } from "domain/multichain/sendSameChainDepositTxn";
 import { SendParam } from "domain/multichain/types";
-import { useGmxAccountFundingHistory } from "domain/multichain/useGmxAccountFundingHistory";
+import { useHfdxAccountFundingHistory } from "domain/multichain/useHfdxAccountFundingHistory";
 import { useMultichainDepositNetworkComposeGas } from "domain/multichain/useMultichainDepositNetworkComposeGas";
 import { useMultichainQuoteFeeUsd } from "domain/multichain/useMultichainQuoteFeeUsd";
 import { useNativeTokenBalance } from "domain/multichain/useNativeTokenBalance";
@@ -94,7 +94,7 @@ import { wrapChainAction } from "./wrapChainAction";
 const useIsFirstDeposit = () => {
   const [enabled, setEnabled] = useState(true);
   const [isFirstDeposit, setIsFirstDeposit] = useState(false);
-  const { fundingHistory, isLoading } = useGmxAccountFundingHistory({ enabled });
+  const { fundingHistory, isLoading } = useHfdxAccountFundingHistory({ enabled });
 
   useEffect(() => {
     if (isLoading) {

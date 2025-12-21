@@ -2,7 +2,7 @@ import { Trans } from "@lingui/macro";
 import { useCallback, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 
-import { useGmxAccountModalOpen } from "context/GmxAccountContext/hooks";
+import { useGmxAccountModalOpen } from "context/HfdxAccountContext/hooks";
 import { useChainId } from "lib/chains";
 import { getGasPaymentTokens } from "sdk/configs/express";
 import { getToken } from "sdk/configs/tokens";

@@ -5,7 +5,7 @@ import {
   useGmxAccountDepositViewChain,
   useGmxAccountDepositViewTokenAddress,
   useGmxAccountModalOpen,
-} from "context/GmxAccountContext/hooks";
+} from "context/HfdxAccountContext/hooks";
 
 export function useOpenMultichainDepositModal(): (tokenAddress: string, chainId: SourceChainId) => void {
   const [, setIsVisibleOrView] = useGmxAccountModalOpen();

@@ -2,10 +2,10 @@ import { Trans } from "@lingui/macro";
 import { memo, useEffect } from "react";
 import { useAccount } from "wagmi";
 
-import { GmxAccountModalView } from "context/GmxAccountContext/GmxAccountContext";
-import { useGmxAccountModalOpen, useGmxAccountSelectedTransferGuid } from "context/GmxAccountContext/hooks";
+import { GmxAccountModalView } from "context/HfdxAccountContext/HfdxAccountContext";
+import { useGmxAccountModalOpen, useGmxAccountSelectedTransferGuid } from "context/HfdxAccountContext/hooks";
 import { SyntheticsStateContextProvider } from "context/SyntheticsStateContext/SyntheticsStateContextProvider";
-import { useGmxAccountFundingHistoryItem } from "domain/multichain/useGmxAccountFundingHistory";
+import { useHfdxAccountFundingHistoryItem } from "domain/multichain/useHfdxAccountFundingHistory";
 import { useChainId } from "lib/chains";
 import { userAnalytics } from "lib/userAnalytics";
 import { OneClickPromotionEvent } from "lib/userAnalytics/types";
@@ -43,7 +43,7 @@ const AvailableToTradeAssetsTitle = () => {
 const TransferDetailsTitle = () => {
   const [, setIsVisibleOrView] = useGmxAccountModalOpen();
   const [selectedTransferGuid] = useGmxAccountSelectedTransferGuid();
-  const selectedTransfer = useGmxAccountFundingHistoryItem(selectedTransferGuid);
+  const selectedTransfer = useHfdxAccountFundingHistoryItem(selectedTransferGuid);
 
   return (
     <div className="flex items-center gap-8">

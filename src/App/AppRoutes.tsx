@@ -29,7 +29,7 @@ import { decodeReferralCode, encodeReferralCode } from "sdk/utils/referrals";
 import { CloseToastButton } from "components/CloseToastButton/CloseToastButton";
 import EventToastContainer from "components/EventToast/EventToastContainer";
 import useEventToast from "components/EventToast/useEventToast";
-import { GmxAccountModal } from "components/GmxAccountModal/GmxAccountModal";
+import { GmxAccountModal } from "components/HfdxAccountModal/HfdxAccountModal";
 import { RedirectPopupModal } from "components/ModalViews/RedirectModal";
 import { NotifyModal } from "components/NotifyModal/NotifyModal";
 import { SettingsModal } from "components/SettingsModal/SettingsModal";

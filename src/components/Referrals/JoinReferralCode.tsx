@@ -41,7 +41,7 @@ import { nowInSeconds } from "sdk/utils/time";
 import type { IStargate } from "typechain-types-stargate";
 
 import Button from "components/Button/Button";
-import { useMultichainTradeTokensRequest } from "components/GmxAccountModal/hooks";
+import { useMultichainTradeTokensRequest } from "components/HfdxAccountModal/hooks";
 import { SyntheticsInfoRow } from "components/SyntheticsInfoRow";
 
 import SpinnerIcon from "img/ic_spinner.svg?react";

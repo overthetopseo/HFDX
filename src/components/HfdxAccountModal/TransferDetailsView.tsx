@@ -12,8 +12,8 @@ import {
   useGmxAccountWithdrawalViewChain,
   useGmxAccountWithdrawalViewTokenAddress,
   useGmxAccountWithdrawalViewTokenInputValue,
-} from "context/GmxAccountContext/hooks";
-import { useGmxAccountFundingHistoryItem } from "domain/multichain/useGmxAccountFundingHistory";
+} from "context/HfdxAccountContext/hooks";
+import { useHfdxAccountFundingHistoryItem } from "domain/multichain/useHfdxAccountFundingHistory";
 import { useChainId } from "lib/chains";
 import { CHAIN_ID_TO_EXPLORER_NAME, CHAIN_ID_TO_TX_URL_BUILDER } from "lib/chains/blockExplorers";
 import { formatAmountFree } from "lib/numbers";
@@ -45,7 +45,7 @@ export const TransferDetailsView = () => {
 
   const [isTransferPending, setIsTransferPending] = useState(false);
 
-  const selectedTransfer = useGmxAccountFundingHistoryItem(selectedTransferGuid, {
+  const selectedTransfer = useHfdxAccountFundingHistoryItem(selectedTransferGuid, {
     refetch: isTransferPending,
   });
 

@@ -8,12 +8,12 @@ import { useAccount } from "wagmi";
 
 import { BOTANIX, getExplorerUrl } from "config/chains";
 import { isSettlementChain } from "config/multichain";
-import { useGmxAccountModalOpen, useGmxAccountSelectedTransferGuid } from "context/GmxAccountContext/hooks";
+import { useGmxAccountModalOpen, useGmxAccountSelectedTransferGuid } from "context/HfdxAccountContext/hooks";
 import { useSettings } from "context/SettingsContext/SettingsContextProvider";
 import { isMultichainFundingItemLoading } from "domain/multichain/isMultichainFundingItemLoading";
 import type { MultichainFundingHistoryItem } from "domain/multichain/types";
 import { useDisconnectAndClose } from "domain/multichain/useDisconnectAndClose";
-import { useGmxAccountFundingHistory } from "domain/multichain/useGmxAccountFundingHistory";
+import { useHfdxAccountFundingHistory } from "domain/multichain/useHfdxAccountFundingHistory";
 import { useChainId } from "lib/chains";
 import { formatRelativeDateWithComma } from "lib/dates";
 import { helperToast } from "lib/helperToast";
@@ -372,7 +372,7 @@ const FundingHistorySection = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [, setSelectedTransferGuid] = useGmxAccountSelectedTransferGuid();
 
-  const { fundingHistory, isLoading } = useGmxAccountFundingHistory();
+  const { fundingHistory, isLoading } = useHfdxAccountFundingHistory();
 
   const filteredFundingHistory: DisplayFundingHistoryItem[] | undefined = fundingHistory
     ?.map((transfer): DisplayFundingHistoryItem | undefined => {

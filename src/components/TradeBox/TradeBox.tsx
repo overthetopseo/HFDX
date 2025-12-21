@@ -7,7 +7,7 @@ import { useKey, useLatest, usePrevious } from "react-use";
 import { HFDX_ACCOUNT_PSEUDO_CHAIN_ID } from "config/chains";
 import { BASIS_POINTS_DIVISOR, USD_DECIMALS } from "config/factors";
 import { isSettlementChain } from "config/multichain";
-import { useOpenMultichainDepositModal } from "context/GmxAccountContext/useOpenMultichainDepositModal";
+import { useOpenMultichainDepositModal } from "context/HfdxAccountContext/useOpenMultichainDepositModal";
 import { useSettings } from "context/SettingsContext/SettingsContextProvider";
 import { useTokensData } from "context/SyntheticsStateContext/hooks/globalsHooks";
 import { selectChartHeaderInfo } from "context/SyntheticsStateContext/selectors/chartSelectors";
@@ -53,7 +53,7 @@ import {
 } from "context/SyntheticsStateContext/selectors/tradeboxSelectors";
 import { useSelector } from "context/SyntheticsStateContext/utils";
 import { toastEnableExpress } from "domain/multichain/toastEnableExpress";
-import { useGmxAccountShowDepositButton } from "domain/multichain/useGmxAccountShowDepositButton";
+import { useHfdxAccountShowDepositButton } from "domain/multichain/useHfdxAccountShowDepositButton";
 import { getMinResidualGasPaymentTokenAmount } from "domain/synthetics/express/getMinResidualGasPaymentTokenAmount";
 import { getMarketIndexName, MarketInfo } from "domain/synthetics/markets";
 import { formatLeverage, formatLiquidationPrice } from "domain/synthetics/positions";
@@ -240,7 +240,7 @@ export function TradeBox({ isMobile }: { isMobile: boolean }) {
   const gasPaymentTokenData = useSelector(selectGasPaymentToken);
   const gasPaymentTokenAddress = useSelector(selectGasPaymentTokenAddress);
   const { subaccount } = useSelector(selectSubaccountState);
-  const { shouldShowDepositButton } = useGmxAccountShowDepositButton();
+  const { shouldShowDepositButton } = useHfdxAccountShowDepositButton();
   const { setIsSettingsVisible, isLeverageSliderEnabled } = useSettings();
 
   const executionFee = useSelector(selectTradeboxExecutionFee);

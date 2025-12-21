@@ -2,15 +2,15 @@ import { Trans } from "@lingui/macro";
 import { useCallback } from "react";
 
 import { MULTICHAIN_SOURCE_TO_SETTLEMENTS_MAPPING } from "config/multichain";
-import { useGmxAccountSettlementChainId } from "context/GmxAccountContext/hooks";
-import { useEmptyGmxAccounts } from "domain/multichain/useEmptyGmxAccounts";
+import { useGmxAccountSettlementChainId } from "context/HfdxAccountContext/hooks";
+import { useEmptyHfdxAccounts } from "domain/multichain/useEmptyHfdxAccounts";
 import { useChainId } from "lib/chains";
 import { formatUsd } from "lib/numbers";
 import { EMPTY_OBJECT } from "lib/objects";
 import { getChainName, SettlementChainId } from "sdk/configs/chains";
 
 import { ColorfulBanner, ColorfulButtonLink } from "components/ColorfulBanner/ColorfulBanner";
-import { useAvailableToTradeAssetMultichainRequest } from "components/GmxAccountModal/hooks";
+import { useAvailableToTradeAssetMultichainRequest } from "components/HfdxAccountModal/hooks";
 
 import InfoIcon from "img/ic_info.svg?react";
 
@@ -21,7 +21,7 @@ export function SettlementChainWarningContainer() {
 
   const settlementChains = srcChainId ? MULTICHAIN_SOURCE_TO_SETTLEMENTS_MAPPING[srcChainId] : undefined;
 
-  const { emptyGmxAccounts } = useEmptyGmxAccounts(settlementChains);
+  const { emptyGmxAccounts } = useEmptyHfdxAccounts(settlementChains);
 
   const isCurrentSettlementChainEmpty = emptyGmxAccounts?.[settlementChainId] === true;
 

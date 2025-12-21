@@ -22,7 +22,7 @@ import { bigMath } from "sdk/utils/bigmath";
 
 import { AmountWithUsdBalance } from "components/AmountWithUsd/AmountWithUsd";
 import Button from "components/Button/Button";
-import { VestModal } from "components/Earn/Portfolio/AssetsList/GmxAssetCard/VestModal";
+import { VestModal } from "components/Earn/Portfolio/AssetsList/HfdxAssetCard/VestModal";
 import HFDXAprTooltip from "components/Stake/HFDXAprTooltip";
 import { SyntheticsInfoRow } from "components/SyntheticsInfoRow";
 import Tooltip from "components/Tooltip/Tooltip";

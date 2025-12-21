@@ -85,7 +85,7 @@ export function isStepGreater(
   return STEP_ORDER[step] - STEP_ORDER[than] > 0;
 }
 
-export function useGmxAccountFundingHistory(opts?: { enabled?: boolean }): {
+export function useHfdxAccountFundingHistory(opts?: { enabled?: boolean }): {
   fundingHistory: MultichainFundingHistoryItem[] | undefined;
   isLoading: boolean;
 } {
@@ -170,7 +170,7 @@ function useGmxAccountPendingFundingHistoryItem(guid: string | undefined): Multi
   return pendingItem;
 }
 
-export function useGmxAccountFundingHistoryItem(
+export function useHfdxAccountFundingHistoryItem(
   guid: string | undefined,
   opts?: { refetch?: boolean }
 ): MultichainFundingHistoryItem | undefined {

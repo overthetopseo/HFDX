@@ -14,7 +14,7 @@ import { PLACEHOLDER_ACCOUNT, StakingProcessedData } from "lib/legacy";
 import useWallet from "lib/wallets/useWallet";
 
 import Button from "components/Button/Button";
-import { ClaimModal } from "components/Earn/Portfolio/AssetsList/GmxAssetCard/ClaimModal";
+import { ClaimModal } from "components/Earn/Portfolio/AssetsList/HfdxAssetCard/ClaimModal";
 
 import EarnIcon from "img/ic_earn.svg?react";
 

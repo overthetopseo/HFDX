@@ -10,7 +10,7 @@ import {
   useGmxAccountDepositViewChain,
   useGmxAccountDepositViewTokenAddress,
   useGmxAccountModalOpen,
-} from "context/GmxAccountContext/hooks";
+} from "context/HfdxAccountContext/hooks";
 import { TokenChainData } from "domain/multichain/types";
 import { useChainId } from "lib/chains";
 import { formatUsd } from "lib/numbers";
@@ -19,7 +19,7 @@ import { convertToUsd, getMidPrice } from "sdk/utils/tokens";
 
 import { Amount } from "components/Amount/Amount";
 import Button from "components/Button/Button";
-import { useMultichainTradeTokensRequest } from "components/GmxAccountModal/hooks";
+import { useMultichainTradeTokensRequest } from "components/HfdxAccountModal/hooks";
 import SearchInput from "components/SearchInput/SearchInput";
 import { ButtonRowScrollFadeContainer } from "components/TableScrollFade/TableScrollFade";
 import { VerticalScrollFadeContainer } from "components/TableScrollFade/VerticalScrollFade";

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { useGmxAccountTokenBalances } from "domain/multichain/useGmxAccountTokenBalances";
+import { useHfdxAccountTokenBalances } from "domain/multichain/useHfdxAccountTokenBalances";
 import { ContractsChainId, SourceChainId } from "sdk/configs/chains";
 import { getTokensMap, getV2Tokens } from "sdk/configs/tokens";
 import { TokenBalanceType } from "sdk/types/tokens";
@@ -32,7 +32,7 @@ export function useTokensDataRequest(
   const { balancesData: walletBalancesData, error: walletBalancesError } = useTokenBalances(chainId, {
     enabled: params?.enabled,
   });
-  const { balancesData: gmxAccountBalancesData, error: gmxAccountBalancesError } = useGmxAccountTokenBalances(chainId, {
+  const { balancesData: gmxAccountBalancesData, error: gmxAccountBalancesError } = useHfdxAccountTokenBalances(chainId, {
     enabled: params?.enabled,
   });
   const {

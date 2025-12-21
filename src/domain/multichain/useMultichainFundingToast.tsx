@@ -10,19 +10,19 @@ import { formatBalanceAmount } from "lib/numbers";
 import { EMPTY_OBJECT } from "lib/objects";
 import { getToken } from "sdk/configs/tokens";
 
-import { FUNDING_OPERATIONS_LABELS } from "components/GmxAccountModal/keys";
+import { FUNDING_OPERATIONS_LABELS } from "components/HfdxAccountModal/keys";
 
 import SpinnerIcon from "img/ic_spinner.svg?react";
 
 import { isMultichainFundingItemLoading } from "./isMultichainFundingItemLoading";
-import { useGmxAccountFundingHistory } from "./useGmxAccountFundingHistory";
+import { useHfdxAccountFundingHistory } from "./useHfdxAccountFundingHistory";
 
 const TOAST_ID = "multichain-funding-toast";
 
 function useGmxAccountPendingFundingHistoryItems(
   guids: string[] | undefined
 ): Partial<Record<string, MultichainFundingHistoryItem>> | undefined {
-  const { fundingHistory } = useGmxAccountFundingHistory({ enabled: guids && guids.length > 0 });
+  const { fundingHistory } = useHfdxAccountFundingHistory({ enabled: guids && guids.length > 0 });
 
   const pendingItems = useMemo((): Partial<Record<string, MultichainFundingHistoryItem>> => {
     if (!fundingHistory || fundingHistory.length === 0 || !guids || guids.length === 0) {

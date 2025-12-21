@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { BN_ZERO } from "lib/numbers";
 
-export function useRecommendStakeGmxAmount(
+export function useRecommendStakeHfdxAmount(
   p: {
     accumulatedHFDX?: bigint;
     accumulatedBnHFDX?: bigint;

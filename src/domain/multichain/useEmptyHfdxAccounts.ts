@@ -66,7 +66,7 @@ const subscribeEmptyGmxAccounts: SWRSubscription<
   };
 };
 
-export function useEmptyGmxAccounts(chainIds: SettlementChainId[] | undefined): {
+export function useEmptyHfdxAccounts(chainIds: SettlementChainId[] | undefined): {
   emptyGmxAccounts: Partial<Record<SettlementChainId, boolean>> | undefined;
   isLoading: boolean;
 } {

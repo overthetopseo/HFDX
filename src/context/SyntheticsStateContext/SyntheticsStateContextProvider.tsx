@@ -67,7 +67,7 @@ import useWallet from "lib/wallets/useWallet";
 import { getContract } from "sdk/configs/contracts";
 import { convertTokenAddress } from "sdk/configs/tokens";
 
-import { useMultichainMarketTokensBalancesRequest } from "components/GmxAccountModal/hooks";
+import { useMultichainMarketTokensBalancesRequest } from "components/HfdxAccountModal/hooks";
 
 import { useCollectSyntheticsMetrics } from "./useCollectSyntheticsMetrics";
 import { LeaderboardState, useLeaderboardState } from "./useLeaderboardState";

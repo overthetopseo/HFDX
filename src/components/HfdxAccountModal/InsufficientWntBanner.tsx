@@ -2,7 +2,7 @@ import { Trans } from "@lingui/macro";
 import { useHistory } from "react-router-dom";
 import { zeroAddress } from "viem";
 
-import { useGmxAccountDepositViewTokenAddress, useGmxAccountModalOpen } from "context/GmxAccountContext/hooks";
+import { useGmxAccountDepositViewTokenAddress, useGmxAccountModalOpen } from "context/HfdxAccountContext/hooks";
 import { useChainId } from "lib/chains";
 import { formatAmount, formatUsd } from "lib/numbers";
 import { getWrappedToken } from "sdk/configs/tokens";

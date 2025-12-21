@@ -2,9 +2,9 @@ import { Trans } from "@lingui/macro";
 import cx from "classnames";
 import { useEffect, useState } from "react";
 
-import { useGmxAccountModalOpen, useGmxAccountSelectedTransferGuid } from "context/GmxAccountContext/hooks";
+import { useGmxAccountModalOpen, useGmxAccountSelectedTransferGuid } from "context/HfdxAccountContext/hooks";
 import { useSubaccountContext } from "context/SubaccountContext/SubaccountContextProvider";
-import { useGmxAccountFundingHistoryItem } from "domain/multichain/useGmxAccountFundingHistory";
+import { useHfdxAccountFundingHistoryItem } from "domain/multichain/useHfdxAccountFundingHistory";
 import { userAnalytics } from "lib/userAnalytics";
 import { OneClickPromotionEvent } from "lib/userAnalytics/types";
 import { getToken } from "sdk/configs/tokens";
@@ -29,7 +29,7 @@ const StatusBadge = ({ variant }: { variant: "loading" | "success" }) => {
 export const DepositStatusView = () => {
   const [, setIsVisibleOrView] = useGmxAccountModalOpen();
   const [selectedTransferGuid] = useGmxAccountSelectedTransferGuid();
-  const transfer = useGmxAccountFundingHistoryItem(selectedTransferGuid, {
+  const transfer = useHfdxAccountFundingHistoryItem(selectedTransferGuid, {
     refetch: Boolean(selectedTransferGuid),
   });
   const [isSubaccountActivating, setIsSubaccountActivating] = useState(false);

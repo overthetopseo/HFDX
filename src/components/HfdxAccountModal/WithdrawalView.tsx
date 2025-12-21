@@ -36,7 +36,7 @@ import {
   useGmxAccountWithdrawalViewChain,
   useGmxAccountWithdrawalViewTokenAddress,
   useGmxAccountWithdrawalViewTokenInputValue,
-} from "context/GmxAccountContext/hooks";
+} from "context/HfdxAccountContext/hooks";
 import { useSettings } from "context/SettingsContext/SettingsContextProvider";
 import { useSyntheticsEvents } from "context/SyntheticsEvents";
 import {
@@ -49,7 +49,7 @@ import { fallbackCustomError } from "domain/multichain/fallbackCustomError";
 import { getMultichainTransferSendParams } from "domain/multichain/getSendParams";
 import { toastCustomOrStargateError } from "domain/multichain/toastCustomOrStargateError";
 import { BridgeOutParams, SendParam } from "domain/multichain/types";
-import { useGmxAccountFundingHistory } from "domain/multichain/useGmxAccountFundingHistory";
+import { useHfdxAccountFundingHistory } from "domain/multichain/useHfdxAccountFundingHistory";
 import { useMultichainQuoteFeeUsd } from "domain/multichain/useMultichainQuoteFeeUsd";
 import { useQuoteOft } from "domain/multichain/useQuoteOft";
 import { useQuoteOftLimits } from "domain/multichain/useQuoteOftLimits";
@@ -90,7 +90,7 @@ import { Amount } from "components/Amount/Amount";
 import { AmountWithUsdBalance } from "components/AmountWithUsd/AmountWithUsd";
 import Button from "components/Button/Button";
 import { DropdownSelector } from "components/DropdownSelector/DropdownSelector";
-import { useAvailableToTradeAssetMultichain, useGmxAccountWithdrawNetworks } from "components/GmxAccountModal/hooks";
+import { useAvailableToTradeAssetMultichain, useGmxAccountWithdrawNetworks } from "components/HfdxAccountModal/hooks";
 import NumberInput from "components/NumberInput/NumberInput";
 import TokenIcon from "components/TokenIcon/TokenIcon";
 import { ValueTransition } from "components/ValueTransition/ValueTransition";
@@ -129,7 +129,7 @@ function useUsdGasTokenBuffer(): {
 const useIsFirstWithdrawal = () => {
   const [enabled, setEnabled] = useState(true);
   const [isFirstWithdrawal, setIsFirstWithdrawal] = useState(false);
-  const { fundingHistory, isLoading } = useGmxAccountFundingHistory({ enabled });
+  const { fundingHistory, isLoading } = useHfdxAccountFundingHistory({ enabled });
 
   useEffect(() => {
     if (isLoading) {

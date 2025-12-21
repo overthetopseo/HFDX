@@ -3,8 +3,8 @@ import cx from "classnames";
 import { useCallback } from "react";
 import Skeleton from "react-loading-skeleton";
 
-import { useGmxAccountModalOpen } from "context/GmxAccountContext/hooks";
-import { useGmxAccountShowDepositButton } from "domain/multichain/useGmxAccountShowDepositButton";
+import { useGmxAccountModalOpen } from "context/HfdxAccountContext/hooks";
+import { useHfdxAccountShowDepositButton } from "domain/multichain/useHfdxAccountShowDepositButton";
 import { useChainId } from "lib/chains";
 import { useENS } from "lib/legacy";
 import { formatUsd } from "lib/numbers";
@@ -13,7 +13,7 @@ import { shortenAddressOrEns } from "lib/wallets";
 
 import { Avatar } from "components/Avatar/Avatar";
 import Button from "components/Button/Button";
-import { useAvailableToTradeAssetSettlementChain } from "components/GmxAccountModal/hooks";
+import { useAvailableToTradeAssetSettlementChain } from "components/HfdxAccountModal/hooks";
 
 type Props = {
   account: string;
@@ -24,7 +24,7 @@ export function AddressDropdownWithMultichain({ account }: Props) {
   const { ensName } = useENS(account);
   const [, setGmxAccountModalOpen] = useGmxAccountModalOpen();
   const { totalUsd, gmxAccountUsd, isGmxAccountLoading } = useAvailableToTradeAssetSettlementChain();
-  const { shouldShowDepositButton } = useGmxAccountShowDepositButton();
+  const { shouldShowDepositButton } = useHfdxAccountShowDepositButton();
 
   const { isMobile, isSmallMobile } = useBreakpoints();
   const displayAddressLength = isMobile ? 9 : 13;

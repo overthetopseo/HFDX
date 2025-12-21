@@ -15,7 +15,7 @@ import {
   parseGmxAccountTokenBalancesData,
 } from "./gmxAccountTokenBalancesMulticallRequest";
 
-export function useGmxAccountTokenBalances(
+export function useHfdxAccountTokenBalances(
   chainId: ContractsChainId,
   params?: {
     enabled?: boolean;
@@ -28,7 +28,7 @@ export function useGmxAccountTokenBalances(
 
   const { resetTokensBalancesUpdates } = useTokensBalancesUpdates();
 
-  const { data, error } = useMulticall(chainId as SettlementChainId, "useGmxAccountTokenBalances", {
+  const { data, error } = useMulticall(chainId as SettlementChainId, "useHfdxAccountTokenBalances", {
     key: account && enabled && isSettlementChain(chainId) ? [account] : null,
     refreshInterval,
     request: (chainId, key) => buildGmxAccountTokenBalancesRequest(chainId, key?.[0] as string),

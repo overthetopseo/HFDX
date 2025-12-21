@@ -22,7 +22,7 @@ import {
   useMultichainMarketTokensBalancesRequest,
   useMultichainTokens,
   useMultichainTradeTokensRequest,
-} from "components/GmxAccountModal/hooks";
+} from "components/HfdxAccountModal/hooks";
 
 export type PoolsDetailsQueryParams = {
   market: string;
