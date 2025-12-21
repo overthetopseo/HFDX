@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 
 import { Theme, useTheme } from "context/ThemeContext/ThemeContext";
 import { useBreakpoints } from "lib/useBreakpoints";
-import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
+import { BuyHfdxModal } from "pages/BuyHFDX/BuyHfdxModal";
 import EarnPageLayout from "pages/Earn/EarnPageLayout";
 
 import EarnDocumentation from "components/Earn/Discovery/EarnDocumentation";
@@ -29,11 +29,11 @@ export default function EarnDiscoveryPage() {
 
   const style = useMemo(() => getDiscoverStyle({ theme, isMobileBg: isDesktop }), [theme, isDesktop]);
 
-  const [isBuyGmxModalVisible, setIsBuyGmxModalVisible] = useState(false);
+  const [isBuyHfdxModalVisible, setIsBuyHfdxModalVisible] = useState(false);
 
   return (
     <EarnPageLayout>
-      <BuyGmxModal isVisible={isBuyGmxModalVisible} setIsVisible={setIsBuyGmxModalVisible} />
+      <BuyHfdxModal isVisible={isBuyHfdxModalVisible} setIsVisible={setIsBuyHfdxModalVisible} />
 
       <div className="flex gap-8 max-md:flex-col">
         <div className="flex grow flex-col gap-8">
@@ -51,9 +51,9 @@ export default function EarnDiscoveryPage() {
           </div>
 
           <div className="grid gap-8 xl:grid-cols-3">
-            <EarnProductCard type="gmx" openBuyGmxModal={() => setIsBuyGmxModalVisible(true)} />
-            <EarnProductCard type="glv" openBuyGmxModal={() => setIsBuyGmxModalVisible(true)} />
-            <EarnProductCard type="gm" openBuyGmxModal={() => setIsBuyGmxModalVisible(true)} />
+            <EarnProductCard type="gmx" openBuyHfdxModal={() => setIsBuyHfdxModalVisible(true)} />
+            <EarnProductCard type="glv" openBuyHfdxModal={() => setIsBuyHfdxModalVisible(true)} />
+            <EarnProductCard type="gm" openBuyHfdxModal={() => setIsBuyHfdxModalVisible(true)} />
           </div>
           <EarnYieldOverview />
         </div>

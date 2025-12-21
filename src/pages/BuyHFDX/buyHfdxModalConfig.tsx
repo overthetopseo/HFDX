@@ -10,7 +10,7 @@ import MatchaIcon from "img/ic_matcha.svg?react";
 import TransakIcon from "img/ic_tansak.svg?react";
 import UniswapIcon from "img/tokens/ic_uni.svg?react";
 
-export type BuyGmxModalButtonConfig = {
+export type BuyHfdxModalButtonConfig = {
   id: string;
   icon: ReactNode;
   label: ReactNode;
@@ -22,7 +22,7 @@ const createGetLink =
     return links[chainId] ?? fallback;
   };
 
-export const BUY_HFDX_MODAL_LINKS: BuyGmxModalButtonConfig[] = [
+export const BUY_HFDX_MODAL_LINKS: BuyHfdxModalButtonConfig[] = [
   {
     id: "uniswap",
     icon: <UniswapIcon className="size-20" />,

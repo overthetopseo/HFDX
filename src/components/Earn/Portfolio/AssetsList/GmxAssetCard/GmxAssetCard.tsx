@@ -17,7 +17,7 @@ import { PLACEHOLDER_ACCOUNT, StakingProcessedData } from "lib/legacy";
 import { formatAmount, formatUsd } from "lib/numbers";
 import { sendEarnPortfolioItemClickEvent } from "lib/userAnalytics/earnEvents";
 import useWallet from "lib/wallets/useWallet";
-import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
+import { BuyHfdxModal } from "pages/BuyHFDX/BuyHfdxModal";
 import { bigMath } from "sdk/utils/bigmath";
 
 import { AmountWithUsdBalance } from "components/AmountWithUsd/AmountWithUsd";
@@ -243,7 +243,7 @@ export function GmxAssetCard({
           reservedAmount={reservedAmount}
         />
       )}
-      <BuyGmxModal isVisible={isBuyModalVisible} setIsVisible={setIsBuyModalVisible} />
+      <BuyHfdxModal isVisible={isBuyModalVisible} setIsVisible={setIsBuyModalVisible} />
     </div>
   );
 }

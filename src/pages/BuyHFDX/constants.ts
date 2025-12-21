@@ -14,7 +14,7 @@ export const EXTERNAL_LINKS: Record<
   ContractsChainId,
   {
     networkWebsite: string;
-    buyGmx: {
+    buyHfdx: {
       uniswap?: string;
       gmx?: string;
       traderjoe?: string;
@@ -23,30 +23,30 @@ export const EXTERNAL_LINKS: Record<
 > = {
   [ARBITRUM]: {
     networkWebsite: "https://arbitrum.io/",
-    buyGmx: {
+    buyHfdx: {
       uniswap: `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${ARBITRUM_HFDX}`,
       gmx: `https://app.gmx.io/#/trade/swap/?mode=market&from=usdc&to=gmx`,
     },
   },
   [AVALANCHE]: {
     networkWebsite: "https://www.avax.network/",
-    buyGmx: {
+    buyHfdx: {
       traderjoe: `https://traderjoexyz.com/trade?outputCurrency=${AVALANCHE_HFDX}`,
     },
   },
   [AVALANCHE_FUJI]: {
     networkWebsite: "https://www.avax.network/",
-    buyGmx: {
+    buyHfdx: {
       traderjoe: `https://traderjoexyz.com/trade?outputCurrency=${AVALANCHE_HFDX}`,
     },
   },
   [ARBITRUM_SEPOLIA]: {
     networkWebsite: "https://arbitrum.io/",
-    buyGmx: {},
+    buyHfdx: {},
   },
   [BOTANIX]: {
     networkWebsite: "https://botanixlabs.com/",
-    buyGmx: {
+    buyHfdx: {
       uniswap: undefined,
     },
   },

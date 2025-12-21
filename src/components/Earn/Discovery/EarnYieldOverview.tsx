@@ -17,7 +17,7 @@ import { useBreakpoints } from "lib/useBreakpoints";
 import { sendEarnRecommendationClickedEvent } from "lib/userAnalytics/earnEvents";
 import { switchNetwork } from "lib/wallets";
 import useWallet from "lib/wallets/useWallet";
-import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
+import { BuyHfdxModal } from "pages/BuyHFDX/BuyHfdxModal";
 
 import APRLabel from "components/APRLabel/APRLabel";
 import Tabs from "components/Tabs/Tabs";
@@ -235,7 +235,7 @@ export default function EarnYieldOverview() {
     [arbitrumTokens.tokensData, avalancheTokens.tokensData, botanixTokens.tokensData]
   );
 
-  const [isBuyGmxModalVisible, setIsBuyGmxModalVisible] = useState(false);
+  const [isBuyHfdxModalVisible, setIsBuyHfdxModalVisible] = useState(false);
 
   const showGmxLink = account && hasGmxHoldings;
   const poolsLink = "/pools";
@@ -267,7 +267,7 @@ export default function EarnYieldOverview() {
           <YieldRow
             key="arb-gmx"
             token="HFDX"
-            onClick={!showGmxLink ? () => setIsBuyGmxModalVisible(true) : undefined}
+            onClick={!showGmxLink ? () => setIsBuyHfdxModalVisible(true) : undefined}
             to={showGmxLink ? "/earn/portfolio" : undefined}
             chainId={ARBITRUM}
             metric={<YieldMetric value={<APRLabel chainId={ARBITRUM} label="avgHFDXAprTotal" />} suffix="APR" />}
@@ -296,7 +296,7 @@ export default function EarnYieldOverview() {
             key="avax-gmx"
             token="HFDX"
             to={showGmxLink ? "/earn/portfolio" : undefined}
-            onClick={!showGmxLink ? () => setIsBuyGmxModalVisible(true) : undefined}
+            onClick={!showGmxLink ? () => setIsBuyHfdxModalVisible(true) : undefined}
             chainId={AVALANCHE}
             metric={<YieldMetric value={<APRLabel chainId={AVALANCHE} label="avgHFDXAprTotal" />} suffix="APR" />}
           />,
@@ -394,7 +394,7 @@ export default function EarnYieldOverview() {
 
   return (
     <div className="flex flex-col max-xl:rounded-8 max-xl:bg-slate-900 max-xl:p-16">
-      <BuyGmxModal isVisible={isBuyGmxModalVisible} setIsVisible={setIsBuyGmxModalVisible} />
+      <BuyHfdxModal isVisible={isBuyHfdxModalVisible} setIsVisible={setIsBuyHfdxModalVisible} />
       <h4 className="py-20 text-20 font-medium text-typography-primary max-xl:pb-12 max-xl:pt-0 max-xl:text-16">
         <Trans>Current Yield Landscape</Trans>
       </h4>

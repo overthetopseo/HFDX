@@ -215,7 +215,7 @@ function DecentralisedExchanges({
   chainId: ContractsChainId;
   externalLinks: {
     networkWebsite: string;
-    buyGmx: {
+    buyHfdx: {
       uniswap?: string;
       gmx?: string;
       traderjoe?: string;
@@ -224,7 +224,7 @@ function DecentralisedExchanges({
 }) {
   const isArbitrum = chainId === ARBITRUM;
 
-  const isEmpty = !Object.values(externalLinks.buyGmx).some((value) => value !== undefined);
+  const isEmpty = !Object.values(externalLinks.buyHfdx).some((value) => value !== undefined);
 
   if (isEmpty) {
     return (
@@ -250,7 +250,7 @@ function DecentralisedExchanges({
                 textAlign="left"
                 imgSrc={uniswapArbitrumIcon}
                 imgAlt={"Uniswap"}
-                to={externalLinks.buyGmx.uniswap}
+                to={externalLinks.buyHfdx.uniswap}
                 newTab
               >
                 Uniswap
@@ -260,7 +260,7 @@ function DecentralisedExchanges({
                 textAlign="left"
                 imgSrc={gmxArbitrumIcon}
                 imgAlt="HFDX"
-                to={externalLinks.buyGmx.gmx}
+                to={externalLinks.buyHfdx.gmx}
                 showExternalLinkArrow={false}
                 newTab
               >
@@ -277,7 +277,7 @@ function DecentralisedExchanges({
               <Button
                 variant="secondary"
                 textAlign="left"
-                to={externalLinks.buyGmx.traderjoe}
+                to={externalLinks.buyHfdx.traderjoe}
                 imgSrc={traderjoeIcon}
                 imgAlt="Traderjoe"
                 newTab

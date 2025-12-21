@@ -6625,7 +6625,7 @@ msgstr "Сессия сгенерирована"
 #: src/components/Earn/Discovery/EarnProductCard.tsx
 #: src/components/Earn/Portfolio/AssetsList/GmxAssetCard/GmxAssetCard.tsx
 #: src/components/Earn/Portfolio/RecommendedAssets/RecommendedAssets.tsx
-#: src/pages/BuyHFDX/BuyGmxModal.tsx
+#: src/pages/BuyHFDX/BuyHfdxModal.tsx
 #: src/pages/Dashboard/GmxCard.tsx
 msgid "Buy HFDX"
 msgstr "Купить HFDX"
@@ -7638,7 +7638,7 @@ msgstr "Финансирование клеймлено."
 msgid "Keep leverage is not available as Position exceeds max. allowed leverage. <0>Read more</0>."
 msgstr "Сохранение плеча недоступно, поскольку позиция превышает макс. допустимое плечо. <0>Подробнее</0>."
 
-#: src/pages/BuyHFDX/BuyGmxModal.tsx
+#: src/pages/BuyHFDX/BuyHfdxModal.tsx
 msgid "Buy HFDX directly"
 msgstr ""
 
@@ -8158,7 +8158,7 @@ msgstr "Чистая ставка объединяет комиссии за ф�
 msgid "Accrued Price Impact Rebates"
 msgstr "Начисленные рибейты за влияние на цену"
 
-#: src/pages/BuyHFDX/BuyGmxModal.tsx
+#: src/pages/BuyHFDX/BuyHfdxModal.tsx
 msgid "Buy on other platforms"
 msgstr ""
 

@@ -18,7 +18,7 @@ import { useChainId } from "lib/chains";
 import { expandDecimals, formatPercentage, USD_DECIMALS } from "lib/numbers";
 import { useBreakpoints } from "lib/useBreakpoints";
 import { sendEarnRecommendationClickedEvent } from "lib/userAnalytics/earnEvents";
-import { BuyGmxModal } from "pages/BuyHFDX/BuyGmxModal";
+import { BuyHfdxModal } from "pages/BuyHFDX/BuyHfdxModal";
 import { AnyChainId, BOTANIX } from "sdk/configs/chains";
 import { getNormalizedTokenSymbol } from "sdk/configs/tokens";
 import { MarketInfo, MarketTokensAPRData } from "sdk/types/markets";
@@ -143,11 +143,11 @@ export function RecommendedAssets({
     });
   }, [hasGmxAssets, marketsInfoData, glvsToShow, marketsApyInfo, marketTokensData, performance]);
 
-  const [isBuyGmxModalVisible, setIsBuyGmxModalVisible] = useState(false);
+  const [isBuyHfdxModalVisible, setIsBuyHfdxModalVisible] = useState(false);
 
   return (
     <section className="flex flex-col gap-8">
-      <BuyGmxModal isVisible={isBuyGmxModalVisible} setIsVisible={setIsBuyGmxModalVisible} />
+      <BuyHfdxModal isVisible={isBuyHfdxModalVisible} setIsVisible={setIsBuyHfdxModalVisible} />
       <h2 className="flex items-center gap-4 pb-12 pt-20 text-24 font-medium text-typography-primary">
         <BoltGradientIcon className="inline-block size-20" />
         <Trans>Recommended</Trans>
@@ -164,7 +164,7 @@ export function RecommendedAssets({
               <GmxRecommendedAssetItem
                 key="gmx"
                 chainId={chainId}
-                openBuyGmxModal={() => setIsBuyGmxModalVisible(true)}
+                openBuyHfdxModal={() => setIsBuyHfdxModalVisible(true)}
               />,
             ]}
           </RecommendedAssetSection>
@@ -236,7 +236,7 @@ function RecommendedAssetSection({
   );
 }
 
-function GmxRecommendedAssetItem({ chainId, openBuyGmxModal }: { chainId: AnyChainId; openBuyGmxModal: () => void }) {
+function GmxRecommendedAssetItem({ chainId, openBuyHfdxModal }: { chainId: AnyChainId; openBuyHfdxModal: () => void }) {
   const handleClick = () => {
     sendEarnRecommendationClickedEvent({
       activeTab: "portfolio",
@@ -244,7 +244,7 @@ function GmxRecommendedAssetItem({ chainId, openBuyGmxModal }: { chainId: AnyCha
       token: "HFDX",
     });
 
-    openBuyGmxModal();
+    openBuyHfdxModal();
   };
 
   return (

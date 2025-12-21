@@ -91,11 +91,11 @@ const BULLET_GRADIENT_STYLE = {
 export default function EarnProductCard({
   type,
   className,
-  openBuyGmxModal,
+  openBuyHfdxModal,
 }: {
   type: EarnProductType;
   className?: string;
-  openBuyGmxModal: () => void;
+  openBuyHfdxModal: () => void;
 }) {
   const content = getCardContent(type);
   const { isMobile } = useBreakpoints();
@@ -111,7 +111,7 @@ export default function EarnProductCard({
     });
 
     if (type === "gmx") {
-      openBuyGmxModal();
+      openBuyHfdxModal();
     }
   };
 

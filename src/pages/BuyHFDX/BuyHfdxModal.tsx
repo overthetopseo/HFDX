@@ -15,11 +15,11 @@ import ArrowRightIcon from "img/ic_arrow_right.svg?react";
 import GmxRoundedWhiteIcon from "img/ic_gmx_rounded_white.svg?react";
 import SpinnerIcon from "img/ic_spinner.svg?react";
 
-import { BUY_HFDX_MODAL_LINKS } from "./buyGmxModalConfig";
+import { BUY_HFDX_MODAL_LINKS } from "./buyHfdxModalConfig";
 
 const DIRECT_BUY_PATH = "/trade/swap?from=usdc&to=gmx";
 
-export function BuyGmxModal({
+export function BuyHfdxModal({
   isVisible,
   setIsVisible,
 }: {
@@ -54,7 +54,7 @@ export function BuyGmxModal({
         history.push(DIRECT_BUY_PATH);
       }
     } catch (e) {
-      metrics.pushError(e, "buyGmxModal.switchNetworkError");
+      metrics.pushError(e, "buyHfdxModal.switchNetworkError");
     }
 
     setIsSwitching(false);
@@ -69,7 +69,7 @@ export function BuyGmxModal({
       withMobileBottomPosition={true}
     >
       <div className="flex flex-col gap-16">
-        <BuyGmxModalButton
+        <BuyHfdxModalButton
           variant="primary"
           icon={<GmxRoundedWhiteIcon className="size-20" />}
           newTab={false}
@@ -78,7 +78,7 @@ export function BuyGmxModal({
           disabled={isSwitching}
         >
           <Trans>Buy HFDX directly</Trans>
-        </BuyGmxModalButton>
+        </BuyHfdxModalButton>
         <div className="flex flex-col gap-8">
           <span className="text-14 font-medium text-typography-secondary">
             <Trans>Buy on other platforms</Trans>
@@ -88,9 +88,9 @@ export function BuyGmxModal({
               const link = button.getLink(chainId);
 
               return (
-                <BuyGmxModalButton key={button.id} variant="secondary" icon={button.icon} to={link} newTab>
+                <BuyHfdxModalButton key={button.id} variant="secondary" icon={button.icon} to={link} newTab>
                   {button.label}
-                </BuyGmxModalButton>
+                </BuyHfdxModalButton>
               );
             })}
           </div>
@@ -100,7 +100,7 @@ export function BuyGmxModal({
   );
 }
 
-export function BuyGmxModalButton({
+export function BuyHfdxModalButton({
   to,
   icon,
   children,
