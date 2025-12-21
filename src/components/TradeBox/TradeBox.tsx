@@ -113,7 +113,7 @@ import SettingsIcon from "img/ic_settings.svg?react";
 
 import { useIsCurtainOpen } from "./Curtain";
 import { ExpressTradingWarningCard } from "./ExpressTradingWarningCard";
-import { useMultichainTokens } from "../GmxAccountModal/hooks";
+import { useMultichainTokens } from "../HfdxAccountModal/hooks";
 import { HighPriceImpactOrFeesWarningCard } from "../HighPriceImpactOrFeesWarningCard/HighPriceImpactOrFeesWarningCard";
 import TradeInfoIcon from "../TradeInfoIcon/TradeInfoIcon";
 import TwapRows from "../TwapRows/TwapRows";

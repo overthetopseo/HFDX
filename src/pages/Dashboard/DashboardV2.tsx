@@ -20,7 +20,7 @@ import SEO from "components/Seo/SEO";
 import V2Icon from "img/ic_v2.svg?react";
 
 import { GmCard } from "./GmCard";
-import { GmxCard } from "./GmxCard";
+import { GmxCard } from "./HfdxCard";
 import { OverviewCard } from "./OverviewCard";
 import { StatsCard } from "./StatsCard";
 import { useDashboardChainStatsMulticall } from "./useDashboardChainStatsMulticall";
