@@ -62,7 +62,7 @@ import { useChainId } from "lib/chains";
 import { formatAmountFree, formatBalanceAmount, formatUsd } from "lib/numbers";
 import { getByKey } from "lib/objects";
 import { switchNetwork } from "lib/wallets";
-import { HFDX_ACCOUNT_PSEUDO_CHAIN_ID, type AnyChainId, type GmxAccountPseudoChainId } from "sdk/configs/chains";
+import { GMX_ACCOUNT_PSEUDO_CHAIN_ID, type AnyChainId, type GmxAccountPseudoChainId } from "sdk/configs/chains";
 import { MARKETS } from "sdk/configs/markets";
 import { convertTokenAddress, getToken, NATIVE_TOKEN_ADDRESS } from "sdk/configs/tokens";
 
@@ -470,7 +470,7 @@ export function GmSwapBoxDepositWithdrawal() {
                       tokenAddress={firstTokenAddress}
                       payChainId={
                         paySource === "gmxAccount"
-                          ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+                          ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
                           : paySource === "sourceChain"
                             ? srcChainId
                             : undefined
@@ -501,7 +501,7 @@ export function GmSwapBoxDepositWithdrawal() {
                       tokens={tokenOptions}
                       chainIdBadge={
                         paySource === "gmxAccount"
-                          ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+                          ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
                           : paySource === "sourceChain"
                             ? srcChainId
                             : undefined
@@ -537,7 +537,7 @@ export function GmSwapBoxDepositWithdrawal() {
                           displaySize={20}
                           chainIdBadge={
                             paySource === "gmxAccount"
-                              ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+                              ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
                               : paySource === "sourceChain"
                                 ? srcChainId
                                 : undefined
@@ -567,7 +567,7 @@ export function GmSwapBoxDepositWithdrawal() {
                       srcChainId={srcChainId}
                       paySource={paySource}
                       onSelectTokenAddress={async (newChainId) => {
-                        if (newChainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID) {
+                        if (newChainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID) {
                           setPaySource("gmxAccount");
                         } else if (newChainId === chainId) {
                           if (srcChainId !== undefined) {
@@ -600,7 +600,7 @@ export function GmSwapBoxDepositWithdrawal() {
                             paySource === "sourceChain"
                               ? srcChainId
                               : paySource === "gmxAccount"
-                                ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+                                ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
                                 : undefined
                           }
                         />
@@ -678,7 +678,7 @@ function FirstTokenPlaceholder() {
             paySource === "sourceChain"
               ? srcChainId
               : paySource === "gmxAccount"
-                ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+                ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
                 : undefined
           }
         />
@@ -695,7 +695,7 @@ function FirstTokenPlaceholder() {
           paySource === "sourceChain"
             ? srcChainId
             : paySource === "gmxAccount"
-              ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+              ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
               : undefined
         }
       />

@@ -7,7 +7,7 @@ import { useAccount } from "wagmi";
 import {
   ContractsChainId,
   getChainName,
-  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
+  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
   SettlementChainId,
   SourceChainId,
 } from "config/chains";
@@ -96,7 +96,7 @@ export function BridgeOutModal({
   const networks = useGmxAccountWithdrawNetworks();
 
   const gmxAccountMarketTokenBalance: bigint | undefined =
-    multichainMarketTokenBalances?.balances[HFDX_ACCOUNT_PSEUDO_CHAIN_ID]?.balance;
+    multichainMarketTokenBalances?.balances[GMX_ACCOUNT_PSEUDO_CHAIN_ID]?.balance;
 
   const nextGmxAccountMarketTokenBalance: bigint | undefined =
     gmxAccountMarketTokenBalance !== undefined && bridgeOutAmount !== undefined

@@ -11,7 +11,7 @@ import { usePositionsTotalCollateral } from "domain/synthetics/positions/usePosi
 import useV2Stats from "domain/synthetics/stats/useV2Stats";
 import { useChainId } from "lib/chains";
 import { arrayURLFetcher } from "lib/fetcher";
-import { GLP_DECIMALS, HFDX_DECIMALS } from "lib/legacy";
+import { GLP_DECIMALS, GMX_DECIMALS } from "lib/legacy";
 import { expandDecimals, formatAmountHuman } from "lib/numbers";
 import { sumBigInts } from "lib/sumBigInts";
 import useWallet from "lib/wallets/useWallet";
@@ -120,8 +120,8 @@ export function OverviewCard({
     avalanchePositionsCollateralUsd !== undefined &&
     botanixPositionsCollateralUsd !== undefined
   ) {
-    const stakedGmxUsdArbitrum = bigMath.mulDiv(gmxPrice, stakedGmxArbitrum, expandDecimals(1, HFDX_DECIMALS));
-    const stakedGmxUsdAvalanche = bigMath.mulDiv(gmxPrice, stakedGmxAvalanche, expandDecimals(1, HFDX_DECIMALS));
+    const stakedGmxUsdArbitrum = bigMath.mulDiv(gmxPrice, stakedGmxArbitrum, expandDecimals(1, GMX_DECIMALS));
+    const stakedGmxUsdAvalanche = bigMath.mulDiv(gmxPrice, stakedGmxAvalanche, expandDecimals(1, GMX_DECIMALS));
 
     // HFDX Staked + GLP Pools + GM Pools
     displayTvlArbitrum = stakedGmxUsdArbitrum + glpMarketCapArbitrum + gmTvlArbitrum + arbitrumPositionsCollateralUsd;

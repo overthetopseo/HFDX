@@ -1,11 +1,11 @@
 import useSWR from "swr";
 
-import { HFDX_STATS_API_URL } from "config/backend";
+import { GMX_STATS_API_URL } from "config/backend";
 import { ARBITRUM, AVALANCHE } from "config/chains";
 import { bigNumberify } from "lib/numbers";
 import { CONFIG_UPDATE_INTERVAL } from "lib/timeConstants";
 
-const URL = `${HFDX_STATS_API_URL}/volume/24h`;
+const URL = `${GMX_STATS_API_URL}/volume/24h`;
 
 export function useVolumeInfo() {
   const { data } = useSWR(

@@ -3,7 +3,7 @@ import cx from "classnames";
 import { useMemo, useState } from "react";
 
 import {
-  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
+  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
   type AnyChainId,
   type ContractsChainId,
   type GmxAccountPseudoChainId,
@@ -84,7 +84,7 @@ export function MultichainMarketTokenSelector({
           return false;
         }
 
-        if (tokenChainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID) {
+        if (tokenChainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID) {
           hasGmxAccountBalance = true;
         } else {
           hasWalletBalance = true;
@@ -94,11 +94,11 @@ export function MultichainMarketTokenSelector({
           return true;
         }
 
-        if (activeFilter === "gmxAccount" && tokenChainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID) {
+        if (activeFilter === "gmxAccount" && tokenChainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID) {
           return true;
         }
 
-        if (activeFilter === "wallet" && tokenChainId !== HFDX_ACCOUNT_PSEUDO_CHAIN_ID) {
+        if (activeFilter === "wallet" && tokenChainId !== GMX_ACCOUNT_PSEUDO_CHAIN_ID) {
           return true;
         }
 
@@ -209,7 +209,7 @@ export function MultichainMarketTokenSelector({
                 paySource === "sourceChain"
                   ? srcChainId
                   : paySource === "gmxAccount"
-                    ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID
+                    ? GMX_ACCOUNT_PSEUDO_CHAIN_ID
                     : undefined
               }
             />

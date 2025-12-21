@@ -4,9 +4,9 @@ import { useMemo } from "react";
 import { ARBITRUM, AVALANCHE } from "config/chains";
 import { USD_DECIMALS } from "config/factors";
 import { getIcons } from "config/icons";
-import { HFDX_PRICE_DECIMALS } from "config/ui";
+import { GMX_PRICE_DECIMALS } from "config/ui";
 import { useTotalGmxStaked } from "domain/legacy";
-import { HFDX_DECIMALS } from "lib/legacy";
+import { GMX_DECIMALS } from "lib/legacy";
 import { expandDecimals, formatAmount, formatAmountHuman } from "lib/numbers";
 import { sumBigInts } from "lib/sumBigInts";
 import { bigMath } from "sdk/utils/bigmath";
@@ -41,11 +41,11 @@ export function GmxCard({
 
   const stakedGmxArbitrumUsd =
     gmxPriceFromArbitrum !== undefined && stakedGmxArbitrum !== undefined
-      ? bigMath.mulDiv(stakedGmxArbitrum, gmxPriceFromArbitrum, expandDecimals(1, HFDX_DECIMALS))
+      ? bigMath.mulDiv(stakedGmxArbitrum, gmxPriceFromArbitrum, expandDecimals(1, GMX_DECIMALS))
       : undefined;
   const stakedGmxAvalancheUsd =
     gmxPriceFromAvalanche !== undefined && stakedGmxAvalanche !== undefined
-      ? bigMath.mulDiv(stakedGmxAvalanche, gmxPriceFromAvalanche, expandDecimals(1, HFDX_DECIMALS))
+      ? bigMath.mulDiv(stakedGmxAvalanche, gmxPriceFromAvalanche, expandDecimals(1, GMX_DECIMALS))
       : undefined;
   const totalStakedGmxUsd = sumBigInts(stakedGmxArbitrumUsd, stakedGmxAvalancheUsd);
 
@@ -129,18 +129,18 @@ export function GmxCard({
                     <TooltipComponent
                       position="bottom-end"
                       className="whitespace-nowrap"
-                      handle={"$\u200a" + formatAmount(gmxPrice, USD_DECIMALS, HFDX_PRICE_DECIMALS, true)}
+                      handle={"$\u200a" + formatAmount(gmxPrice, USD_DECIMALS, GMX_PRICE_DECIMALS, true)}
                       handleClassName="numbers"
                       content={
                         <>
                           <StatsTooltipRow
                             label={t`Price on Arbitrum`}
-                            value={formatAmount(gmxPriceFromArbitrum, USD_DECIMALS, HFDX_PRICE_DECIMALS, true)}
+                            value={formatAmount(gmxPriceFromArbitrum, USD_DECIMALS, GMX_PRICE_DECIMALS, true)}
                             showDollar={true}
                           />
                           <StatsTooltipRow
                             label={t`Price on Avalanche`}
-                            value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, HFDX_PRICE_DECIMALS, true)}
+                            value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, GMX_PRICE_DECIMALS, true)}
                             showDollar={true}
                           />
                         </>
@@ -156,7 +156,7 @@ export function GmxCard({
                 <div>
                   <TooltipComponent
                     position="bottom-end"
-                    handle={formatAmountHuman(totalGmxSupply, HFDX_DECIMALS, false, 2)}
+                    handle={formatAmountHuman(totalGmxSupply, GMX_DECIMALS, false, 2)}
                     handleClassName="numbers"
                     content={t`Total circulating supply of HFDX tokens.`}
                   />
@@ -180,7 +180,7 @@ export function GmxCard({
                             <AmountWithUsdHuman
                               amount={stakedGmxArbitrum}
                               usd={stakedGmxArbitrumUsd}
-                              decimals={HFDX_DECIMALS}
+                              decimals={GMX_DECIMALS}
                               symbol="HFDX"
                             />
                           }
@@ -192,7 +192,7 @@ export function GmxCard({
                             <AmountWithUsdHuman
                               amount={stakedGmxAvalanche}
                               usd={stakedGmxAvalancheUsd}
-                              decimals={HFDX_DECIMALS}
+                              decimals={GMX_DECIMALS}
                               symbol="HFDX"
                             />
                           }
@@ -205,7 +205,7 @@ export function GmxCard({
                             <AmountWithUsdHuman
                               amount={totalStakedGmx}
                               usd={totalStakedGmxUsd}
-                              decimals={HFDX_DECIMALS}
+                              decimals={GMX_DECIMALS}
                               symbol="HFDX"
                             />
                           }

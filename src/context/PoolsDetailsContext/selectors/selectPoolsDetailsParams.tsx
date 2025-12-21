@@ -33,7 +33,7 @@ import {
   selectSrcChainId,
 } from "context/SyntheticsStateContext/selectors/globalSelectors";
 import { createSelector } from "context/SyntheticsStateContext/utils";
-import { CodecUiHelper, HFDX_DATA_ACTION_HASH, MultichainActionType } from "domain/multichain/codecs/CodecUiHelper";
+import { CodecUiHelper, GMX_DATA_ACTION_HASH, MultichainActionType } from "domain/multichain/codecs/CodecUiHelper";
 import { isGlvInfo } from "domain/synthetics/markets/glv";
 import {
   RawCreateDepositParams,
@@ -163,7 +163,7 @@ export const selectPoolsDetailsParams = createSelector((q): PoolsDetailsParams =
       const bytes = hexToBytes(actionHash);
       const bytes32array = chunk(bytes, 32).map((b) => bytesToHex(Uint8Array.from(b)));
 
-      dataList = [HFDX_DATA_ACTION_HASH, ...bytes32array];
+      dataList = [GMX_DATA_ACTION_HASH, ...bytes32array];
     }
 
     return {
@@ -224,7 +224,7 @@ export const selectPoolsDetailsParams = createSelector((q): PoolsDetailsParams =
 
       const bytes32array = chunk(bytes, 32).map((b) => bytesToHex(Uint8Array.from(b)));
 
-      dataList = [HFDX_DATA_ACTION_HASH, ...bytes32array];
+      dataList = [GMX_DATA_ACTION_HASH, ...bytes32array];
     }
 
     return {
@@ -330,7 +330,7 @@ export const selectPoolsDetailsParams = createSelector((q): PoolsDetailsParams =
       const bytes = hexToBytes(actionHash);
       const bytes32array = chunk(bytes, 32).map((b) => bytesToHex(Uint8Array.from(b)));
 
-      dataList = [HFDX_DATA_ACTION_HASH, ...bytes32array];
+      dataList = [GMX_DATA_ACTION_HASH, ...bytes32array];
     }
 
     let shouldUnwrapNativeTokenForGm = false;
@@ -441,7 +441,7 @@ export const selectPoolsDetailsParams = createSelector((q): PoolsDetailsParams =
 
       const bytes32array = chunk(bytes, 32).map((b) => bytesToHex(Uint8Array.from(b)));
 
-      dataList = [HFDX_DATA_ACTION_HASH, ...bytes32array];
+      dataList = [GMX_DATA_ACTION_HASH, ...bytes32array];
     }
 
     let shouldUnwrapNativeTokenForGlv = false;

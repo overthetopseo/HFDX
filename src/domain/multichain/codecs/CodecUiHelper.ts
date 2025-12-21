@@ -113,7 +113,7 @@ type BridgeOutAction = {
   actionData: BridgeOutActionData;
 };
 
-export const HFDX_DATA_ACTION_HASH = hashString("HFDX_DATA_ACTION");
+export const GMX_DATA_ACTION_HASH = hashString("GMX_DATA_ACTION");
 // TODO MLTCH also implement     bytes32 public constant MAX_DATA_LENGTH = keccak256(abi.encode("MAX_DATA_LENGTH"));
 
 export class CodecUiHelper {

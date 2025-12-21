@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useMemo, useState } from "react";
 
 import {
   getChainName,
-  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
+  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
   type AnyChainId,
   type ContractsChainId,
   type GmxAccountPseudoChainId,
@@ -99,9 +99,9 @@ export function MultichainTokenSelector({
 
   const onSelectTokenAddress = (tokenAddress: string, tokenChainId: AnyChainId | GmxAccountPseudoChainId) => {
     setIsModalVisible(false);
-    const isGmxAccount = tokenChainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID;
+    const isGmxAccount = tokenChainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID;
     const tokenSrcChainId =
-      tokenChainId !== chainId && tokenChainId !== HFDX_ACCOUNT_PSEUDO_CHAIN_ID && isSourceChain(tokenChainId)
+      tokenChainId !== chainId && tokenChainId !== GMX_ACCOUNT_PSEUDO_CHAIN_ID && isSourceChain(tokenChainId)
         ? tokenChainId
         : undefined;
     propsOnSelectTokenAddress(tokenAddress, isGmxAccount, tokenSrcChainId);
@@ -296,7 +296,7 @@ export function useAvailableToTradeTokenList({
         concatenatedTokens.push({
           ...token,
           balanceType: TokenBalanceType.GmxAccount,
-          chainId: HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
+          chainId: GMX_ACCOUNT_PSEUDO_CHAIN_ID,
           balance: token.gmxAccountBalance,
           balanceUsd,
         });
@@ -472,7 +472,7 @@ export function AvailableToTradeTokenList({
                     </div>
                     <span className="text-body-small text-typography-secondary">
                       <Trans>From</Trans>{" "}
-                      {token.chainId === HFDX_ACCOUNT_PSEUDO_CHAIN_ID ? (
+                      {token.chainId === GMX_ACCOUNT_PSEUDO_CHAIN_ID ? (
                         <Trans>HFDX Account</Trans>
                       ) : (
                         getChainName(token.chainId)

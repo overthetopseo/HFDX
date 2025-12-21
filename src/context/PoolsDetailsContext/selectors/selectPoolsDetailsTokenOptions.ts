@@ -2,7 +2,7 @@ import uniq from "lodash/uniq";
 import uniqBy from "lodash/uniqBy";
 import { zeroAddress } from "viem";
 
-import { AnyChainId, HFDX_ACCOUNT_PSEUDO_CHAIN_ID, GmxAccountPseudoChainId, SettlementChainId } from "config/chains";
+import { AnyChainId, GMX_ACCOUNT_PSEUDO_CHAIN_ID, GmxAccountPseudoChainId, SettlementChainId } from "config/chains";
 import { getMappedTokenId } from "config/multichain";
 import {
   selectChainId,
@@ -87,7 +87,7 @@ const selectPoolsDetailsWithdrawalTokenOptions = createSelector((q): DisplayToke
       (token) => token.address
     );
     for (const token of tokens) {
-      withdrawalResult.push(createDisplayToken(token, HFDX_ACCOUNT_PSEUDO_CHAIN_ID, token.gmxAccountBalance ?? 0n));
+      withdrawalResult.push(createDisplayToken(token, GMX_ACCOUNT_PSEUDO_CHAIN_ID, token.gmxAccountBalance ?? 0n));
     }
     return withdrawalResult;
   } else if (paySource === "sourceChain") {
@@ -151,7 +151,7 @@ const selectPoolsDetailsDepositTokenOptions = createSelector((q): DisplayToken[]
       result.push(createDisplayToken(token, chainId, token.walletBalance));
     }
     if (token.gmxAccountBalance !== undefined && token.gmxAccountBalance !== 0n) {
-      result.push(createDisplayToken(token, HFDX_ACCOUNT_PSEUDO_CHAIN_ID, token.gmxAccountBalance));
+      result.push(createDisplayToken(token, GMX_ACCOUNT_PSEUDO_CHAIN_ID, token.gmxAccountBalance));
     }
   }
 

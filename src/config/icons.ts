@@ -5,7 +5,7 @@ import {
   AVALANCHE,
   AVALANCHE_FUJI,
   BOTANIX,
-  HFDX_ACCOUNT_PSEUDO_CHAIN_ID,
+  GMX_ACCOUNT_PSEUDO_CHAIN_ID,
   GmxAccountPseudoChainId,
   SOURCE_BASE_MAINNET,
   SOURCE_BSC_MAINNET,
@@ -97,7 +97,7 @@ const ICONS: Record<number | "common", ChainIcons> = {
 export const CHAIN_ID_TO_NETWORK_ICON: Record<AnyChainId | GmxAccountPseudoChainId, string> = {
   [ARBITRUM]: arbitrum,
   [AVALANCHE]: avalanche,
-  [HFDX_ACCOUNT_PSEUDO_CHAIN_ID]: gmxIcon,
+  [GMX_ACCOUNT_PSEUDO_CHAIN_ID]: gmxIcon,
   [SOURCE_ETHEREUM_MAINNET]: eth,
   [SOURCE_BASE_MAINNET]: base,
   [AVALANCHE_FUJI]: avalancheTestnet,

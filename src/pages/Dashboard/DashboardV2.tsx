@@ -5,7 +5,7 @@ import { ARBITRUM, AVALANCHE } from "config/chains";
 import { SyntheticsStateContextProvider } from "context/SyntheticsStateContext/SyntheticsStateContextProvider";
 import { useGmxPrice, useTotalGmxInLiquidity, useTotalGmxSupply } from "domain/legacy";
 import { useChainId } from "lib/chains";
-import { HFDX_DECIMALS, getPageTitle } from "lib/legacy";
+import { GMX_DECIMALS, getPageTitle } from "lib/legacy";
 import { expandDecimals } from "lib/numbers";
 import useWallet from "lib/wallets/useWallet";
 import { bigMath } from "sdk/utils/bigmath";
@@ -46,7 +46,7 @@ export default function DashboardV2() {
 
   let gmxMarketCap =
     gmxPrice !== undefined && totalGmxSupply !== undefined
-      ? bigMath.mulDiv(gmxPrice, totalGmxSupply, expandDecimals(1, HFDX_DECIMALS))
+      ? bigMath.mulDiv(gmxPrice, totalGmxSupply, expandDecimals(1, GMX_DECIMALS))
       : undefined;
 
   let { total: totalGmxInLiquidity } = useTotalGmxInLiquidity();

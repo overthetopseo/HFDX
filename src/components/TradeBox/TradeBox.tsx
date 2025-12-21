@@ -4,7 +4,7 @@ import cx from "classnames";
 import { ChangeEvent, KeyboardEvent, useCallback, useEffect, useMemo, useRef } from "react";
 import { useKey, useLatest, usePrevious } from "react-use";
 
-import { HFDX_ACCOUNT_PSEUDO_CHAIN_ID } from "config/chains";
+import { GMX_ACCOUNT_PSEUDO_CHAIN_ID } from "config/chains";
 import { BASIS_POINTS_DIVISOR, USD_DECIMALS } from "config/factors";
 import { isSettlementChain } from "config/multichain";
 import { useOpenMultichainDepositModal } from "context/HfdxAccountContext/useOpenMultichainDepositModal";
@@ -788,7 +788,7 @@ export function TradeBox({ isMobile }: { isMobile: boolean }) {
                 srcChainId={srcChainId}
                 label={t`Pay`}
                 tokenAddress={fromTokenAddress}
-                payChainId={isFromTokenGmxAccount ? HFDX_ACCOUNT_PSEUDO_CHAIN_ID : undefined}
+                payChainId={isFromTokenGmxAccount ? GMX_ACCOUNT_PSEUDO_CHAIN_ID : undefined}
                 onSelectTokenAddress={handleSelectFromTokenAddress}
                 extendedSortSequence={sortedLongAndShortTokens}
                 qa="collateral-selector"
