@@ -75,9 +75,19 @@ function AdminPage() {
   const [error, setError] = useState<string>("");
   const [success, setSuccess] = useState<string>("");
 
-  // Get contract addresses
-  const exchangeRouterAddress = chainId ? getContract(chainId, "ExchangeRouter") : undefined;
-  const dataStoreAddress = chainId ? getContract(chainId, "DataStore") : undefined;
+  // Get contract addresses - wrapped in try-catch for unsupported chains
+  let exchangeRouterAddress: string | undefined;
+  let dataStoreAddress: string | undefined;
+  
+  try {
+    if (chainId) {
+      exchangeRouterAddress = getContract(chainId, "ExchangeRouter");
+      dataStoreAddress = getContract(chainId, "DataStore");
+    }
+  } catch (e) {
+    // Chain not supported - will show unsupported chain message
+    console.warn("Chain not supported for GMX contracts:", chainId);
+  }
 
   // Load max UI fee factor from DataStore
   useEffect(() => {
