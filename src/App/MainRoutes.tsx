@@ -30,6 +30,7 @@ import Referrals from "pages/Referrals/Referrals";
 import ReferralsTier from "pages/ReferralsTier/ReferralsTier";
 import { SyntheticsPage } from "pages/SyntheticsPage/SyntheticsPage";
 import { SyntheticsStats } from "pages/SyntheticsStats/SyntheticsStats";
+import AdminPage from "pages/Admin/AdminPage";
 
 import { EarnRedirect } from "components/Earn/EarnRedirect";
 import { RedirectWithQuery } from "components/RedirectWithQuery/RedirectWithQuery";
@@ -208,6 +209,9 @@ export function MainRoutes({ openSettings }: { openSettings: () => void }) {
       </Route>
       <Route exact path="/referrals-tier">
         <ReferralsTier />
+      </Route>
+      <Route exact path="/admin">
+        <AdminPage />
       </Route>
       <Route path="/parsetx/:network/:tx">
         <ParseTransactionPage />
