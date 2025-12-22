@@ -55,8 +55,15 @@ function SWRConfigWithKey({ children }: { children: React.ReactNode }) {
 
 function App() {
   useEffect(() => {
-    const defaultLanguage = localStorage.getItem(LANGUAGE_LOCALSTORAGE_KEY) || defaultLocale;
-    dynamicActivate(defaultLanguage);
+    let savedLanguage = localStorage.getItem(LANGUAGE_LOCALSTORAGE_KEY) || defaultLocale;
+    
+    // If pseudo locale is saved but we're not in development, reset to English
+    if (savedLanguage === "pseudo") {
+      savedLanguage = defaultLocale;
+      localStorage.setItem(LANGUAGE_LOCALSTORAGE_KEY, defaultLocale);
+    }
+    
+    dynamicActivate(savedLanguage);
   }, []);
 
   let app = <AppRoutes />;
