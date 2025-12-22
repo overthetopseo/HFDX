@@ -56,6 +56,7 @@ const DATA_STORE_ABI = [
 // Keys for DataStore - using keccak256 hash of the key name (GMX convention)
 const MAX_UI_FEE_FACTOR_KEY = keccak256(toBytes("MAX_UI_FEE_FACTOR"));
 
+// HFDX Admin Dashboard v1.0
 function AdminPage() {
   const chainId = useChainId();
   const { address: account, isConnected } = useAccount();
