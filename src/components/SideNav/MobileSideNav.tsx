@@ -9,7 +9,7 @@ import CloseIcon from "img/ic_close.svg?react";
 
 import { LanguageNavItem } from "./LanguageNavItem";
 import { SettingsNavItem } from "./SettingsNavItem";
-import { DocsNavItem, LogoSection, MenuSection } from "./SideNav";
+import { LogoSection, MenuSection } from "./SideNav";
 
 export function MobileSideNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +46,6 @@ export function MobileSideNav() {
                 <ul className="flex list-none flex-col px-0">
                   <SettingsNavItem isCollapsed={false} onClick={handleToggle} />
                   <LanguageNavItem isCollapsed={false} />
-                  <DocsNavItem isCollapsed={false} />
                 </ul>
               </div>
               <div className="py-8">
