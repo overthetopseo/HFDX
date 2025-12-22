@@ -1,8 +1,8 @@
 import { ARBITRUM, ARBITRUM_SEPOLIA, AVALANCHE, AVALANCHE_FUJI, BOTANIX, ContractsChainId } from "config/chains";
 import { getContract } from "config/contracts";
 
-const ARBITRUM_HFDX = getContract(ARBITRUM, "HFDX").toLowerCase();
-const AVALANCHE_HFDX = getContract(AVALANCHE, "HFDX").toLowerCase();
+const ARBITRUM_HFDX = getContract(ARBITRUM, "GMX").toLowerCase();
+const AVALANCHE_HFDX = getContract(AVALANCHE, "GMX").toLowerCase();
 
 type Exchange = {
   name: string;

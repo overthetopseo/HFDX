@@ -148,7 +148,7 @@ export const useOpportunities = () => {
             makeMarketAsset(ARBITRUM, "SOL/USD [SOL-USDC]"),
             makeMarketAsset(ARBITRUM, "UNI/USD [UNI-USDC]"),
             makeMarketAsset(ARBITRUM, "WIF/USD [WIF-USDC]"),
-            makeTokenAsset(ARBITRUM, "HFDX"),
+            makeTokenAsset(ARBITRUM, "GMX"),
             makeTokenAsset(ARBITRUM, "USDC"),
           ],
           link: "https://dolomite.io/",
@@ -163,7 +163,7 @@ export const useOpportunities = () => {
             </Trans>
           ),
           tags: ["autocompound"],
-          assets: [makeTokenAsset(ARBITRUM, "HFDX")],
+          assets: [makeTokenAsset(ARBITRUM, "GMX")],
           link: "https://beefy.com/",
         },
         {
@@ -218,7 +218,7 @@ export const useOpportunities = () => {
           icon: deltaPrimeIcon,
           description: <Trans>Lend out your tokens, or borrow against it.</Trans>,
           tags: ["lending-and-borrowing"],
-          assets: [makeTokenAsset(ARBITRUM, "HFDX")],
+          assets: [makeTokenAsset(ARBITRUM, "GMX")],
           link: "https://deltaprime.io/",
         },
         {
@@ -244,7 +244,7 @@ export const useOpportunities = () => {
             </Trans>
           ),
           tags: ["autocompound"],
-          assets: [makeTokenAsset(AVALANCHE, "HFDX")],
+          assets: [makeTokenAsset(AVALANCHE, "GMX")],
           link: "https://beefy.com/",
         },
         {
@@ -252,7 +252,7 @@ export const useOpportunities = () => {
           icon: deltaPrimeIcon,
           description: <Trans>Lend out your tokens, or borrow against it.</Trans>,
           tags: ["lending-and-borrowing"],
-          assets: [makeTokenAsset(AVALANCHE, "HFDX")],
+          assets: [makeTokenAsset(AVALANCHE, "GMX")],
           link: "https://deltaprime.io/",
         },
       ],

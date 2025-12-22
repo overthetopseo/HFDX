@@ -34,8 +34,8 @@ export function ClaimRewardsButton({ processedData, mutateProcessedData, classNa
 
   const rewardRouterAddress = getContract(chainId, "RewardRouter");
   const readerAddress = getContract(chainId, "Reader");
-  const gmxAddress = getContract(chainId, "HFDX");
-  const esGmxAddress = getContract(chainId, "ES_HFDX");
+  const gmxAddress = getContract(chainId, "GMX");
+  const esGmxAddress = getContract(chainId, "ES_GMX");
   const glpAddress = getContract(chainId, "GLP");
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");
 

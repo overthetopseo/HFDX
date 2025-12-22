@@ -63,8 +63,8 @@ export function GmxAssetCard({
   const rewardRouterAddress = getContract(chainId, "RewardRouter");
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");
   const feeGmxTrackerAddress = getContract(chainId, "FeeGmxTracker");
-  const gmxAddress = getContract(chainId, "HFDX");
-  const esGmxAddress = getContract(chainId, "ES_HFDX");
+  const gmxAddress = getContract(chainId, "GMX");
+  const esGmxAddress = getContract(chainId, "ES_GMX");
 
   const shouldFetchSbfGmx = chainId !== undefined && feeGmxTrackerAddress !== zeroAddress;
   const { data: sbfGmxBalance } = useSWR<bigint>(

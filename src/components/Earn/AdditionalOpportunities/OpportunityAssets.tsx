@@ -117,7 +117,7 @@ function OpportunityTokenIcon({
       const token = tokensData?.[asset.address];
       const symbol = token?.symbol;
 
-      if (symbol === "HFDX") {
+      if (symbol === "GMX") {
         return <GmxRoundedIcon className={className} />;
       }
 

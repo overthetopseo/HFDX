@@ -8,7 +8,7 @@ import type { ContractsChainId } from "sdk/configs/chains";
 import { getWhitelistedV1Tokens } from "sdk/configs/tokens";
 
 function buildDashboardRequest(chainId: ContractsChainId) {
-  const gmxAddress = getContract(chainId, "HFDX");
+  const gmxAddress = getContract(chainId, "GMX");
   const glpAddress = getContract(chainId, "GLP");
   const usdgAddress = getContract(chainId, "USDG");
   const readerAddress = getContract(chainId, "Reader");

@@ -229,9 +229,9 @@ export default function EarnYieldOverview() {
 
   const hasGmxHoldings = useMemo(
     () =>
-      hasTokenBalance(arbitrumTokens.tokensData, "HFDX") ||
-      hasTokenBalance(avalancheTokens.tokensData, "HFDX") ||
-      hasTokenBalance(botanixTokens.tokensData, "HFDX"),
+      hasTokenBalance(arbitrumTokens.tokensData, "GMX") ||
+      hasTokenBalance(avalancheTokens.tokensData, "GMX") ||
+      hasTokenBalance(botanixTokens.tokensData, "GMX"),
     [arbitrumTokens.tokensData, avalancheTokens.tokensData, botanixTokens.tokensData]
   );
 

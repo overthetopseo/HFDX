@@ -48,7 +48,7 @@ export default function BeginAccountTransfer() {
     parsedReceiver = receiver;
   }
 
-  const gmxAddress = getContract(chainId, "HFDX");
+  const gmxAddress = getContract(chainId, "GMX");
   const gmxVesterAddress = getContract(chainId, "GmxVester");
   const glpVesterAddress = getContract(chainId, "GlpVester");
   const affiliateVesterAddress = getContract(chainId, "AffiliateVester");

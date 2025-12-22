@@ -140,9 +140,9 @@ function buildStakeProcessedDataRequest({ chainId, account }: { chainId: Contrac
   const rewardReaderAddress = getContract(chainId, "RewardReader");
   const readerAddress = getContract(chainId, "Reader");
 
-  const gmxAddress = getContract(chainId, "HFDX");
-  const esGmxAddress = getContract(chainId, "ES_HFDX");
-  const bnGmxAddress = getContract(chainId, "BN_HFDX");
+  const gmxAddress = getContract(chainId, "GMX");
+  const esGmxAddress = getContract(chainId, "ES_GMX");
+  const bnGmxAddress = getContract(chainId, "BN_GMX");
   const glpAddress = getContract(chainId, "GLP");
 
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");

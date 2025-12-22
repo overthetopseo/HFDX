@@ -92,7 +92,7 @@ export function ClaimModal(props: {
   const isUndelegatedGovToken =
     chainId === ARBITRUM && govTokenDelegatesAddress === NATIVE_TOKEN_ADDRESS && govTokenAmount && govTokenAmount > 0;
 
-  const gmxAddress = getContract(chainId, "HFDX");
+  const gmxAddress = getContract(chainId, "GMX");
   const stakedGmxTrackerAddress = getContract(chainId, "StakedGmxTracker");
 
   const [isApproving, setIsApproving] = useState(false);

@@ -75,7 +75,7 @@ export function useTotalGmxStaked() {
     [
       `StakeV2:stakedGmxSupply:${ARBITRUM}`,
       ARBITRUM,
-      getContract(ARBITRUM, "HFDX"),
+      getContract(ARBITRUM, "GMX"),
       "balanceOf",
       stakedGmxTrackerAddressArbitrum,
     ],
@@ -87,7 +87,7 @@ export function useTotalGmxStaked() {
     [
       `StakeV2:stakedGmxSupply:${AVALANCHE}`,
       AVALANCHE,
-      getContract(AVALANCHE, "HFDX"),
+      getContract(AVALANCHE, "GMX"),
       "balanceOf",
       stakedGmxTrackerAddressAvax,
     ],
@@ -120,13 +120,13 @@ export function useTotalGmxInLiquidity() {
   let totalHFDX = useRef(BN_ZERO);
 
   const { data: gmxInLiquidityOnArbitrum, mutate: mutateHFDXInLiquidityOnArbitrum } = useSWR<any>(
-    [`StakeV2:gmxInLiquidity:${ARBITRUM}`, ARBITRUM, getContract(ARBITRUM, "HFDX"), "balanceOf", poolAddressArbitrum],
+    [`StakeV2:gmxInLiquidity:${ARBITRUM}`, ARBITRUM, getContract(ARBITRUM, "GMX"), "balanceOf", poolAddressArbitrum],
     {
       fetcher: contractFetcher(undefined, "Token"),
     }
   );
   const { data: gmxInLiquidityOnAvax, mutate: mutateHFDXInLiquidityOnAvax } = useSWR<any>(
-    [`StakeV2:gmxInLiquidity:${AVALANCHE}`, AVALANCHE, getContract(AVALANCHE, "HFDX"), "balanceOf", poolAddressAvax],
+    [`StakeV2:gmxInLiquidity:${AVALANCHE}`, AVALANCHE, getContract(AVALANCHE, "GMX"), "balanceOf", poolAddressAvax],
     {
       fetcher: contractFetcher(undefined, "Token"),
     }
@@ -201,7 +201,7 @@ function useGmxPriceFromArbitrum(signer, active) {
     if (uniPoolSlot0 != undefined && ethPrice != undefined) {
       const tokenA = new UniToken(ARBITRUM, ethAddress, 18, "SYMBOL", "NAME");
 
-      const gmxAddress = getContract(ARBITRUM, "HFDX");
+      const gmxAddress = getContract(ARBITRUM, "GMX");
       const tokenB = new UniToken(ARBITRUM, gmxAddress, 18, "SYMBOL", "NAME");
 
       const pool = new Pool(
