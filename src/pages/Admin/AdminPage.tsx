@@ -4,9 +4,9 @@ import { useAccount, useChainId, usePublicClient, useWalletClient } from "wagmi"
 import { Address, keccak256, toBytes } from "viem";
 
 import SEO from "components/Seo/SEO";
-import Footer from "components/Footer/Footer";
 import Button from "components/Button/Button";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import AppPageLayout from "components/AppPageLayout/AppPageLayout";
 
 import { getContract } from "config/contracts";
 import { ARBITRUM, AVALANCHE } from "config/chains";
@@ -208,17 +208,18 @@ function AdminPage() {
   };
 
   return (
-    <SEO title={t`Admin - UI Fee Management`}>
-      <div className="admin-page">
-        <div className="admin-container">
-          <div className="admin-header">
-            <h1 className="admin-title">
-              <Trans>UI Fee Administration</Trans>
-            </h1>
-            <p className="admin-subtitle">
-              <Trans>Configure UI fees and claim accumulated trading fees</Trans>
-            </p>
-          </div>
+    <AppPageLayout>
+      <SEO title={t`Admin - UI Fee Management`}>
+        <div className="admin-page">
+          <div className="admin-container">
+            <div className="admin-header">
+              <h1 className="admin-title">
+                <Trans>UI Fee Administration</Trans>
+              </h1>
+              <p className="admin-subtitle">
+                <Trans>Configure UI fees and claim accumulated trading fees</Trans>
+              </p>
+            </div>
 
           {!isConnected ? (
             <div className="admin-card admin-connect-prompt">
@@ -430,11 +431,10 @@ function AdminPage() {
               </div>
             </>
           )}
+          </div>
         </div>
-
-        <Footer />
-      </div>
-    </SEO>
+      </SEO>
+    </AppPageLayout>
   );
 }
 
