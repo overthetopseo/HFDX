@@ -1,7 +1,7 @@
 import { Trans, t } from "@lingui/macro";
 import { useCallback, useEffect, useState } from "react";
 import { useAccount, useChainId, usePublicClient, useWalletClient } from "wagmi";
-import { parseUnits, formatUnits, Address, encodeFunctionData } from "viem";
+import { Address, keccak256, toBytes } from "viem";
 
 import SEO from "components/Seo/SEO";
 import Footer from "components/Footer/Footer";
@@ -53,11 +53,8 @@ const DATA_STORE_ABI = [
   },
 ] as const;
 
-// Keys for DataStore
-const MAX_UI_FEE_FACTOR_KEY = "0x" + Buffer.from("MAX_UI_FEE_FACTOR").toString("hex").padEnd(64, "0");
-
-// Precision for fee calculations (10^30)
-const FEE_PRECISION = 10n ** 30n;
+// Keys for DataStore - using keccak256 hash of the key name (GMX convention)
+const MAX_UI_FEE_FACTOR_KEY = keccak256(toBytes("MAX_UI_FEE_FACTOR"));
 
 function AdminPage() {
   const chainId = useChainId();
