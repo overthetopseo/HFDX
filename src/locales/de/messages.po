@@ -3139,6 +3139,10 @@ msgstr "GM kann für {0} und {1} für diesen Markt bis zu den angegebenen Verkau
 msgid "HFDX (Portuguese)"
 msgstr "HFDX (Portugiesisch)"
 
+#: src/pages/SyntheticsPage/SyntheticsPage.tsx
+msgid "Live Trades"
+msgstr ""
+
 #: src/components/GmList/GlvList.tsx
 #: src/components/GmList/GmList.tsx
 msgid "Graph showing performance vs benchmark over the selected period."

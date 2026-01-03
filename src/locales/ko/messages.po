@@ -3139,6 +3139,10 @@ msgstr "이 시장에서 GM은 지정된 판매 상한까지 {0} 및 {1}로 판�
 msgid "HFDX (Portuguese)"
 msgstr "HFDX (포르투갈어)"
 
+#: src/pages/SyntheticsPage/SyntheticsPage.tsx
+msgid "Live Trades"
+msgstr ""
+
 #: src/components/GmList/GlvList.tsx
 #: src/components/GmList/GmList.tsx
 msgid "Graph showing performance vs benchmark over the selected period."

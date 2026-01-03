@@ -3139,6 +3139,10 @@ msgstr "GM peut être vendu pour {0} et {1} pour ce marché jusqu'aux plafonds d
 msgid "HFDX (Portuguese)"
 msgstr "HFDX (Portugais)"
 
+#: src/pages/SyntheticsPage/SyntheticsPage.tsx
+msgid "Live Trades"
+msgstr ""
+
 #: src/components/GmList/GlvList.tsx
 #: src/components/GmList/GmList.tsx
 msgid "Graph showing performance vs benchmark over the selected period."

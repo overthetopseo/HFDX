@@ -3139,6 +3139,10 @@ msgstr "GM 可以为此市场出售 {0} 和 {1}，上限为指定的出售上限
 msgid "HFDX (Portuguese)"
 msgstr "HFDX (葡萄牙语)"
 
+#: src/pages/SyntheticsPage/SyntheticsPage.tsx
+msgid "Live Trades"
+msgstr ""
+
 #: src/components/GmList/GlvList.tsx
 #: src/components/GmList/GmList.tsx
 msgid "Graph showing performance vs benchmark over the selected period."

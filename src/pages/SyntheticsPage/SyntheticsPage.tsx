@@ -89,6 +89,7 @@ enum ListSection {
   Positions = "Positions",
   Orders = "Orders",
   Trades = "Trades",
+  LiveTrades = "LiveTrades",
   Claims = "Claims",
 }
 
@@ -263,6 +264,7 @@ export function SyntheticsPage(p: Props) {
       ),
       [ListSection.Orders]: renderOrdersTabTitle(),
       [ListSection.Trades]: t`Trades`,
+      [ListSection.LiveTrades]: t`Live Trades`,
       [ListSection.Claims]:
         totalClaimables > 0 ? (
           <div className="flex gap-4">
@@ -391,6 +393,7 @@ export function SyntheticsPage(p: Props) {
                 />
               )}
               {listSection === ListSection.Trades && <TradeHistory account={account} />}
+              {listSection === ListSection.LiveTrades && <TradeHistory forAllAccounts hideDashboardLink />}
               {listSection === ListSection.Claims && (
                 <Claims
                   setIsSettling={setIsSettling}
@@ -472,6 +475,7 @@ export function SyntheticsPage(p: Props) {
               />
             )}
             {listSection === ListSection.Trades && <TradeHistory account={account} />}
+            {listSection === ListSection.LiveTrades && <TradeHistory forAllAccounts hideDashboardLink />}
             {listSection === ListSection.Claims && (
               <Claims
                 setIsSettling={setIsSettling}
