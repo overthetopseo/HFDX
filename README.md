@@ -8,14 +8,14 @@ A white-label perpetual futures decentralized exchange built on the ApolloX Brok
 
 ## Overview
 
-HFDX is a perpetual futures trading platform powered by the ApolloX Broker SDK v4.0.3. It enables users to trade cryptocurrency perpetual futures with up to 500x leverage on BNB Chain.
+HFDX is a perpetual futures trading platform powered by the ApolloX Broker SDK v4.0.3. It enables users to trade cryptocurrency perpetual futures with up to 500x leverage on Ethereum, Base, Arbitrum, and BNB Chain.
 
 ### Key Features
 
 - **Perpetual Futures Trading** - Trade BTC, ETH, and 100+ crypto pairs
 - **Up to 500x Leverage** - High leverage trading in Degen Mode
 - **Non-Custodial** - Your keys, your crypto
-- **BNB Chain** - Fast, low-cost transactions
+- **Multi-Chain Support** - Trade on Ethereum, Base, Arbitrum, and BNB Chain
 - **Professional Trading UI** - TradingView charts, advanced order types
 
 ---
@@ -26,7 +26,7 @@ HFDX is a perpetual futures trading platform powered by the ApolloX Broker SDK v
 |---------|-------|
 | Broker ID | `2063` |
 | Domain | `app.hfdx.xyz` |
-| Network | BNB Chain |
+| Networks | Ethereum, Base, Arbitrum, BNB Chain |
 | SDK Version | 4.0.3 |
 
 ---
