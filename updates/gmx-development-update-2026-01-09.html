@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0c12" />
+    <meta
+      name="description"
+      content="GMX ecosystem update (Jan 9, 2026): Ethereum mainnet unlocked, cross-chain liquidity products, new perp markets, OI calculation update, indexer migration, and governance proposals."
+    />
+    <title>GMX Development Update (Jan 9, 2026) | HFDX</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #0b0c12;
+        color: #f0f0f5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.55;
+      }
+
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 40px 20px 64px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .brand img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .brand span {
+        font-weight: 650;
+        letter-spacing: 0.2px;
+      }
+
+      .actions {
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        color: #f0f0f5;
+        text-decoration: none;
+        font-size: 13px;
+        transition: transform 120ms ease, background 120ms ease;
+        white-space: nowrap;
+      }
+
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.07);
+        transform: translateY(-1px);
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+        letter-spacing: -0.3px;
+      }
+
+      .meta {
+        margin: 0 0 22px;
+        color: #9aa0b8;
+        font-size: 13px;
+      }
+
+      .card {
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 14px;
+        padding: 18px 18px 6px;
+        margin: 18px 0;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+      }
+
+      ul {
+        margin: 10px 0 14px 20px;
+        padding: 0;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        color: #8ab4f8;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      .footnote {
+        margin-top: 26px;
+        color: #9aa0b8;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="/en/futures/BTCUSD" target="_parent" rel="noreferrer">
+          <img src="/assets/logo-dark-rwd.svg" alt="HFDX" />
+          <span>HFDX</span>
+        </a>
+        <div class="actions">
+          <a class="btn" href="/en/futures/BTCUSD" target="_parent" rel="noreferrer">Open HFDX</a>
+          <a class="btn" href="https://hfdx.xyz" target="_blank" rel="noreferrer">Website</a>
+        </div>
+      </div>
+
+      <h1>GMX Development Update</h1>
+      <p class="meta">Jan 9, 2026</p>
+
+      <div class="card">
+        <h2>GMX Development</h2>
+        <ul>
+          <li>
+            GMX has unlocked Ethereum Mainnet. Any user on Ethereum can now access GMX’s suite of Perp and Spot markets,
+            along with its high-yield liquidity products.
+            <a href="https://x.com/GMX_IO/status/2003039870646644773" target="_blank" rel="noreferrer">Launch article</a>
+          </li>
+          <li>
+            GMX’s blue-chip liquidity products are now fully cross-chain. The most popular GM and GLV tokens are available
+            to buy on Base, BNB Chain, ETH Mainnet, and Arbitrum, and can now also be stored in your self-custody wallet.
+            <a href="https://x.com/GMX_IO/status/1999507691555668111" target="_blank" rel="noreferrer">Learn more</a>
+          </li>
+          <li>Eight new perp markets have been introduced: ZEC, MON, SKY, SYRUP, CHZ, JTO, AR, and DASH.</li>
+          <li>
+            The calculation method for the open interest balance has been updated. The new OI calculation is based on the
+            sum of the notional value of positions.
+            <a href="https://t.me/GMX_Announcements/1175" target="_blank" rel="noreferrer">Details</a>
+          </li>
+          <li>RPC fallback changes have been introduced, increasing the RPC selection logic reliability for all users.</li>
+          <li>
+            GMX’s subgraph indexer APIs have migrated from Satsuma to Goldsky. Subgraph is GMX's legacy indexer API, and
+            it is recommended to use the SQD endpoints.
+            <a href="https://docs.gmx.io/docs/api/subsquid/" target="_blank" rel="noreferrer">SQD endpoints</a>
+          </li>
+          <li>
+            To keep funding costs reasonable for traders while maintaining attractive conditions for arbitrage funding
+            farmers, GMX is trialling caps on the max paid funding rate.
+            <a href="https://t.me/GMX_Announcements/1173" target="_blank" rel="noreferrer">More info</a>
+          </li>
+          <li>
+            Several minor optimizations were implemented to improve the Multichain user experience, the Network selector,
+            and the GMX Account functionality.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>GMX Ecosystem</h2>
+        <ul>
+          <li>
+            LP Staking is now live on GMTrade (the rebranded GMX-Solana). Provide liquidity and stake to unlock dual
+            rewards.
+            <a href="https://x.com/GMX_SOL/status/2009463733299356138" target="_blank" rel="noreferrer">Announcement</a>
+          </li>
+          <li>
+            In the past week, the GMX Buyback &amp; Distribute Programme acquired ~16,800 GMX tokens from the open market.
+            <a href="https://x.com/GMX_IO/status/2008944225925070905" target="_blank" rel="noreferrer">Details</a>
+          </li>
+          <li>
+            Most active day yet for GMX multichain, thanks to many users from ETH Mainnet.
+            <a href="https://x.com/sliux/status/2008457217716965751" target="_blank" rel="noreferrer">Post</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>GMX Governance</h2>
+        <ul>
+          <li>
+            Gov Proposal: GMX V2 Deployment on MegaETH
+            <a href="https://gov.gmx.io/t/gmx-v2-deployment-on-megaeth-proposal/4954/16" target="_blank" rel="noreferrer"
+              >Thread</a
+            >
+          </li>
+          <li>
+            Gov Proposal: GMX Labs Funding Proposal (2026-2027)
+            <a href="https://gov.gmx.io/t/gmx-labs-funding-proposal-2026-2027/4979/10" target="_blank" rel="noreferrer"
+              >Thread</a
+            >
+          </li>
+          <li>
+            Gov Proposal: Proposal for Fees Rebate Incentive Program (December to March 2026)
+            <a href="https://gov.gmx.io/t/proposal-for-fees-rebate-incentive-program-december-to-march-2026/4930/18" target="_blank" rel="noreferrer"
+              >Thread</a
+            >
+          </li>
+          <li>
+            Gov Proposal: Dynamic BBD Adjustment - Capping APR and Accumulating Overhead
+            <a href="https://gov.gmx.io/t/proposal-dynamic-bbd-adjustment-capping-apr-and-accumulating-overhead/4914/54" target="_blank" rel="noreferrer"
+              >Thread</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <p class="footnote">
+        Note: This page is an informational ecosystem update and is not affiliated with, endorsed by, or operated by GMX.
+      </p>
+    </div>
+  </body>
+</html>
+

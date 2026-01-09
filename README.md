@@ -224,6 +224,12 @@ Edit `index.html` to modify:
 
 ---
 
+## Ecosystem Updates (Static Pages)
+
+- GMX Development Update (Jan 9, 2026): `/updates/gmx-development-update-2026-01-09.html`
+
+---
+
 ## SDK Documentation
 
 For detailed SDK documentation, refer to:
