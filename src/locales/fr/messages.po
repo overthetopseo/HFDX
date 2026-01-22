@@ -2471,6 +2471,10 @@ msgstr ""
 msgid "There may not be sufficient liquidity to execute the pay token to collateral token swap when the price conditions are met."
 msgstr "Il pourrait ne pas y avoir suffisamment de liquidité pour exécuter l'échange du token de paiement vers le token de collatéral lorsque les conditions de prix sont remplies."
 
+#: src/components/SideNav/SideNav.tsx
+msgid "Yields"
+msgstr ""
+
 #: src/pages/Ecosystem/ecosystemConstants.tsx
 msgid "User Quests"
 msgstr "Quêtes utilisateur"
