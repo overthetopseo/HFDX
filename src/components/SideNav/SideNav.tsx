@@ -5,8 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 
 import { useLocalStorageSerializeKey } from "lib/localStorage";
 
-
 import CollapseIcon from "img/collapse.svg?react";
+import EarnIcon from "img/ic_earn.svg?react";
 import LeaderboardIcon from "img/leaderboard.svg?react";
 import logoIcon from "img/logo-icon.svg";
 import LogoText from "img/logo-text.svg?react";
@@ -108,9 +108,9 @@ export function NavItem({ icon, label, isActive = false, isCollapsed = false, on
 
   const content = to ? (
     external ? (
-      <ExternalLink className="w-full !no-underline" href={to}>
+      <a href={to} target="_blank" rel="noopener noreferrer" className="w-full no-underline">
         {button}
-      </ExternalLink>
+      </a>
     ) : (
       <Link to={to}>{button}</Link>
     )
@@ -132,6 +132,7 @@ export function MenuSection({
     { icon: <TradeIcon className="size-24" />, label: t`Trade`, key: "trade", to: "/trade" },
     { icon: <LeaderboardIcon className="size-24" />, label: t`Leaderboard`, key: "leaderboard", to: "/leaderboard" },
     { icon: <ReferralsIcon className="size-24" />, label: t`Referrals`, key: "referrals", to: "/referrals" },
+    { icon: <EarnIcon className="size-24" />, label: t`Yields`, key: "yields", to: "https://hfdx.xyz/invest", external: true },
   ];
 
   const { pathname } = useLocation();
@@ -143,10 +144,11 @@ export function MenuSection({
           key={item.key}
           icon={item.icon}
           label={item.label}
-          isActive={pathname === item.to || pathname.startsWith(`${item.to}/`)}
+          isActive={!item.external && (pathname === item.to || pathname.startsWith(`${item.to}/`))}
           isCollapsed={isCollapsed}
           to={item.to}
           onClick={onMenuItemClick}
+          external={item.external}
         />
       ))}
     </ul>

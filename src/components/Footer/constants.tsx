@@ -1,7 +1,6 @@
 import { t } from "@lingui/macro";
 import { ReactNode } from "react";
 
-import DiscordIcon from "img/ic_discord.svg?react";
 import TelegramIcon from "img/ic_telegram.svg?react";
 import XIcon from "img/ic_x.svg?react";
 
@@ -23,7 +22,6 @@ export const getFooterLinks = (): Link[] => [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { link: "https://twitter.com/HFDX", name: "Twitter", icon: <XIcon className="size-16" /> },
-  { link: "https://t.me/HFDX", name: "Telegram", icon: <TelegramIcon className="size-16" /> },
-  { link: "https://discord.gg/HFDX", name: "Discord", icon: <DiscordIcon className="size-16" /> },
+  { link: "https://x.com/hfdxprotocol", name: "Twitter", icon: <XIcon className="size-16" /> },
+  { link: "https://t.me/HFDXTrading", name: "Telegram", icon: <TelegramIcon className="size-16" /> },
 ];
