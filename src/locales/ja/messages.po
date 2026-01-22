@@ -3425,10 +3425,6 @@ msgstr "アンステーク"
 msgid "Debug Settings"
 msgstr "デバッグ設定"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "別の選択肢"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""

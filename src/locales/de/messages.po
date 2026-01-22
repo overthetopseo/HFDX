@@ -3425,10 +3425,6 @@ msgstr "Unstaken"
 msgid "Debug Settings"
 msgstr "Debug-Einstellungen"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "Mehr Optionen"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""

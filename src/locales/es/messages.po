@@ -3425,10 +3425,6 @@ msgstr "Destakear"
 msgid "Debug Settings"
 msgstr "Ajustes de Depuración"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "Más Opciones"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""

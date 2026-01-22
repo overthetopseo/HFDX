@@ -3425,10 +3425,6 @@ msgstr "Снять стейкинг"
 msgid "Debug Settings"
 msgstr "Настройки Отладки"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "Больше Опций"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""

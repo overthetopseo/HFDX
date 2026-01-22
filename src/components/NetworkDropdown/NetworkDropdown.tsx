@@ -22,7 +22,7 @@ import TooltipWithPortal from "components/Tooltip/TooltipWithPortal";
 import ChevronDownIcon from "img/ic_chevron_down.svg?react";
 import SettingsIcon from "img/ic_settings.svg?react";
 
-import SolanaNetworkItem from "./SolanaNetworkItem";
+// Solana removed - HFDX only supports EVM chains
 
 import "./NetworkDropdown.scss";
 
@@ -159,9 +159,6 @@ function NetworkMenuItems({ networkOptions, chainId }: { networkOptions: Network
       {enabledNetworks.map((network) => (
         <NetworkMenuItem key={network.value} network={network} chainId={chainId} disabled={false} />
       ))}
-      <Menu.Item key="solana">
-        <SolanaNetworkItem />
-      </Menu.Item>
       {disabledNetworks.map((network) => (
         <NetworkMenuItem key={network.value} network={network} chainId={chainId} disabled={true} />
       ))}
@@ -243,10 +240,6 @@ function NetworkModalContent({
         {networkOptions.map((network) => {
           return <NetworkModalOption key={network.value} network={network} chainId={chainId} />;
         })}
-        <span className="network-dropdown-label more-options">
-          <Trans>More Options</Trans>
-        </span>
-        <SolanaNetworkItem />
         <div
           className="network-option"
           onClick={() => {

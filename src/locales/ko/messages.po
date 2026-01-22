@@ -3425,10 +3425,6 @@ msgstr "언스테이킹"
 msgid "Debug Settings"
 msgstr "디버그 설정"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "더 많은 설정"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""

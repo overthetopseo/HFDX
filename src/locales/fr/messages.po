@@ -3425,10 +3425,6 @@ msgstr "Unstaker"
 msgid "Debug Settings"
 msgstr "Paramètres de débogage"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "Plus d'options"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""

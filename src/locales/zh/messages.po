@@ -3425,10 +3425,6 @@ msgstr "解除质押"
 msgid "Debug Settings"
 msgstr "调试设置"
 
-#: src/components/NetworkDropdown/NetworkDropdown.tsx
-msgid "More Options"
-msgstr "更多选项"
-
 #: src/components/UserIncentiveDistribution/ClaimableAmounts.tsx
 msgid "By claiming, you agree to the <0>GLP Reimbursement</0> terms."
 msgstr ""
