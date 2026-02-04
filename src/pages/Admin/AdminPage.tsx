@@ -97,12 +97,13 @@ function AdminPage() {
   
   try {
     if (chainId && isSupportedChain) {
-      exchangeRouterAddress = getContract(chainId, "ExchangeRouter");
-      dataStoreAddress = getContract(chainId, "DataStore");
+      // Cast chainId to the supported type since we already check isSupportedChain
+      const supportedChainId = chainId as typeof ARBITRUM | typeof AVALANCHE;
+      exchangeRouterAddress = getContract(supportedChainId, "ExchangeRouter");
+      dataStoreAddress = getContract(supportedChainId, "DataStore");
     }
   } catch (e) {
     // Chain not supported - will show unsupported chain message
-    console.warn("Chain not supported for GMX contracts:", chainId);
   }
 
   // Load max UI fee factor from DataStore
