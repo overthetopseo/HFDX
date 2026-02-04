@@ -1,4 +1,4 @@
-import { Trans, t } from "@lingui/macro";
+import { t } from "@lingui/macro";
 import { Link } from "react-router-dom";
 
 import { ARBITRUM, AVALANCHE } from "config/chains";
@@ -12,14 +12,12 @@ import { bigMath } from "sdk/utils/bigmath";
 
 import AppPageLayout from "components/AppPageLayout/AppPageLayout";
 import { ChainContentHeader } from "components/ChainContentHeader/ChainContentHeader";
-import ExternalLink from "components/ExternalLink/ExternalLink";
 import { MarketsList } from "components/MarketsList/MarketsList";
 import PageTitle from "components/PageTitle/PageTitle";
 import SEO from "components/Seo/SEO";
 
 import V2Icon from "img/ic_v2.svg?react";
 
-import { GmCard } from "./GmCard";
 import { GmxCard } from "./HfdxCard";
 import { OverviewCard } from "./OverviewCard";
 import { StatsCard } from "./StatsCard";
@@ -60,13 +58,6 @@ export default function DashboardV2() {
             qa="dashboard-page"
             subtitle={
               <div className="flex items-center gap-6 font-medium text-typography-secondary">
-                <Trans>For detailed stats</Trans>{" "}
-                <ExternalLink
-                  className="flex items-center gap-4 !no-underline hover:text-typography-primary"
-                  href="https://dune.com/gmx-io/gmx-analytics"
-                >
-                  <V2Icon className="size-15" /> Analytics
-                </ExternalLink>
                 <Link
                   className="flex items-center gap-4 text-typography-secondary !no-underline hover:text-typography-primary"
                   to="/monitor"
@@ -93,7 +84,6 @@ export default function DashboardV2() {
                   gmxMarketCap={gmxMarketCap}
                   totalGmxInLiquidity={totalGmxInLiquidity}
                 />
-                <GmCard />
               </div>
 
               <SyntheticsStateContextProvider skipLocalReferralCode={false} pageType="pools">

@@ -13,7 +13,6 @@ import { bigMath } from "sdk/utils/bigmath";
 
 import { AmountWithUsdHuman } from "components/AmountWithUsd/AmountWithUsd";
 import { AppCard, AppCardSection, AppCardSplit } from "components/AppCard/AppCard";
-import Button from "components/Button/Button";
 import InteractivePieChart from "components/InteractivePieChart/InteractivePieChart";
 import StatsTooltipRow from "components/StatsTooltip/StatsTooltipRow";
 import TooltipComponent from "components/Tooltip/Tooltip";
@@ -103,12 +102,6 @@ export function GmxCard({
                   <div>
                     <div className="text-body-medium font-medium">HFDX</div>
                   </div>
-                </div>
-                <div className="h-32">
-                  <Button size="small" variant="secondary" to="/buy_gmx">
-                    <img src={currentIcons.gmx} width="16" alt="HFDX Icon" />
-                    <Trans>Buy HFDX</Trans>
-                  </Button>
                 </div>
               </div>
               <div className="text-13 text-typography-secondary">
