@@ -45,7 +45,7 @@ type ActionFilter = {
 };
 
 type Props = {
-  account: Address | null | undefined;
+  account?: Address | null | undefined;
   forAllAccounts?: boolean;
   hideDashboardLink?: boolean;
 };
