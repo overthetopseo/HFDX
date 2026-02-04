@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "buildCommand": "NODE_OPTIONS='--max-old-space-size=8192' yarn build",
+  "buildCommand": "NODE_OPTIONS='--max-old-space-size=8192' yarn lingui:prepare && yarn build",
   "outputDirectory": "build",
   "installCommand": "yarn install",
   "rewrites": [
