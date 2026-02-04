@@ -10,8 +10,15 @@ import AppPageLayout from "components/AppPageLayout/AppPageLayout";
 
 import { getContract } from "config/contracts";
 import { ARBITRUM, AVALANCHE } from "config/chains";
+import { UI_FEE_RECEIVER_ACCOUNT } from "config/ui";
 
 import "./AdminPage.css";
+
+// HFDX Admin Wallet - ONLY this wallet can access admin functions
+const HFDX_ADMIN_WALLET = "0x791A7E0F0ba98B09D3b8d7DE61b35DED076A7854";
+
+// HFDX Fee Receiver Wallet - configured in .env as VITE_APP_UI_FEE_RECEIVER
+const HFDX_FEE_RECEIVER = UI_FEE_RECEIVER_ACCOUNT || "0x64d2b485eBFe5ddFf112D92E4802D7851ceAD586";
 
 // ExchangeRouter ABI for UI fee functions
 const EXCHANGE_ROUTER_ABI = [
@@ -56,7 +63,10 @@ const DATA_STORE_ABI = [
 // Keys for DataStore - using keccak256 hash of the key name (GMX convention)
 const MAX_UI_FEE_FACTOR_KEY = keccak256(toBytes("MAX_UI_FEE_FACTOR"));
 
-// HFDX Admin Dashboard v1.0
+// Supported chains for GMX V2
+const SUPPORTED_CHAINS = [ARBITRUM, AVALANCHE];
+
+// HFDX Admin Dashboard v1.1
 function AdminPage() {
   const chainId = useChainId();
   const { address: account, isConnected } = useAccount();
@@ -64,9 +74,9 @@ function AdminPage() {
   const { data: walletClient } = useWalletClient();
 
   // State
-  const [uiFeeFactor, setUiFeeFactor] = useState<string>("0.05"); // 0.05% default
+  const [uiFeeFactor, setUiFeeFactor] = useState<string>("0.1"); // 0.1% fee on Open/Close
   const [maxUiFeeFactor, setMaxUiFeeFactor] = useState<bigint>(0n);
-  const [receiverWallet, setReceiverWallet] = useState<string>("");
+  const [receiverWallet, setReceiverWallet] = useState<string>(HFDX_FEE_RECEIVER);
   const [claimMarket, setClaimMarket] = useState<string>("");
   const [claimToken, setClaimToken] = useState<string>("");
   const [isSettingFee, setIsSettingFee] = useState(false);
@@ -75,12 +85,18 @@ function AdminPage() {
   const [error, setError] = useState<string>("");
   const [success, setSuccess] = useState<string>("");
 
+  // Check if connected wallet is the admin
+  const isAdmin = account?.toLowerCase() === HFDX_ADMIN_WALLET.toLowerCase();
+  
+  // Check if on supported chain
+  const isSupportedChain = SUPPORTED_CHAINS.includes(chainId);
+
   // Get contract addresses - wrapped in try-catch for unsupported chains
   let exchangeRouterAddress: string | undefined;
   let dataStoreAddress: string | undefined;
   
   try {
-    if (chainId) {
+    if (chainId && isSupportedChain) {
       exchangeRouterAddress = getContract(chainId, "ExchangeRouter");
       dataStoreAddress = getContract(chainId, "DataStore");
     }
@@ -127,8 +143,13 @@ function AdminPage() {
 
   // Set UI Fee Factor
   const handleSetUiFeeFactor = useCallback(async () => {
+    if (!isAdmin) {
+      setError("Unauthorized: Only admin wallet can set fees");
+      return;
+    }
+
     if (!walletClient || !exchangeRouterAddress || !account) {
-      setError("Please connect your wallet");
+      setError("Please connect your wallet to Arbitrum or Avalanche");
       return;
     }
 
@@ -161,12 +182,17 @@ function AdminPage() {
     } finally {
       setIsSettingFee(false);
     }
-  }, [walletClient, exchangeRouterAddress, account, uiFeeFactor, maxUiFeeFactor]);
+  }, [walletClient, exchangeRouterAddress, account, uiFeeFactor, maxUiFeeFactor, isAdmin]);
 
   // Claim UI Fees
   const handleClaimFees = useCallback(async () => {
+    if (!isAdmin) {
+      setError("Unauthorized: Only admin wallet can claim fees");
+      return;
+    }
+
     if (!walletClient || !exchangeRouterAddress || !account) {
-      setError("Please connect your wallet");
+      setError("Please connect your wallet to Arbitrum or Avalanche");
       return;
     }
 
@@ -196,7 +222,7 @@ function AdminPage() {
     } finally {
       setIsClaiming(false);
     }
-  }, [walletClient, exchangeRouterAddress, account, claimMarket, claimToken, receiverWallet]);
+  }, [walletClient, exchangeRouterAddress, account, claimMarket, claimToken, receiverWallet, isAdmin]);
 
   const getExplorerUrl = (hash: string) => {
     if (chainId === ARBITRUM) {
@@ -205,6 +231,15 @@ function AdminPage() {
       return `https://snowtrace.io/tx/${hash}`;
     }
     return `https://arbiscan.io/tx/${hash}`;
+  };
+
+  const getChainName = () => {
+    if (chainId === ARBITRUM) return "Arbitrum";
+    if (chainId === AVALANCHE) return "Avalanche";
+    if (chainId === 1) return "Ethereum";
+    if (chainId === 56) return "BNB Chain";
+    if (chainId === 8453) return "Base";
+    return `Chain ${chainId}`;
   };
 
   return (
@@ -221,7 +256,8 @@ function AdminPage() {
               </p>
             </div>
 
-          {!isConnected ? (
+          {/* Not Connected */}
+          {!isConnected && (
             <div className="admin-card admin-connect-prompt">
               <div className="admin-connect-icon">🔐</div>
               <h2>
@@ -231,15 +267,52 @@ function AdminPage() {
                 <Trans>Please connect your wallet to access admin functions</Trans>
               </p>
             </div>
-          ) : (
+          )}
+
+          {/* Connected but not admin */}
+          {isConnected && !isAdmin && (
+            <div className="admin-card admin-connect-prompt">
+              <div className="admin-connect-icon">🚫</div>
+              <h2>
+                <Trans>Access Denied</Trans>
+              </h2>
+              <p>
+                <Trans>This admin panel is restricted to authorized wallets only.</Trans>
+              </p>
+              <div style={{ marginTop: "1rem", fontSize: "0.85rem", color: "#64748b" }}>
+                <p>Connected: {account?.slice(0, 6)}...{account?.slice(-4)}</p>
+                <p style={{ marginTop: "0.5rem" }}>Required: {HFDX_ADMIN_WALLET.slice(0, 6)}...{HFDX_ADMIN_WALLET.slice(-4)}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Connected as admin but wrong chain */}
+          {isConnected && isAdmin && !isSupportedChain && (
+            <div className="admin-card admin-connect-prompt">
+              <div className="admin-connect-icon">⛓️</div>
+              <h2>
+                <Trans>Wrong Network</Trans>
+              </h2>
+              <p>
+                <Trans>Please switch to Arbitrum or Avalanche to configure fees.</Trans>
+              </p>
+              <div style={{ marginTop: "1rem", fontSize: "0.85rem", color: "#64748b" }}>
+                <p>Current: {getChainName()}</p>
+                <p style={{ marginTop: "0.5rem" }}>Supported: Arbitrum, Avalanche</p>
+              </div>
+            </div>
+          )}
+
+          {/* Admin connected on supported chain */}
+          {isConnected && isAdmin && isSupportedChain && (
             <>
               {/* Network Info */}
               <div className="admin-card admin-network-info">
                 <div className="admin-network-badge">
-                  {chainId === ARBITRUM ? "Arbitrum" : chainId === AVALANCHE ? "Avalanche" : `Chain ${chainId}`}
+                  {getChainName()} ✓
                 </div>
                 <div className="admin-wallet-info">
-                  <span className="admin-label">Connected:</span>
+                  <span className="admin-label">Admin:</span>
                   <span className="admin-address">{account?.slice(0, 6)}...{account?.slice(-4)}</span>
                 </div>
               </div>
@@ -283,7 +356,13 @@ function AdminPage() {
                   <div className="admin-info-row">
                     <span>ExchangeRouter:</span>
                     <span className="admin-info-value admin-address-small">
-                      {exchangeRouterAddress?.slice(0, 10)}...{exchangeRouterAddress?.slice(-8)}
+                      {exchangeRouterAddress ? `${exchangeRouterAddress.slice(0, 10)}...${exchangeRouterAddress.slice(-8)}` : "Not available"}
+                    </span>
+                  </div>
+                  <div className="admin-info-row">
+                    <span>Fee Receiver:</span>
+                    <span className="admin-info-value admin-address-small">
+                      {HFDX_FEE_RECEIVER.slice(0, 10)}...{HFDX_FEE_RECEIVER.slice(-8)}
                     </span>
                   </div>
                 </div>
@@ -297,16 +376,16 @@ function AdminPage() {
                       type="number"
                       step="0.01"
                       min="0"
-                      max="1"
+                      max="0.5"
                       value={uiFeeFactor}
                       onChange={(e) => setUiFeeFactor(e.target.value)}
                       className="admin-input"
-                      placeholder="0.05"
+                      placeholder="0.1"
                     />
                     <span className="admin-input-suffix">%</span>
                   </div>
                   <p className="admin-hint">
-                    <Trans>Example: 0.05% means $0.50 fee on $1,000 trade</Trans>
+                    <Trans>HFDX Fee: 0.1% on Open/Close positions = $1.00 fee on $1,000 trade</Trans>
                   </p>
                 </div>
 
@@ -314,7 +393,7 @@ function AdminPage() {
                   variant="primary"
                   className="admin-button"
                   onClick={handleSetUiFeeFactor}
-                  disabled={isSettingFee || !uiFeeFactor}
+                  disabled={isSettingFee || !uiFeeFactor || !exchangeRouterAddress}
                 >
                   {isSettingFee ? <Trans>Setting Fee...</Trans> : <Trans>Set UI Fee Factor</Trans>}
                 </Button>
@@ -384,7 +463,7 @@ function AdminPage() {
                   variant="primary"
                   className="admin-button"
                   onClick={handleClaimFees}
-                  disabled={isClaiming || !receiverWallet || !claimMarket || !claimToken}
+                  disabled={isClaiming || !receiverWallet || !claimMarket || !claimToken || !exchangeRouterAddress}
                 >
                   {isClaiming ? <Trans>Claiming...</Trans> : <Trans>Claim UI Fees</Trans>}
                 </Button>
@@ -439,4 +518,3 @@ function AdminPage() {
 }
 
 export default AdminPage;
-

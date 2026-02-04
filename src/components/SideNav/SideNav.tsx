@@ -8,6 +8,7 @@ import { useLocalStorageSerializeKey } from "lib/localStorage";
 import CollapseIcon from "img/collapse.svg?react";
 import EarnIcon from "img/ic_earn.svg?react";
 import LeaderboardIcon from "img/leaderboard.svg?react";
+import StatsIcon from "img/ic_line_chart_up.svg?react";
 import logoIcon from "img/logo-icon.svg";
 import LogoText from "img/logo-text.svg?react";
 import ReferralsIcon from "img/referrals.svg?react";
@@ -130,6 +131,7 @@ export function MenuSection({
 }) {
   const mainNavItems = [
     { icon: <TradeIcon className="size-24" />, label: t`Trade`, key: "trade", to: "/trade" },
+    { icon: <StatsIcon className="size-24" />, label: t`Stats`, key: "stats", to: "/stats" },
     { icon: <LeaderboardIcon className="size-24" />, label: t`Leaderboard`, key: "leaderboard", to: "/leaderboard" },
     { icon: <ReferralsIcon className="size-24" />, label: t`Referrals`, key: "referrals", to: "/referrals" },
     { icon: <EarnIcon className="size-24" />, label: t`Yields`, key: "yields", to: "https://hfdx.xyz/invest", external: true },
