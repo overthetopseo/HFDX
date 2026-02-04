@@ -26,7 +26,6 @@ import { useBreakpoints } from "lib/useBreakpoints";
 import { switchNetwork } from "lib/wallets";
 import useWallet from "lib/wallets/useWallet";
 
-import ExternalLink from "components/ExternalLink/ExternalLink";
 import SearchInput from "components/SearchInput/SearchInput";
 import { BodyScrollFadeContainer } from "components/TableScrollFade/TableScrollFade";
 import Tabs from "components/Tabs/Tabs";
@@ -141,11 +140,7 @@ export function LeaderboardContainer() {
       case "march_20-27_2024":
         return (
           <>
-            Powered by the Arbitrum DAO STIP.&nbsp;
-            <ExternalLink href="https://open.substack.com/pub/gmxio/p/the-gmx-eip4844-trading-competition">
-              <Trans>Read the rules</Trans>
-            </ExternalLink>
-            .{wrongNetworkSwitcher}{" "}
+            Trading Competition on Arbitrum.{wrongNetworkSwitcher}{" "}
           </>
         );
 
