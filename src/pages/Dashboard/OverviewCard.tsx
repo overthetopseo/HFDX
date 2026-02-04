@@ -398,8 +398,8 @@ export function OverviewCard({
                       <br />
                       <ul className="my-8 list-disc">
                         <li className="p-2">HFDX Staked</li>
-                        <li className="p-2">GLP Pool</li>
-                        <li className="p-2">GM Pools</li>
+                        <li className="p-2">HFDX LP Pool</li>
+                        <li className="p-2">HFDX Pools</li>
                         <li className="p-2">Positions' Collateral</li>
                       </ul>
                       <StatsTooltipRow
@@ -430,7 +430,7 @@ export function OverviewCard({
             </div>
             <div className="App-card-row">
               <div className="label">
-                <Trans>GLP Pool</Trans>
+                <Trans>HFDX LP Pool</Trans>
               </div>
               <div>
                 <TooltipComponent
@@ -439,7 +439,7 @@ export function OverviewCard({
                   position="bottom-end"
                   content={
                     <>
-                      <Trans>Total value of tokens in the GLP pools.</Trans>
+                      <Trans>Total value of tokens in the HFDX LP pools.</Trans>
                       <br />
                       <br />
                       <StatsTooltipRow
@@ -470,7 +470,7 @@ export function OverviewCard({
             </div>
             <div className="App-card-row">
               <div className="label">
-                <Trans>GM Pools</Trans>
+                <Trans>HFDX Pools</Trans>
               </div>
               <div>
                 <TooltipComponent
@@ -479,7 +479,7 @@ export function OverviewCard({
                   position="bottom-end"
                   content={
                     <>
-                      <Trans>Total value of tokens in GM Pools.</Trans>
+                      <Trans>Total value of tokens in HFDX Pools.</Trans>
                       <br />
                       <br />
                       <StatsTooltipRow
